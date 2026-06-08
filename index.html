@@ -372,7 +372,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libe
         <a href="#roadmap">30-Day Roadmap</a>
 
         <div class="navTitle">Topics</div>
-        <a href="#java-core">1. Java Core for Senior Backend</a><a href="#spring">2. Spring Boot / Spring Framework for Senior</a><a href="#rest-api">3. REST API Design for Senior</a><a href="#microservices">4. Microservices / Distributed Systems</a><a href="#kafka">5. Kafka / Event-driven Architecture</a><a href="#database">6. SQL / Transaction / Database Performance</a><a href="#jpa">7. JPA / Hibernate for Senior</a><a href="#docker-k8s">8. Docker / Kubernetes / Cloud-native</a><a href="#cloud">9. Cloud Basics for Senior Java</a><a href="#architecture">10. System Design / Clean Architecture / CI-CD</a><a href="#ddd">11. Domain-Driven Design (Strategic + Tactical)</a><a href="#system-design">12. System Design at Scale</a><a href="#modern-java">13. Modern Java (Loom, Records, Sealed)</a>
+        <a href="#java-core">1. Java Core for Senior Backend</a><a href="#spring">2. Spring Boot / Spring Framework for Senior</a><a href="#rest-api">3. REST API Design for Senior</a><a href="#microservices">4. Microservices / Distributed Systems</a><a href="#kafka">5. Kafka / Event-driven Architecture</a><a href="#database">6. SQL / Transaction / Database Performance</a><a href="#jpa">7. JPA / Hibernate for Senior</a><a href="#docker-k8s">8. Docker / Kubernetes / Cloud-native</a><a href="#cloud">9. Cloud Basics for Senior Java</a><a href="#architecture">10. System Design / Clean Architecture / CI-CD</a><a href="#ddd">11. Domain-Driven Design (Strategic + Tactical)</a><a href="#system-design">12. System Design at Scale</a><a href="#modern-java">13. Modern Java (Loom, Records, Sealed)</a><a href="#algorithms">14. Coding Test / Algorithms (DSA)</a>
       </nav>
     </aside>
 
@@ -395,8 +395,8 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libe
       </section>
 
       <section class="stats">
-        <div class="card"><strong>13</strong><span>Senior topics</span></div>
-        <div class="card"><strong>44</strong><span>Deep sub-topics</span></div>
+        <div class="card"><strong>14</strong><span>Senior topics</span></div>
+        <div class="card"><strong>54</strong><span>Deep sub-topics</span></div>
         <div class="card"><strong>100+</strong><span>Tips, examples, pitfalls</span></div>
         <div class="card"><strong>Offline</strong><span>Open in browser anytime</span></div>
       </section>
@@ -411,7 +411,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libe
           <input id="searchBox" placeholder="Search: OOP, Kafka, Outbox, Transaction, N+1, Kubernetes...">
           <select id="topicSelect">
             <option value="all">All topics</option>
-            <option value="1">1. Java Core for Senior Backend</option><option value="2">2. Spring Boot / Spring Framework for Senior</option><option value="3">3. REST API Design for Senior</option><option value="4">4. Microservices / Distributed Systems</option><option value="5">5. Kafka / Event-driven Architecture</option><option value="6">6. SQL / Transaction / Database Performance</option><option value="7">7. JPA / Hibernate for Senior</option><option value="8">8. Docker / Kubernetes / Cloud-native</option><option value="9">9. Cloud Basics for Senior Java</option><option value="10">10. System Design / Clean Architecture / CI-CD</option><option value="11">11. Domain-Driven Design (Strategic + Tactical)</option><option value="12">12. System Design at Scale</option><option value="13">13. Modern Java (Loom, Records, Sealed)</option>
+            <option value="1">1. Java Core for Senior Backend</option><option value="2">2. Spring Boot / Spring Framework for Senior</option><option value="3">3. REST API Design for Senior</option><option value="4">4. Microservices / Distributed Systems</option><option value="5">5. Kafka / Event-driven Architecture</option><option value="6">6. SQL / Transaction / Database Performance</option><option value="7">7. JPA / Hibernate for Senior</option><option value="8">8. Docker / Kubernetes / Cloud-native</option><option value="9">9. Cloud Basics for Senior Java</option><option value="10">10. System Design / Clean Architecture / CI-CD</option><option value="11">11. Domain-Driven Design (Strategic + Tactical)</option><option value="12">12. System Design at Scale</option><option value="13">13. Modern Java (Loom, Records, Sealed)</option><option value="14">14. Coding Test / Algorithms (DSA)</option>
           </select>
           <button class="secondary" onclick="clearFilters()">Clear</button>
         </div>
@@ -430,6 +430,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libe
           <button class="topicTab" data-target="ddd" role="tab"><span class="num">11</span>DDD</button>
           <button class="topicTab" data-target="system-design" role="tab"><span class="num">12</span>System Design</button>
           <button class="topicTab" data-target="modern-java" role="tab"><span class="num">13</span>Modern Java</button>
+          <button class="topicTab" data-target="algorithms" role="tab"><span class="num">14</span>Algorithms</button>
         </div>
 
     <article class="topic active" id="java-core" data-rank="1" data-search="java core for senior backend do not learn java core as definitions. learn by being able to explain behavior, trade-off, production bug and performance. real-world oop in backend senior does not only talk about encapsulation/inheritance/polymorphism/abstraction. senior must know how to use oop to reduce coupling, keep the domain model meaningful, avoid service god class and avoid abusing inheritance. encapsulation: not just private field + getter/setter. the goal is to keep the invariant of the object. example: order should not allow the outside to setstatus arbitrarily, but should have methods confirm(), cancel(), pay(). inheritance: use very carefully. in business code, composition is usually safer than inheritance because inheritance creates tight coupling and easily breaks parent/child behavior. polymorphism: use it to replace long if/else with strategy, especially in fee calculation, choosing payment provider, validation rule, export file, notification channel. abstraction: an interface should represent a capability/business port, not mechanically create an interface for every service. hashmap, equals/hashcode, collections internals senior needs to be able to explain why bugs happen when using a mutable object as a key, why hashmap degrades performance, and when to use concurrenthashmap. hashmap uses hashcode to find the bucket, then uses equals to find the right key. if hashcode is poorly distributed, many keys fall into the same bucket → performance drops. since java 8, a bucket can treeify into a red-black tree when collisions are many, but you should not rely on that to hide a poor hashcode design. a key used in a hashmap should be immutable or at least the fields participating in equals/hashcode must not change after put. concurrency, thread pool, completablefuture senior must know that concurrency is not only for running faster, but also to control resources: thread pool, timeout, backpressure, connection pool, db pool and failure handling. completablefuture is suitable for parallel i/o such as calling many independent apis. do not use commonpool carelessly in backend production. you should define a dedicated executor to avoid affecting other tasks. more parallelism is not always faster. if the db pool has only 10 connections but you create 100 parallel db tasks then you only choke the system. always have timeout, fallback, exception handling and logging correlation id. java memory model, volatile, synchronized senior needs to understand visibility and atomicity. volatile does not replace a lock for a compound operation such as count++. volatile guarantees visibility: other threads see the latest value. volatile does not guarantee atomicity for an operation made of multiple steps. synchronized guarantees mutual exclusion and visibility. atomicinteger is suitable for a simple counter; a lock is suitable when you need trylock, fairness or condition.">
@@ -6544,7 +6545,7 @@ Product featured() {
       </div>
     </article>
 
-    <article class="topic" id="modern-java" data-rank="13" data-is-last="true" data-search="modern java java 21 java 17 virtual threads project loom carrier thread mounting unmounting pinning synchronized reentrantlock structured concurrency structuredtaskscope scoped values thread-per-request semaphore records sealed classes sealed interface permits algebraic data types value object dto compact constructor immutability pattern matching instanceof pattern switch expression yield record deconstruction guarded pattern when exhaustiveness streams optional collectors groupingby tomap merge function parallel stream common forkjoinpool n+1 functional lambda">
+    <article class="topic" id="modern-java" data-rank="13" data-search="modern java java 21 java 17 virtual threads project loom carrier thread mounting unmounting pinning synchronized reentrantlock structured concurrency structuredtaskscope scoped values thread-per-request semaphore records sealed classes sealed interface permits algebraic data types value object dto compact constructor immutability pattern matching instanceof pattern switch expression yield record deconstruction guarded pattern when exhaustiveness streams optional collectors groupingby tomap merge function parallel stream common forkjoinpool n+1 functional lambda">
       <div class="topicHeader">
         <div>
           <h4>13. Modern Java (Loom, Records, Sealed)</h4>
@@ -6966,6 +6967,541 @@ return v;</code></pre>
             <p class="turn candidate">Behind a flag, one service first, with load tests comparing throughput and p99 before and after. I'd add a JFR/jstack check for pinned events under load. If pinning shows up I fix the lock and re-test. It's a low-risk change precisely because the programming model stays the same — the risk is concentrated in a few locks, not the whole codebase.</p>
           </div>
           </section>
+
+      </div>
+    </article>
+
+    <article class="topic" id="algorithms" data-rank="14" data-is-last="true" data-search="coding test algorithms dsa data structures big o complexity time space tradeoff two pointers sliding window prefix sum hashmap hashset hashtable two sum frequency dedup binary search lower bound upper bound binary search on answer stack queue deque monotonic stack valid parentheses next greater element bfs dfs breadth first depth first tree graph traversal level order inorder preorder postorder topological sort recursion backtracking permutations combinations subsets n queens dynamic programming memoization tabulation knapsack fibonacci longest common subsequence coin change heap priority queue top k kth largest merge k lists quickselect sorting comparator merge sort quicksort stable sort union find disjoint set whiteboard leetcode interview coding round optimize brute force">
+      <div class="topicHeader">
+        <div>
+          <h4>14. Coding Test / Algorithms (DSA)</h4>
+          <p>For the coding-test round. Do not memorize 500 LeetCode problems — learn the handful of patterns that 80% of interview questions reduce to, and how to talk through complexity.</p>
+        </div>
+        <div class="rank">#14</div>
+      </div>
+      <div class="topicBody">
+
+        <section class="subtopic" id="algorithms-1">
+          <span class="badge">Start here</span>
+          <h5>Complexity & a problem-solving framework</h5>
+          <div class="concept">
+            <h6>Concept</h6>
+            <p><span class="mini">Big-O</span> describes how runtime/memory grows as input size <em>n</em> grows — it ignores constants and small terms, and answers "does this still work when n is a million?".</p>
+            <p class="why"><strong>Why it exists:</strong> The coding round is rarely about getting <em>an</em> answer; it is about getting an efficient one and being able to justify it. Interviewers grade your reasoning out loud as much as the final code.</p>
+            <p class="analogy">Analogy: finding a name in a phone book — flipping page by page is O(n); opening to the middle and halving each time is O(log n).</p>
+          </div>
+          <div class="flow">
+            <h6>How to approach any problem (say this out loud)</h6>
+            <ol class="flowList">
+              <li><strong>Clarify:</strong> input size, value range, duplicates, sorted or not, empty/negative cases. Repeat the problem back.</li>
+              <li><strong>Brute force first:</strong> state the naive O(n²)/O(2ⁿ) solution so you have a baseline and never freeze.</li>
+              <li><strong>Find the bottleneck:</strong> which step is expensive? That points at the pattern (hash to avoid a scan, two pointers to avoid nested loops, sort to enable binary search).</li>
+              <li><strong>Pick a data structure:</strong> the right structure usually <em>is</em> the algorithm (HashMap, heap, stack, set).</li>
+              <li><strong>Walk a tiny example, then code, then test edge cases:</strong> empty, single element, all-equal, max size.</li>
+            </ol>
+          </div>
+          <div class="cases">
+            <h6>Complexity cheat-sheet for common operations</h6>
+            <ol class="caseList">
+              <li><strong>HashMap / HashSet get/put/contains:</strong> O(1) average — the workhorse for turning a scan into a lookup.</li>
+              <li><strong>Sort:</strong> O(n log n) — often worth paying once to unlock two pointers or binary search.</li>
+              <li><strong>Binary search on a sorted array:</strong> O(log n).</li>
+              <li><strong>Heap (PriorityQueue) push/pop:</strong> O(log n); peek O(1) — for top-K and streaming min/max.</li>
+              <li><strong>ArrayList get by index:</strong> O(1); contains / remove from middle: O(n). LinkedList random access: O(n).</li>
+              <li><strong>Nested loop over n:</strong> O(n²) — fine for n ≤ ~1000, a red flag for n ≥ 10⁵.</li>
+            </ol>
+          </div>
+          <div class="grid2">
+            <div class="box">
+              <h6>What to understand deeply</h6>
+              <ul class="deepList">
+                <li><strong>Read n to guess the target complexity</strong><p>n ≤ 20 → exponential/backtracking is fine. n ≤ 10³ → O(n²). n ≤ 10⁵–10⁶ → you need O(n log n) or O(n). n ≥ 10⁸ → O(n) or O(log n) only.</p></li>
+                <li><strong>Time vs space trade-off</strong><p>Most "make it faster" moves spend memory (a HashMap, a prefix-sum array, memoization) to delete a loop. Name the trade-off explicitly.</p></li>
+                <li><strong>Amortized vs worst case</strong><p>ArrayList add is amortized O(1) but a single resize is O(n); HashMap is O(1) average but O(n) if every key collides.</p></li>
+              </ul>
+            </div>
+            <div class="box">
+              <h6>Common pitfalls in the test</h6>
+              <ul class="deepList pitfallList">
+                <li><strong>Jumping straight to code</strong><p>Silence then a wrong solution scores worse than a narrated brute force you then optimize.</p></li>
+                <li><strong>Ignoring integer overflow</strong><p><span class="mini">int</span> overflows around 2.1×10⁹. Use <span class="mini">long</span> for sums/products, and write <span class="mini">lo + (hi - lo) / 2</span> not <span class="mini">(lo + hi) / 2</span>.</p></li>
+                <li><strong>Off-by-one and empty input</strong><p>The classic bug. Always test n = 0 and n = 1 before saying "done".</p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="tip"><strong>Interview answer tip:</strong> "My brute force is O(n²) because of the nested scan. The bottleneck is the inner lookup, so I'll trade O(n) memory for a HashMap and bring it to O(n) time." Naming brute force → bottleneck → trade-off is the senior signal.</div>
+        </section>
+
+        <section class="subtopic" id="algorithms-2">
+          <span class="badge">Top pattern</span>
+          <h5>Two pointers & sliding window</h5>
+          <div class="concept">
+            <h6>Concept</h6>
+            <p>Two indices walking an array/string instead of a nested loop. A <em>sliding window</em> is the two-pointer variant where the pair bounds a contiguous range that grows and shrinks.</p>
+            <p class="why"><strong>Why it exists:</strong> It collapses an O(n²) "check every pair / every subarray" into O(n) when the data is sorted or the property is monotonic (extending the window can only help, shrinking can only fix a violation).</p>
+          </div>
+          <div class="flow">
+            <h6>How it works</h6>
+            <ol class="flowList">
+              <li><strong>Opposite ends:</strong> on a <em>sorted</em> array, move <span class="mini">left++</span> when the sum is too small, <span class="mini">right--</span> when too big (two-sum, container-with-most-water, palindrome check).</li>
+              <li><strong>Fast/slow:</strong> same direction at different speeds (cycle detection, removing duplicates in place, finding the middle of a list).</li>
+              <li><strong>Sliding window:</strong> expand <span class="mini">right</span> to grow, shrink <span class="mini">left</span> while the window is invalid; track the best window seen (longest substring without repeats, min subarray ≥ target).</li>
+            </ol>
+          </div>
+          <div class="grid2">
+            <div class="box">
+              <h6>When to reach for it</h6>
+              <ul class="deepList">
+                <li><strong>"Subarray / substring" + "contiguous"</strong><p>Almost always a sliding window. "Longest", "shortest", "at most K distinct", "sum equals" are tells.</p></li>
+                <li><strong>Sorted array + "pair/triplet with sum"</strong><p>Opposite-end two pointers; for triplets, fix one element and two-point the rest → O(n²).</p></li>
+              </ul>
+            </div>
+            <div class="box">
+              <h6>Pitfalls</h6>
+              <ul class="deepList pitfallList">
+                <li><strong>Window only works for non-negative contributions</strong><p>"Subarray sum = k" with negatives needs a prefix-sum + HashMap, not a window — shrinking is no longer safe.</p></li>
+                <li><strong>Forgetting to update the answer at the right moment</strong><p>For "longest valid" update after expanding; for "shortest valid" update after each shrink.</p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="box">
+            <h6>Example — longest substring without repeating characters (O(n))</h6>
+            <pre><code>int longestUnique(String s) {
+  Map&lt;Character,Integer&gt; last = new HashMap&lt;&gt;();
+  int left = 0, best = 0;
+  for (int right = 0; right &lt; s.length(); right++) {
+    char c = s.charAt(right);
+    if (last.containsKey(c) &amp;&amp; last.get(c) &gt;= left) {
+      left = last.get(c) + 1;          // shrink past the duplicate
+    }
+    last.put(c, right);
+    best = Math.max(best, right - left + 1);
+  }
+  return best;
+}</code></pre>
+          </div>
+          <div class="tip"><strong>Interview answer tip:</strong> "It's a contiguous-substring problem, so I'll slide a window: expand right, and when a character repeats I jump left past its last position. Each index is visited at most twice → O(n)."</div>
+        </section>
+
+        <section class="subtopic" id="algorithms-3">
+          <span class="badge">Top pattern</span>
+          <h5>Hashing — turn a scan into a lookup</h5>
+          <div class="concept">
+            <h6>Concept</h6>
+            <p>A <span class="mini">HashMap</span>/<span class="mini">HashSet</span> gives O(1) average membership and counting. The pattern: while scanning once, ask "have I seen the complement / this value / this prefix before?".</p>
+            <p class="why"><strong>Why it exists:</strong> It is the single most common way to drop a nested loop. The same idea ties directly to the Java-Core HashMap topic — a good <span class="mini">equals/hashCode</span> is what makes it O(1).</p>
+          </div>
+          <div class="flow">
+            <h6>How it works</h6>
+            <ol class="flowList">
+              <li><strong>Complement lookup:</strong> Two-Sum — for each x, check if <span class="mini">target - x</span> was already seen.</li>
+              <li><strong>Frequency map:</strong> count occurrences for anagrams, majority element, top-K, first non-repeating char.</li>
+              <li><strong>Seen-set:</strong> detect duplicates, cycle in a linked structure, or visited nodes in a graph.</li>
+              <li><strong>Prefix-sum + map:</strong> count/locate subarrays summing to k <em>even with negatives</em> — store running sum → index/count.</li>
+            </ol>
+          </div>
+          <div class="grid2">
+            <div class="box">
+              <h6>What to understand deeply</h6>
+              <ul class="deepList">
+                <li><strong>Group-by key design</strong><p>Anagrams group by sorted string or a 26-count signature; "lines on the same slope" group by a reduced fraction key.</p></li>
+                <li><strong>getOrDefault / merge / computeIfAbsent</strong><p><span class="mini">map.merge(k, 1, Integer::sum)</span> is the idiomatic frequency counter; <span class="mini">computeIfAbsent(k, x -&gt; new ArrayList&lt;&gt;())</span> for adjacency lists.</p></li>
+              </ul>
+            </div>
+            <div class="box">
+              <h6>Pitfalls</h6>
+              <ul class="deepList pitfallList">
+                <li><strong>Mutable keys</strong><p>Mutating an object after using it as a key corrupts the map — keys must be immutable in the equals/hashCode fields.</p></li>
+                <li><strong>Autoboxing surprises</strong><p><span class="mini">Integer</span> caches only -128..127; never compare boxed values with <span class="mini">==</span>. Use <span class="mini">.equals</span> or primitives.</p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="box">
+            <h6>Example — Two Sum in O(n)</h6>
+            <pre><code>int[] twoSum(int[] nums, int target) {
+  Map&lt;Integer,Integer&gt; seen = new HashMap&lt;&gt;();   // value -&gt; index
+  for (int i = 0; i &lt; nums.length; i++) {
+    Integer j = seen.get(target - nums[i]);
+    if (j != null) return new int[]{j, i};
+    seen.put(nums[i], i);
+  }
+  return new int[0];
+}</code></pre>
+          </div>
+          <div class="tip"><strong>Interview answer tip:</strong> "Brute force checks every pair in O(n²). Instead I scan once and remember each value in a HashMap, asking if the complement is already there — O(n) time, O(n) space."</div>
+        </section>
+
+        <section class="subtopic" id="algorithms-4">
+          <span class="badge">Top pattern</span>
+          <h5>Binary search (on arrays and on the answer)</h5>
+          <div class="concept">
+            <h6>Concept</h6>
+            <p>Repeatedly halve a <em>sorted/monotonic</em> search space until one candidate remains — O(log n). The deeper version: binary-search the <em>answer</em> when you can cheaply check "is X feasible?".</p>
+            <p class="why"><strong>Why it exists:</strong> log n is dramatically faster than n for large inputs, and many "minimize the maximum / find the smallest X that works" problems hide a monotonic predicate.</p>
+          </div>
+          <div class="flow">
+            <h6>How it works</h6>
+            <ol class="flowList">
+              <li><strong>Classic:</strong> <span class="mini">lo=0, hi=n-1</span>; compare mid to target, discard half each step.</li>
+              <li><strong>Lower/upper bound:</strong> find the first index ≥ target (insertion point) or last ≤ target — the basis of <span class="mini">Arrays.binarySearch</span>, <span class="mini">TreeMap.ceilingKey/floorKey</span>.</li>
+              <li><strong>Binary search on answer:</strong> guess a value, run an O(n) feasibility check, move <span class="mini">lo/hi</span> based on the result (e.g. "min days to ship", "min eating speed").</li>
+            </ol>
+          </div>
+          <div class="grid2">
+            <div class="box">
+              <h6>When to reach for it</h6>
+              <ul class="deepList">
+                <li><strong>Data is sorted, or you can sort it</strong><p>Or it's rotated-sorted, or the value space is monotonic ("smallest capacity such that we finish in time").</p></li>
+                <li><strong>Use the library when allowed</strong><p><span class="mini">Collections.binarySearch</span>, <span class="mini">TreeMap</span>/<span class="mini">TreeSet</span> give floor/ceiling in O(log n) for free.</p></li>
+              </ul>
+            </div>
+            <div class="box">
+              <h6>Pitfalls</h6>
+              <ul class="deepList pitfallList">
+                <li><strong>Infinite loops</strong><p>Wrong boundary updates (<span class="mini">lo = mid</span> instead of <span class="mini">mid + 1</span>) loop forever. Pick a template and reuse it exactly.</p></li>
+                <li><strong>Overflow on mid</strong><p>Always <span class="mini">lo + (hi - lo) / 2</span>.</p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="box">
+            <h6>Example — lower bound (first index with nums[i] &gt;= target)</h6>
+            <pre><code>int lowerBound(int[] nums, int target) {
+  int lo = 0, hi = nums.length;            // [lo, hi)
+  while (lo &lt; hi) {
+    int mid = lo + (hi - lo) / 2;
+    if (nums[mid] &lt; target) lo = mid + 1;  // discard left half incl. mid
+    else hi = mid;                         // mid still a candidate
+  }
+  return lo;                               // insertion point
+}</code></pre>
+          </div>
+          <div class="tip"><strong>Interview answer tip:</strong> "The array is sorted so I binary-search in O(log n). For 'smallest X that works' problems I binary-search the answer: each guess gets an O(n) feasibility check, so O(n log range) overall."</div>
+        </section>
+
+        <section class="subtopic" id="algorithms-5">
+          <span class="badge">Pattern</span>
+          <h5>Stack, queue & monotonic stack</h5>
+          <div class="concept">
+            <h6>Concept</h6>
+            <p>A <span class="mini">stack</span> (LIFO) remembers "what's still open / unresolved"; a <span class="mini">queue</span> (FIFO) processes "in arrival order". A <em>monotonic</em> stack keeps its elements sorted to answer "next greater/smaller" in O(n).</p>
+            <p class="why"><strong>Why it exists:</strong> Matching, nesting, and "nearest bigger element" problems have a natural last-in-first-out structure; a plain stack solves them in one pass instead of nested scans.</p>
+          </div>
+          <div class="flow">
+            <h6>How it works</h6>
+            <ol class="flowList">
+              <li><strong>Validation/matching:</strong> push openers, pop and check on closers (valid parentheses, expression evaluation).</li>
+              <li><strong>Monotonic stack:</strong> before pushing, pop everything smaller (or larger) — those popped just found their "next greater" (daily temperatures, stock span, largest rectangle in histogram).</li>
+              <li><strong>Deque as both:</strong> <span class="mini">ArrayDeque</span> is the go-to for stack <em>and</em> queue, and for the sliding-window-maximum monotonic deque.</li>
+            </ol>
+          </div>
+          <div class="grid2">
+            <div class="box">
+              <h6>What to understand deeply</h6>
+              <ul class="deepList">
+                <li><strong>Use ArrayDeque, not Stack/LinkedList</strong><p>Legacy <span class="mini">java.util.Stack</span> is synchronized and slow; <span class="mini">ArrayDeque</span> is the recommended LIFO/FIFO.</p></li>
+                <li><strong>Each element pushed/popped once</strong><p>That's why a monotonic stack is O(n) even though there's an inner while-loop.</p></li>
+              </ul>
+            </div>
+            <div class="box">
+              <h6>Pitfalls</h6>
+              <ul class="deepList pitfallList">
+                <li><strong>Peeking/popping an empty stack</strong><p>Check <span class="mini">isEmpty()</span> first — a stray closer with nothing to match is the common bug.</p></li>
+                <li><strong>Storing values when you need indices</strong><p>Many monotonic-stack problems need indices to compute distances/widths.</p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="box">
+            <h6>Example — valid parentheses</h6>
+            <pre><code>boolean isValid(String s) {
+  Deque&lt;Character&gt; st = new ArrayDeque&lt;&gt;();
+  Map&lt;Character,Character&gt; pair = Map.of(')','(', ']','[', '}','{');
+  for (char c : s.toCharArray()) {
+    if (pair.containsValue(c)) st.push(c);                  // opener
+    else if (st.isEmpty() || st.pop() != pair.get(c)) return false;
+  }
+  return st.isEmpty();
+}</code></pre>
+          </div>
+          <div class="tip"><strong>Interview answer tip:</strong> "Nesting/matching screams stack. For 'next greater element' I keep a monotonic stack — each index is pushed and popped once, so it's O(n) despite the inner loop."</div>
+        </section>
+
+        <section class="subtopic" id="algorithms-6">
+          <span class="badge">Top pattern</span>
+          <h5>Trees & graphs — BFS / DFS</h5>
+          <div class="concept">
+            <h6>Concept</h6>
+            <p><span class="mini">BFS</span> explores level by level using a <em>queue</em>; <span class="mini">DFS</span> goes deep first using recursion or a <em>stack</em>. A tree is just a graph with no cycles, so the same two traversals cover most tree and graph questions.</p>
+            <p class="why"><strong>Why it exists:</strong> Almost any "reachability / shortest steps / connected components / level / order" problem is a graph traversal in disguise.</p>
+          </div>
+          <div class="flow">
+            <h6>How it works</h6>
+            <ol class="flowList">
+              <li><strong>BFS:</strong> queue + visited set; first time you reach a node is the <em>fewest edges</em> path → shortest path on an unweighted graph, level-order tree traversal.</li>
+              <li><strong>DFS:</strong> recurse/stack + visited set; natural for "explore a whole component", cycle detection, and tree in/pre/post-order.</li>
+              <li><strong>Grid as a graph:</strong> cells are nodes, 4/8 neighbours are edges → number of islands, flood fill, rotting oranges (multi-source BFS).</li>
+              <li><strong>Topological sort:</strong> DFS post-order or Kahn's BFS on a DAG → build/task ordering, course schedule.</li>
+            </ol>
+          </div>
+          <div class="grid2">
+            <div class="box">
+              <h6>BFS vs DFS — when to pick which</h6>
+              <ul class="deepList">
+                <li><strong>Shortest path / minimum steps (unweighted)</strong><p>BFS — the level you first reach a node is its distance.</p></li>
+                <li><strong>Connectivity, cycles, "all paths", tree depth</strong><p>DFS — simpler to write recursively. For weighted shortest path use Dijkstra (a heap-based BFS).</p></li>
+              </ul>
+            </div>
+            <div class="box">
+              <h6>Pitfalls</h6>
+              <ul class="deepList pitfallList">
+                <li><strong>Forgetting the visited set</strong><p>Graphs have cycles → infinite loops. Mark visited <em>when you enqueue</em> in BFS, not when you dequeue, to avoid duplicates.</p></li>
+                <li><strong>Deep recursion stack overflow</strong><p>n ≈ 10⁵ deep DFS can blow the JVM stack — switch to an explicit stack or BFS.</p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="box">
+            <h6>Example — number of islands (grid DFS)</h6>
+            <pre><code>int numIslands(char[][] g) {
+  int count = 0;
+  for (int r = 0; r &lt; g.length; r++)
+    for (int c = 0; c &lt; g[0].length; c++)
+      if (g[r][c] == '1') { count++; sink(g, r, c); }
+  return count;
+}
+void sink(char[][] g, int r, int c) {
+  if (r &lt; 0 || c &lt; 0 || r &gt;= g.length || c &gt;= g[0].length || g[r][c] != '1') return;
+  g[r][c] = '0';                                   // mark visited in place
+  sink(g, r+1, c); sink(g, r-1, c); sink(g, r, c+1); sink(g, r, c-1);
+}</code></pre>
+          </div>
+          <div class="tip"><strong>Interview answer tip:</strong> "I model it as a graph: nodes and edges. Shortest unweighted path → BFS with a queue; connectivity or all-paths → DFS. Either way I keep a visited set so cycles don't loop forever."</div>
+        </section>
+
+        <section class="subtopic" id="algorithms-7">
+          <span class="badge">Pattern</span>
+          <h5>Recursion & backtracking</h5>
+          <div class="concept">
+            <h6>Concept</h6>
+            <p>Recursion solves a problem in terms of smaller copies of itself. <em>Backtracking</em> is recursion that builds a candidate step by step and <em>undoes</em> the last choice when it leads to a dead end.</p>
+            <p class="why"><strong>Why it exists:</strong> For "generate all / find every valid configuration" (subsets, permutations, combinations, N-Queens, word search) it explores the decision tree systematically and prunes impossible branches early.</p>
+          </div>
+          <div class="flow">
+            <h6>How it works (the template)</h6>
+            <ol class="flowList">
+              <li><strong>Base case:</strong> candidate is complete → record it (a copy!) and return.</li>
+              <li><strong>Choose:</strong> pick the next option, add it to the current path.</li>
+              <li><strong>Explore:</strong> recurse with the choice applied.</li>
+              <li><strong>Un-choose (backtrack):</strong> remove the choice so the next iteration starts clean.</li>
+              <li><strong>Prune:</strong> skip branches that can't possibly lead to a valid/better answer.</li>
+            </ol>
+          </div>
+          <div class="grid2">
+            <div class="box">
+              <h6>What to understand deeply</h6>
+              <ul class="deepList">
+                <li><strong>Complexity is exponential by nature</strong><p>Subsets 2ⁿ, permutations n!. Acceptable only for small n — pruning is what makes it finish.</p></li>
+                <li><strong>Avoid duplicates</strong><p>Sort first and skip equal siblings, or pass a <span class="mini">start</span> index so you don't reuse earlier elements.</p></li>
+              </ul>
+            </div>
+            <div class="box">
+              <h6>Pitfalls</h6>
+              <ul class="deepList pitfallList">
+                <li><strong>Adding the path by reference</strong><p>You must add <span class="mini">new ArrayList&lt;&gt;(path)</span> — otherwise every result points at the same list that ends up empty.</p></li>
+                <li><strong>Forgetting to undo</strong><p>Missing the remove/backtrack step silently corrupts later branches.</p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="box">
+            <h6>Example — all subsets</h6>
+            <pre><code>List&lt;List&lt;Integer&gt;&gt; subsets(int[] nums) {
+  List&lt;List&lt;Integer&gt;&gt; res = new ArrayList&lt;&gt;();
+  backtrack(nums, 0, new ArrayList&lt;&gt;(), res);
+  return res;
+}
+void backtrack(int[] nums, int start, List&lt;Integer&gt; path, List&lt;List&lt;Integer&gt;&gt; res) {
+  res.add(new ArrayList&lt;&gt;(path));            // every node is a valid subset
+  for (int i = start; i &lt; nums.length; i++) {
+    path.add(nums[i]);                        // choose
+    backtrack(nums, i + 1, path, res);        // explore
+    path.remove(path.size() - 1);             // un-choose
+  }
+}</code></pre>
+          </div>
+          <div class="tip"><strong>Interview answer tip:</strong> "It's 'generate all valid configurations', so I backtrack: choose → recurse → un-choose, snapshotting the path at base cases. I prune dead branches early because the raw search is exponential."</div>
+        </section>
+
+        <section class="subtopic" id="algorithms-8">
+          <span class="badge">Hard but common</span>
+          <h5>Dynamic programming</h5>
+          <div class="concept">
+            <h6>Concept</h6>
+            <p>DP solves problems with <em>overlapping subproblems</em> and <em>optimal substructure</em> by solving each subproblem once and reusing the answer — either top-down (recursion + <span class="mini">memo</span>) or bottom-up (fill a table).</p>
+            <p class="why"><strong>Why it exists:</strong> It turns an exponential brute-force recursion into polynomial time by never recomputing the same state. The art is defining the <em>state</em> and the <em>transition</em>.</p>
+          </div>
+          <div class="flow">
+            <h6>How to derive a DP</h6>
+            <ol class="flowList">
+              <li><strong>Define the state:</strong> what minimal info identifies a subproblem? e.g. <span class="mini">dp[i]</span> = best answer using the first i items.</li>
+              <li><strong>Write the recurrence:</strong> express <span class="mini">dp[i]</span> from smaller states (the "choice" at step i).</li>
+              <li><strong>Base cases:</strong> the smallest states you know directly.</li>
+              <li><strong>Order / memoize:</strong> bottom-up fill in dependency order, or top-down recurse with a cache.</li>
+              <li><strong>Optimize space:</strong> if <span class="mini">dp[i]</span> only needs <span class="mini">dp[i-1]</span>, keep two rows / a few variables.</li>
+            </ol>
+          </div>
+          <div class="grid2">
+            <div class="box">
+              <h6>Classic shapes to recognize</h6>
+              <ul class="deepList">
+                <li><strong>1-D sequence:</strong> Fibonacci, climbing stairs, house robber, longest increasing subsequence.</li>
+                <li><strong>2-D grid / two strings:</strong> unique paths, edit distance, longest common subsequence.</li>
+                <li><strong>Knapsack / subset-sum:</strong> coin change, partition equal subset — "pick or skip with a capacity".</li>
+              </ul>
+            </div>
+            <div class="box">
+              <h6>Pitfalls</h6>
+              <ul class="deepList pitfallList">
+                <li><strong>Wrong state definition</strong><p>If the recurrence needs info your state doesn't carry, the table is wrong. Get the state right before coding.</p></li>
+                <li><strong>Iteration order</strong><p>Bottom-up must compute dependencies first; 0/1 vs unbounded knapsack differ only by inner-loop direction.</p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="box">
+            <h6>Example — coin change (fewest coins for amount)</h6>
+            <pre><code>int coinChange(int[] coins, int amount) {
+  int[] dp = new int[amount + 1];
+  Arrays.fill(dp, amount + 1);          // "infinity" sentinel
+  dp[0] = 0;
+  for (int a = 1; a &lt;= amount; a++)
+    for (int c : coins)
+      if (c &lt;= a) dp[a] = Math.min(dp[a], dp[a - c] + 1);
+  return dp[amount] &gt; amount ? -1 : dp[amount];
+}</code></pre>
+          </div>
+          <div class="tip"><strong>Interview answer tip:</strong> "I look for overlapping subproblems. I define the state as 'fewest coins to make amount a', the transition is 'take one coin c then dp[a−c]', and I fill bottom-up. Often I can shrink the table to O(amount) space."</div>
+        </section>
+
+        <section class="subtopic" id="algorithms-9">
+          <span class="badge">Pattern</span>
+          <h5>Heap / priority queue & top-K</h5>
+          <div class="concept">
+            <h6>Concept</h6>
+            <p>A heap (Java's <span class="mini">PriorityQueue</span>) always gives you the smallest (or largest) element in O(1) peek and O(log n) push/pop, without keeping everything fully sorted.</p>
+            <p class="why"><strong>Why it exists:</strong> When you only need the <em>K best</em> or a running min/max — not a full sort — a heap does it in O(n log k) and works on streams where you can't see all data at once.</p>
+          </div>
+          <div class="flow">
+            <h6>How it works</h6>
+            <ol class="flowList">
+              <li><strong>Top-K largest:</strong> keep a <em>min-heap</em> of size K; push each element, pop when size &gt; K → the heap holds the K largest. (Top-K smallest → max-heap.)</li>
+              <li><strong>Merge K sorted lists/streams:</strong> heap of the current head of each list, repeatedly pop the min and push its successor.</li>
+              <li><strong>Running median / scheduling:</strong> two heaps, or pull the soonest/cheapest task (Dijkstra, task scheduler).</li>
+              <li><strong>Quickselect alternative:</strong> for an in-memory "Kth largest" you can also partition in O(n) average — mention both.</li>
+            </ol>
+          </div>
+          <div class="grid2">
+            <div class="box">
+              <h6>What to understand deeply</h6>
+              <ul class="deepList">
+                <li><strong>Custom ordering</strong><p><span class="mini">new PriorityQueue&lt;&gt;(Comparator.reverseOrder())</span> for a max-heap; <span class="mini">comparingInt</span> for objects.</p></li>
+                <li><strong>Size-K heap beats full sort</strong><p>O(n log k) vs O(n log n) — a big win when k ≪ n, and it streams.</p></li>
+              </ul>
+            </div>
+            <div class="box">
+              <h6>Pitfalls</h6>
+              <ul class="deepList pitfallList">
+                <li><strong>Heap is not sorted iteration</strong><p>Iterating a PriorityQueue does <em>not</em> yield sorted order — only poll() does.</p></li>
+                <li><strong>Wrong heap direction</strong><p>For "K largest" you want a <em>min</em>-heap so the smallest of your K is the one you evict.</p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="box">
+            <h6>Example — Kth largest element (O(n log k))</h6>
+            <pre><code>int kthLargest(int[] nums, int k) {
+  PriorityQueue&lt;Integer&gt; minHeap = new PriorityQueue&lt;&gt;();   // smallest on top
+  for (int x : nums) {
+    minHeap.offer(x);
+    if (minHeap.size() &gt; k) minHeap.poll();                 // drop the smallest
+  }
+  return minHeap.peek();                                     // Kth largest
+}</code></pre>
+          </div>
+          <div class="tip"><strong>Interview answer tip:</strong> "I don't need a full sort, just the K largest, so I keep a size-K min-heap — O(n log k) and it works on a stream. If everything's in memory, quickselect gives O(n) average."</div>
+        </section>
+
+        <section class="subtopic" id="algorithms-10">
+          <span class="badge">Foundations</span>
+          <h5>Sorting & comparators</h5>
+          <div class="concept">
+            <h6>Concept</h6>
+            <p>Sorting (O(n log n)) is often the cheap pre-step that unlocks two pointers, binary search, greedy or interval-merging. Knowing how to express custom order in Java is the practical skill the test checks.</p>
+            <p class="why"><strong>Why it exists:</strong> Many problems become trivial once data is ordered — merge intervals, meeting rooms, "k closest", greedy scheduling all start with a sort.</p>
+          </div>
+          <div class="flow">
+            <h6>How it works</h6>
+            <ol class="flowList">
+              <li><strong>Know the library:</strong> <span class="mini">Arrays.sort</span> uses dual-pivot quicksort for primitives (not stable) and Timsort for objects (stable, O(n log n) worst case).</li>
+              <li><strong>Comparator composition:</strong> <span class="mini">comparingInt(...).thenComparing(...).reversed()</span> for multi-key order.</li>
+              <li><strong>Sort then sweep:</strong> sort by start, then merge overlapping intervals in one pass.</li>
+              <li><strong>Know the trade-offs:</strong> merge sort = stable, O(n) extra space; quicksort = in-place, O(n²) worst case; counting/radix = O(n) for small integer ranges.</li>
+            </ol>
+          </div>
+          <div class="grid2">
+            <div class="box">
+              <h6>What to understand deeply</h6>
+              <ul class="deepList">
+                <li><strong>Stable vs unstable</strong><p>Stability preserves the order of equal keys — matters when sorting by a secondary key in two passes.</p></li>
+                <li><strong>Comparator contract</strong><p>Must be consistent (anti-symmetric, transitive); a broken one throws "Comparison method violates its general contract". Never subtract ints that can overflow — use <span class="mini">Integer.compare</span>.</p></li>
+              </ul>
+            </div>
+            <div class="box">
+              <h6>Pitfalls</h6>
+              <ul class="deepList pitfallList">
+                <li><strong>Overflow in a comparator</strong><p><span class="mini">(a, b) -&gt; a - b</span> overflows for large/negative values → use <span class="mini">Integer.compare(a, b)</span>.</p></li>
+                <li><strong>Sorting when you don't need to</strong><p>If you only need the min/max or top-K, a single pass or heap beats an O(n log n) sort.</p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="box">
+            <h6>Example — merge overlapping intervals</h6>
+            <pre><code>int[][] merge(int[][] iv) {
+  Arrays.sort(iv, Comparator.comparingInt(a -&gt; a[0]));   // by start
+  List&lt;int[]&gt; out = new ArrayList&lt;&gt;();
+  for (int[] cur : iv) {
+    if (!out.isEmpty() &amp;&amp; cur[0] &lt;= out.get(out.size()-1)[1]) {
+      out.get(out.size()-1)[1] = Math.max(out.get(out.size()-1)[1], cur[1]);
+    } else {
+      out.add(cur);
+    }
+  }
+  return out.toArray(new int[0][]);
+}</code></pre>
+          </div>
+          <div class="tip"><strong>Interview answer tip:</strong> "Sorting is my O(n log n) setup move — it unlocks a linear sweep for interval merging or greedy. I write custom order with Comparator.comparingInt(...).thenComparing(...) and use Integer.compare to avoid overflow."</div>
+        </section>
+
+        <section class="seniorExtras">
+          <h6>Senior deep dive — Coding Test / Algorithms</h6>
+          <div class="warStory">
+            <h6>War story — the "optimal" solution that timed out</h6>
+            <p><strong>Symptom:</strong> A candidate's solution passed the small tests but TLE'd (time-limit exceeded) on the large hidden case with n = 2×10⁵.</p>
+            <p><strong>Cause:</strong> An inner <span class="mini">list.contains()</span> turned an otherwise O(n) loop into O(n²) — contains on an ArrayList is a linear scan, so 4×10¹⁰ operations.</p>
+            <p><strong>Fix:</strong> Swap the ArrayList membership check for a <span class="mini">HashSet</span>. Same algorithm shape, O(1) lookups, back to O(n) and well under the limit.</p>
+            <p><strong>Lesson:</strong> Always sanity-check the complexity of <em>library calls inside loops</em> — <span class="mini">contains</span>, string concatenation in a loop, or <span class="mini">list.remove(0)</span> quietly add a factor of n. Estimate operations against n before submitting.</p>
+            <pre><code>// Before — O(n^2): contains scans the whole list each time
+if (seen.contains(x)) ...;     // List&lt;Integer&gt; seen
+// After — O(n): O(1) membership
+if (seenSet.contains(x)) ...;  // HashSet&lt;Integer&gt; seenSet</code></pre>
+          </div>
+          <div class="interviewQa">
+            <h6>Interview scenario — "Walk me through how you'd attack a new problem"</h6>
+            <p class="turn interviewer">You're given an array and a target; here's the problem. Where do you start?</p>
+            <p class="turn candidate">First I clarify: input size, are values sorted, can they be negative, are there duplicates, what should I return if there's no answer? Then I state a brute force out loud so we have a baseline and I'm not stuck on a blank screen — usually the O(n²) "check every pair".</p>
+            <p class="turn interviewer">Good — now make it faster.</p>
+            <p class="turn candidate">I find the bottleneck: the inner lookup. I can trade memory for speed with a HashMap and ask whether the complement was already seen, which gets me to O(n) time and O(n) space. If the array were sorted I'd instead use two pointers and stay O(1) extra space — I'd name that trade-off and let you steer.</p>
+            <p class="turn interviewer">How do you know your code is correct before running it?</p>
+            <p class="turn candidate">I dry-run a tiny example by hand, then deliberately test the edges: empty array, single element, all equal, the no-answer case, and the maximum size for complexity. I also watch for integer overflow — long for sums, and lo + (hi - lo) / 2 in binary search.</p>
+            <p class="turn interviewer">What if you don't see the optimal solution in time?</p>
+            <p class="turn candidate">I ship the working brute force, say clearly what its complexity is and where the bottleneck is, and describe the direction I'd optimize — a hash, a sort, a heap. A correct slower solution plus an honest optimization plan beats a broken "clever" one, and it keeps the conversation going.</p>
+          </div>
+        </section>
 
       </div>
     </article>
