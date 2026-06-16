@@ -355,6 +355,10 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libe
         <option value="#ddd">11. Domain-Driven Design</option>
         <option value="#system-design">12. System Design at Scale</option>
         <option value="#modern-java">13. Modern Java</option>
+        <option value="#algorithms">14. Algorithms (DSA)</option>
+        <option value="#security">15. Security &amp; Identity</option>
+        <option value="#testing">16. Testing Strategy</option>
+        <option value="#resilience">17. Resilience</option>
       </optgroup>
     </select>
     <button class="secondary" onclick="collapseAll()">Collapse</button>
@@ -367,7 +371,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libe
         <div class="logo">J</div>
         <div>
           <h1>Java Technical Reference</h1>
-          <p>Not learning the junior way</p>
+          <p>A practical, in-depth backend engineering reference</p>
         </div>
       </div>
       <nav>
@@ -377,7 +381,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libe
         <a href="#roadmap">30-Day Roadmap</a>
 
         <div class="navTitle">Topics</div>
-        <a href="#java-core">1. Java Core for Backend</a><a href="#spring">2. Spring Boot / Spring Framework</a><a href="#rest-api">3. REST API Design</a><a href="#microservices">4. Microservices / Distributed Systems</a><a href="#kafka">5. Kafka / Event-driven Architecture</a><a href="#database">6. SQL / Transaction / Database Performance</a><a href="#jpa">7. JPA / Hibernate</a><a href="#docker-k8s">8. Docker / Kubernetes / Cloud-native</a><a href="#cloud">9. Cloud Basics for Java</a><a href="#architecture">10. System Design / Clean Architecture / CI-CD</a><a href="#ddd">11. Domain-Driven Design (Strategic + Tactical)</a><a href="#system-design">12. System Design at Scale</a><a href="#modern-java">13. Modern Java (Loom, Records, Sealed)</a><a href="#algorithms">14. Coding Test / Algorithms (DSA)</a>
+        <a href="#java-core">1. Java Core for Backend</a><a href="#spring">2. Spring Boot / Spring Framework</a><a href="#rest-api">3. REST API Design</a><a href="#microservices">4. Microservices / Distributed Systems</a><a href="#kafka">5. Kafka / Event-driven Architecture</a><a href="#database">6. SQL / Transaction / Database Performance</a><a href="#jpa">7. JPA / Hibernate</a><a href="#docker-k8s">8. Docker / Kubernetes / Cloud-native</a><a href="#cloud">9. Cloud Basics for Java</a><a href="#architecture">10. System Design / Clean Architecture / CI-CD</a><a href="#ddd">11. Domain-Driven Design (Strategic + Tactical)</a><a href="#system-design">12. System Design at Scale</a><a href="#modern-java">13. Modern Java (Loom, Records, Sealed)</a><a href="#algorithms">14. Coding Test / Algorithms (DSA)</a><a href="#security">15. Security &amp; Identity</a><a href="#testing">16. Testing Strategy</a><a href="#resilience">17. Resilience &amp; Fault Tolerance</a>
       </nav>
     </aside>
 
@@ -400,8 +404,8 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libe
       </section>
 
       <section class="stats">
-        <div class="card"><strong>14</strong><span>Topics</span></div>
-        <div class="card"><strong>54</strong><span>Deep sub-topics</span></div>
+        <div class="card"><strong>17</strong><span>Topics</span></div>
+        <div class="card"><strong>63</strong><span>Deep sub-topics</span></div>
         <div class="card"><strong>100+</strong><span>Tips, examples, pitfalls</span></div>
         <div class="card"><strong>Offline</strong><span>Open in browser anytime</span></div>
       </section>
@@ -416,7 +420,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libe
           <input id="searchBox" placeholder="Search: OOP, Kafka, Outbox, Transaction, N+1, Kubernetes...">
           <select id="topicSelect">
             <option value="all">All topics</option>
-            <option value="1">1. Java Core for Backend</option><option value="2">2. Spring Boot / Spring Framework</option><option value="3">3. REST API Design</option><option value="4">4. Microservices / Distributed Systems</option><option value="5">5. Kafka / Event-driven Architecture</option><option value="6">6. SQL / Transaction / Database Performance</option><option value="7">7. JPA / Hibernate</option><option value="8">8. Docker / Kubernetes / Cloud-native</option><option value="9">9. Cloud Basics for Java</option><option value="10">10. System Design / Clean Architecture / CI-CD</option><option value="11">11. Domain-Driven Design (Strategic + Tactical)</option><option value="12">12. System Design at Scale</option><option value="13">13. Modern Java (Loom, Records, Sealed)</option><option value="14">14. Coding Test / Algorithms (DSA)</option>
+            <option value="1">1. Java Core for Backend</option><option value="2">2. Spring Boot / Spring Framework</option><option value="3">3. REST API Design</option><option value="4">4. Microservices / Distributed Systems</option><option value="5">5. Kafka / Event-driven Architecture</option><option value="6">6. SQL / Transaction / Database Performance</option><option value="7">7. JPA / Hibernate</option><option value="8">8. Docker / Kubernetes / Cloud-native</option><option value="9">9. Cloud Basics for Java</option><option value="10">10. System Design / Clean Architecture / CI-CD</option><option value="11">11. Domain-Driven Design (Strategic + Tactical)</option><option value="12">12. System Design at Scale</option><option value="13">13. Modern Java (Loom, Records, Sealed)</option><option value="14">14. Coding Test / Algorithms (DSA)</option><option value="15">15. Security &amp; Identity</option><option value="16">16. Testing Strategy</option><option value="17">17. Resilience &amp; Fault Tolerance</option>
           </select>
           <button class="secondary" onclick="clearFilters()">Clear</button>
         </div>
@@ -436,6 +440,9 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libe
           <button class="topicTab" data-target="system-design" role="tab"><span class="num">12</span>System Design</button>
           <button class="topicTab" data-target="modern-java" role="tab"><span class="num">13</span>Modern Java</button>
           <button class="topicTab" data-target="algorithms" role="tab"><span class="num">14</span>Algorithms</button>
+          <button class="topicTab" data-target="security" role="tab"><span class="num">15</span>Security</button>
+          <button class="topicTab" data-target="testing" role="tab"><span class="num">16</span>Testing</button>
+          <button class="topicTab" data-target="resilience" role="tab"><span class="num">17</span>Resilience</button>
         </div>
 
     <article class="topic active" id="java-core" data-rank="1" data-search="java core for Backend do not learn java core as definitions. learn by being able to explain behavior, trade-off, production bug and performance. real-world oop in backend advanced does not only talk about encapsulation/inheritance/polymorphism/abstraction. advanced must know how to use oop to reduce coupling, keep the domain model meaningful, avoid service god class and avoid abusing inheritance. encapsulation: not just private field + getter/setter. the goal is to keep the invariant of the object. example: order should not allow the outside to setstatus arbitrarily, but should have methods confirm(), cancel(), pay(). inheritance: use very carefully. in business code, composition is usually safer than inheritance because inheritance creates tight coupling and easily breaks parent/child behavior. polymorphism: use it to replace long if/else with strategy, especially in fee calculation, choosing payment provider, validation rule, export file, notification channel. abstraction: an interface should represent a capability/business port, not mechanically create an interface for every service. hashmap, equals/hashcode, collections internals advanced needs to be able to explain why bugs happen when using a mutable object as a key, why hashmap degrades performance, and when to use concurrenthashmap. hashmap uses hashcode to find the bucket, then uses equals to find the right key. if hashcode is poorly distributed, many keys fall into the same bucket → performance drops. since java 8, a bucket can treeify into a red-black tree when collisions are many, but you should not rely on that to hide a poor hashcode design. a key used in a hashmap should be immutable or at least the fields participating in equals/hashcode must not change after put. concurrency, thread pool, completablefuture advanced must know that concurrency is not only for running faster, but also to control resources: thread pool, timeout, backpressure, connection pool, db pool and failure handling. completablefuture is suitable for parallel i/o such as calling many independent apis. do not use commonpool carelessly in backend production. you should define a dedicated executor to avoid affecting other tasks. more parallelism is not always faster. if the db pool has only 10 connections but you create 100 parallel db tasks then you only choke the system. always have timeout, fallback, exception handling and logging correlation id. java memory model, volatile, synchronized advanced needs to understand visibility and atomicity. volatile does not replace a lock for a compound operation such as count++. volatile guarantees visibility: other threads see the latest value. volatile does not guarantee atomicity for an operation made of multiple steps. synchronized guarantees mutual exclusion and visibility. atomicinteger is suitable for a simple counter; a lock is suitable when you need trylock, fairness or condition.">
@@ -6976,7 +6983,7 @@ return v;</code></pre>
       </div>
     </article>
 
-    <article class="topic" id="algorithms" data-rank="14" data-is-last="true" data-search="coding test algorithms dsa data structures big o complexity time space tradeoff two pointers sliding window prefix sum hashmap hashset hashtable two sum frequency dedup binary search lower bound upper bound binary search on answer stack queue deque monotonic stack valid parentheses next greater element bfs dfs breadth first depth first tree graph traversal level order inorder preorder postorder topological sort recursion backtracking permutations combinations subsets n queens dynamic programming memoization tabulation knapsack fibonacci longest common subsequence coin change heap priority queue top k kth largest merge k lists quickselect sorting comparator merge sort quicksort stable sort union find disjoint set whiteboard leetcode interview coding round optimize brute force">
+    <article class="topic" id="algorithms" data-rank="14" data-search="coding test algorithms dsa data structures big o complexity time space tradeoff two pointers sliding window prefix sum hashmap hashset hashtable two sum frequency dedup binary search lower bound upper bound binary search on answer stack queue deque monotonic stack valid parentheses next greater element bfs dfs breadth first depth first tree graph traversal level order inorder preorder postorder topological sort recursion backtracking permutations combinations subsets n queens dynamic programming memoization tabulation knapsack fibonacci longest common subsequence coin change heap priority queue top k kth largest merge k lists quickselect sorting comparator merge sort quicksort stable sort union find disjoint set whiteboard leetcode interview coding round optimize brute force">
       <div class="topicHeader">
         <div>
           <h4>14. Coding Test / Algorithms (DSA)</h4>
@@ -7511,6 +7518,1512 @@ if (seenSet.contains(x)) ...;  // HashSet&lt;Integer&gt; seenSet</code></pre>
       </div>
     </article>
 
+    <article class="topic" id="security" data-rank="15" data-search="security and identity for backend engineers must treat authentication authorization and secret handling as first-class design concerns not an afterthought. authentication authn vs authorization authz. authn is who you are proving identity, authz is what you can do checking permissions. a request can be authenticated but not authorized. oauth2 roles resource owner client authorization server resource server. authorization code flow with pkce proof key for code exchange protects public clients spa mobile from code interception. client generates code verifier random string, sends code challenge sha256 hash, exchanges authorization code plus verifier for access token. oidc openid connect adds an id_token on top of oauth2, id_token is a jwt that proves the user identity to the client, oauth2 is for authorization access not authentication identity. jwt json web token is self-contained stateless header payload signature, must verify the signature with the issuer public key jwks, check exp expiry iss issuer aud audience nbf not before, cannot be revoked easily before expiry so keep lifetime short and use refresh tokens. opaque token is a random string with no meaning, the resource server validates it by calling the authorization server introspection endpoint rfc 7662, revocable instantly but adds a network hop per request, can cache the introspection result with short ttl. where to validate tokens at the api gateway and again at the service zero trust never trust internal traffic blindly. service to service security mtls mutual tls both sides present certificates proving service identity, spiffe spire for workload identity, istio linkerd service mesh can do mtls transparently. secrets management never hardcode secrets in code or config, use hashicorp vault aws secrets manager gcp secret manager azure key vault or kubernetes secrets, rotate credentials regularly, short lived dynamic secrets are better than long lived static ones. token propagation pass the user context downstream, downscoping reduce the audience and scopes when calling a downstream service so a leaked token has limited blast radius, token exchange rfc 8693. the danger of a service trusting any internal caller, network position is not identity, zero trust authenticate and authorize every hop. owasp top 10 in practice broken access control idor insecure direct object reference enforce authorization on the object owner not just the route, injection sql injection use parameterized queries jpa named parameters preparedstatement never string concatenate sql, ssrf server side request forgery validate and allowlist outbound urls block link local metadata endpoints 169.254.169.254 internal ranges, insecure deserialization never deserialize untrusted data with java serialization prefer json with strict types, security misconfiguration default credentials verbose errors open actuator endpoints debug mode in production, sensitive data exposure encrypt at rest and in transit do not log tokens passwords pii mask secrets. spring security resource server validate jwt with issuer audience preauthorize method security. designing auth for microservices system gateway terminates auth services verify jwt locally with cached jwks bff backend for frontend. cors csrf same site cookies bearer token. principle of least privilege scopes claims roles rbac abac. refresh token rotation reuse detection. leaked credential git secret scanning rotate revoke. password hashing bcrypt argon2 never plaintext. rate limiting brute force protection.">
+      <div class="topicHeader">
+        <div>
+          <h4>15. Security &amp; Identity</h4>
+          <p>Backend engineers must treat authentication, authorization and secret handling as first-class design concerns, not an afterthought bolted on at the end.</p>
+        </div>
+        <div class="rank">#15</div>
+      </div>
+      <div class="topicBody">
+
+        <section class="subtopic" id="security-1">
+          <span class="badge">Key focus</span>
+          <h5>AuthN vs AuthZ, OAuth2 &amp; OIDC, JWT vs opaque tokens</h5>
+          <div class="concept">
+            <h6>Concept</h6>
+            <p><span class="mini">Authentication (AuthN)</span> proves <em>who you are</em>; <span class="mini">Authorization (AuthZ)</span> decides <em>what you are allowed to do</em>. <span class="mini">OAuth2</span> is an authorization-delegation framework; <span class="mini">OIDC</span> layers identity on top of it; the token can be a self-contained <span class="mini">JWT</span> or an <span class="mini">opaque</span> reference.</p>
+            <p class="why"><strong>Why it exists:</strong> So that a service can let a user log in once and then delegate scoped access to other services/clients without ever sharing the password, and so that "logged in" and "allowed to perform this action" stay two separate decisions.</p>
+            <p class="analogy">Analogy: AuthN = the bouncer checking your ID at the door; AuthZ = the wristband that says which rooms you may enter. The same person is one identity but many permissions.</p>
+          </div>
+          <div class="flow">
+            <h6>How it works</h6>
+            <ol class="flowList">
+              <li><strong>Roles:</strong> resource owner (the user), client (the app), authorization server (issues tokens), resource server (the API holding the data).</li>
+              <li><strong>Authorization Code + PKCE:</strong> client redirects the user to the auth server with a <code>code_challenge</code> (SHA-256 of a secret verifier), gets back a short-lived code, then exchanges code + <code>code_verifier</code> for an access token — so a stolen code is useless without the verifier.</li>
+              <li><strong>OIDC adds the <code>id_token</code>:</strong> a JWT that proves <em>identity</em> to the client; the <code>access_token</code> still authorizes API calls. OAuth2 alone is for access, not identity.</li>
+              <li><strong>Validation:</strong> JWT → verify signature against the issuer JWKS, check <code>exp</code>/<code>iss</code>/<code>aud</code>. Opaque → call the auth server's introspection endpoint to ask "is this still valid?".</li>
+            </ol>
+          </div>
+          <div class="cases">
+            <h6>Common real-world scenarios</h6>
+            <ol class="caseList">
+              <li><strong>SPA / mobile login:</strong> public clients cannot keep a client secret → use Authorization Code <span class="mini">+ PKCE</span>, never the deprecated Implicit flow.</li>
+              <li><strong>"Log out now" requirement:</strong> a long-lived JWT cannot be revoked before <span class="mini">exp</span> → either keep JWT lifetime short (5-15 min) + refresh tokens, or use opaque tokens with introspection.</li>
+              <li><strong>Reading the user's email from a JWT vs an id_token:</strong> the access token is for the API; identity claims belong in the <span class="mini">id_token</span>. Don't treat the access token as proof of identity.</li>
+              <li><strong>Multi-audience token reused on the wrong service:</strong> a token issued for <span class="mini">payments-api</span> accepted by <span class="mini">reports-api</span> because nobody checked <code>aud</code> → privilege bleed.</li>
+              <li><strong>Clock skew between services:</strong> a freshly issued token is rejected as "not yet valid" (<code>nbf</code>) → allow a small leeway (30-60s) in validation.</li>
+            </ol>
+          </div>
+          <p>A strong engineer can explain the OAuth2 roles precisely, why PKCE exists, the difference between an access token and an id_token, and the revocability trade-off between JWT and opaque tokens — not just "we use JWT".</p>
+          <div class="grid2">
+            <div class="box">
+              <h6>What to understand deeply</h6>
+              <ul class="deepList">
+                <li>
+                  <strong>AuthN and AuthZ are two separate decisions</strong>
+                  <p>A request can be perfectly authenticated and still unauthorized. Treating "has a valid token" as "may do this" is the root of most access-control bugs. Validate the token first (identity), then evaluate permissions against the <em>target resource</em>.</p>
+                  <pre><code>// Authenticated != authorized
+                  // Step 1 (AuthN): token signature + exp + iss + aud are valid
+                  // Step 2 (AuthZ): does THIS user own THIS order?
+if (!order.getOwnerId().equals(principal.userId())) {
+    throw new AccessDeniedException("Not your order");
+}</code></pre>
+                </li>
+                <li>
+                  <strong>Authorization Code + PKCE, step by step</strong>
+                  <p>PKCE (Proof Key for Code Exchange) binds the token request to the same client that started the flow. The client generates a random <span class="mini">code_verifier</span>, sends <code>code_challenge = SHA256(verifier)</code> on the redirect, then proves possession of the verifier at the token endpoint.</p>
+                  <pre><code>verifier  = random(43..128 chars)
+challenge = base64url(sha256(verifier))
+// 1. /authorize?...&amp;code_challenge=challenge&amp;code_challenge_method=S256
+// 2. user logs in, server returns ?code=abc
+// 3. POST /token  code=abc &amp; code_verifier=verifier
+//    server recomputes sha256(verifier) == challenge ? issue tokens</code></pre>
+                </li>
+                <li>
+                  <strong>JWT: self-contained, stateless — and hard to revoke</strong>
+                  <p>A JWT is <code>header.payload.signature</code>. The resource server verifies the signature with the issuer's public key (fetched from the JWKS endpoint, cached by <code>kid</code>) and checks <span class="mini">exp/iss/aud/nbf</span> — no network call per request. The cost: you cannot easily invalidate it before expiry, so keep lifetimes short and rely on refresh-token rotation.</p>
+                </li>
+                <li>
+                  <strong>Opaque token: revocable, but a hop per request</strong>
+                  <p>An opaque token is a random reference with no embedded claims. The resource server calls the auth server's introspection endpoint (RFC 7662) to validate and resolve scopes. Revocation is instant, but every request adds latency — mitigate with a short-TTL introspection cache. Choose opaque when instant revocation matters more than statelessness.</p>
+                </li>
+              </ul>
+            </div>
+            <div class="box">
+              <h6>Production issues / pitfalls</h6>
+              <ul class="deepList pitfallList">
+                <li>
+                  <strong>Accepting <code>alg: none</code> or not pinning the algorithm</strong>
+                  <p>A classic JWT attack: the attacker sets the header <code>alg</code> to <span class="mini">none</span>, or swaps RS256→HS256 and signs with the public key as the HMAC secret. Always pin the expected algorithm and verify against the JWKS — never let the token dictate how it is verified.</p>
+                </li>
+                <li>
+                  <strong>Not validating <code>aud</code> / <code>iss</code></strong>
+                  <p>A token issued for service A is replayed against service B. If B only checks the signature (same auth server) but not the audience, it accepts a token never meant for it. Always assert <code>iss</code> equals your trusted issuer and <code>aud</code> contains your service id.</p>
+                  <pre><code>JwtDecoder decoder = ...;
+decoder.setJwtValidator(JwtValidators.createDefaultWithIssuer(issuer));
+// plus a custom audience validator that requires aud == "payments-api"</code></pre>
+                </li>
+                <li>
+                  <strong>Treating "valid token" as "authorized"</strong>
+                  <p>The token says who, not what they may touch. Skipping per-object checks turns every endpoint into an IDOR. AuthZ must run against the concrete resource, not just the route — see Broken Access Control below.</p>
+                </li>
+                <li>
+                  <strong>Long-lived JWTs with no revocation strategy</strong>
+                  <p>A 24h access token means a compromised token is usable for 24h even after the user is disabled. Either shorten lifetimes drastically + rotate refresh tokens with reuse detection, or move to opaque tokens. "We'll just blacklist it" reintroduces the state you were trying to avoid.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="box">
+            <h6>Example</h6>
+            <pre><code>// Decoded JWT payload the resource server must check
+{
+  "iss": "https://auth.example.com/",   // must equal trusted issuer
+  "aud": "payments-api",                 // must contain THIS service
+  "sub": "user-123",                     // the principal
+  "scope": "payments:read payments:write",
+  "exp": 1718539200,                     // reject if now &gt; exp (+skew)
+  "iat": 1718538300,
+  "nbf": 1718538300                      // reject if now &lt; nbf (-skew)
+}
+
+// Validation order: signature (JWKS) -> exp/nbf -> iss -> aud -> scopes
+// Only AFTER all pass do you trust 'sub' and 'scope'.</code></pre>
+          </div>
+          <div class="tip"><strong>Interview answer tip:</strong> Say: 'AuthN proves identity, AuthZ checks permission — separate decisions. For public clients I use Authorization Code + PKCE. JWTs are stateless but hard to revoke, so I keep them short-lived with rotating refresh tokens; opaque tokens are revocable but cost an introspection hop. And I always validate signature, exp, iss and aud — never just the signature.'</div>
+        </section>
+
+        <section class="subtopic" id="security-2">
+          <span class="badge">Key focus</span>
+          <h5>Service-to-service security: mTLS, secrets &amp; token propagation</h5>
+          <div class="concept">
+            <h6>Concept</h6>
+            <p>Inside a microservices system, services must prove <em>which service they are</em> (<span class="mini">mTLS</span>), fetch credentials safely (<span class="mini">secrets management</span>), and pass the user's context downstream without over-sharing (<span class="mini">token propagation &amp; downscoping</span>). Network position is not identity — this is <span class="mini">zero trust</span>.</p>
+            <p class="why"><strong>Why it exists:</strong> "It came from inside the cluster, so it's safe" is how one compromised pod turns into a full breach. Mutual authentication, scoped credentials and rotating secrets shrink the blast radius of any single compromise.</p>
+            <p class="analogy">Analogy: A company badge (mTLS) proves you're an employee at every door, not just the lobby; a key card is scoped to your floor (downscoped token); the master key lives in a vault, not under the mat (secrets manager).</p>
+          </div>
+          <div class="flow">
+            <h6>How it works</h6>
+            <ol class="flowList">
+              <li><strong>mTLS:</strong> both client and server present X.509 certificates; each verifies the other against a trusted CA → mutual proof of identity, encrypted channel.</li>
+              <li><strong>Secrets:</strong> the app fetches DB passwords / API keys from a secret manager (Vault, cloud SM, k8s Secret) at startup or on demand — never from source or baked images.</li>
+              <li><strong>Token propagation:</strong> the gateway authenticates the user, then services forward the user context; downstream calls receive a <em>downscoped</em> token (fewer scopes, narrower audience) via token exchange.</li>
+              <li><strong>Zero trust:</strong> every hop authenticates and authorizes the caller and the user — no service is trusted merely for being internal.</li>
+            </ol>
+          </div>
+          <div class="cases">
+            <h6>Common real-world scenarios</h6>
+            <ol class="caseList">
+              <li><strong>An internal endpoint with no auth:</strong> "only called by other services" — until an SSRF or a compromised pod calls it directly. Require mTLS or a service token on every internal API.</li>
+              <li><strong>DB password committed to <span class="mini">application.yml</span>:</strong> ends up in git history and the container image. Move to a secret manager and rotate the leaked credential immediately.</li>
+              <li><strong>Forwarding the full user token everywhere:</strong> the notification service now holds a token with <span class="mini">payments:write</span> it never needs → downscope before propagating.</li>
+              <li><strong>Service mesh enables mTLS but apps still listen on plaintext:</strong> the sidecar is bypassed on <span class="mini">localhost</span> → bind only to the mesh interface / use <span class="mini">STRICT</span> mTLS mode.</li>
+              <li><strong>Static API keys that never rotate:</strong> a key leaked two years ago still works → prefer short-lived dynamic credentials (Vault dynamic secrets, IAM roles).</li>
+            </ol>
+          </div>
+          <p>A strong engineer designs the trust boundaries explicitly: which calls require mTLS, where secrets come from and how they rotate, and what scopes a token carries by the time it reaches the third service downstream.</p>
+          <div class="grid2">
+            <div class="box">
+              <h6>What to understand deeply</h6>
+              <ul class="deepList">
+                <li>
+                  <strong>mTLS gives services a verifiable identity</strong>
+                  <p>One-way TLS only authenticates the server. mTLS makes the client present a certificate too, so service B knows it's really service A (identity bound to the cert's SAN/SPIFFE ID), not just "something on the network". A mesh (Istio/Linkerd) or SPIFFE/SPIRE can issue and rotate these certs transparently.</p>
+                </li>
+                <li>
+                  <strong>Secrets: never hardcode, always rotate</strong>
+                  <p>Secrets in code/config/images leak through git, logs and registries. Fetch them from Vault / AWS Secrets Manager / GCP Secret Manager / k8s Secrets. Dynamic, short-lived secrets (e.g. Vault generating a per-pod DB credential with a 1h TTL) beat long-lived static ones because there is little to leak and rotation is automatic.</p>
+                  <pre><code>// Anti-pattern
+spring.datasource.password: SuperSecret123   // in git forever
+
+// Better: injected from a secret manager, rotated
+spring.datasource.password: ${DB_PASSWORD}   // sourced from Vault / k8s Secret
+// Best: dynamic short-lived credential issued per pod, auto-rotated</code></pre>
+                </li>
+                <li>
+                  <strong>Token propagation &amp; downscoping</strong>
+                  <p>When service A calls B which calls C, blindly forwarding the original user token gives C more power than it needs. Use token exchange (RFC 8693) to mint a downstream token with a narrower <code>aud</code> and fewer scopes, so a leak at C cannot be replayed against A's resources.</p>
+                </li>
+                <li>
+                  <strong>Zero trust: position is not identity</strong>
+                  <p>A flat internal network where every service trusts every other means one foothold = everything. Authenticate the caller (mTLS / service token) <em>and</em> the user (propagated token) on every hop, and authorize each call. "Behind the firewall" is not an authorization decision.</p>
+                </li>
+              </ul>
+            </div>
+            <div class="box">
+              <h6>Production issues / pitfalls</h6>
+              <ul class="deepList pitfallList">
+                <li>
+                  <strong>Implicit trust of internal callers</strong>
+                  <p>An admin endpoint protected only by "it's on the internal subnet". A SSRF in any front-line service, or a single compromised pod, can now call it. Internal != trusted — require authentication on internal traffic too.</p>
+                </li>
+                <li>
+                  <strong>Secrets in env vars dumped to logs / crash reports</strong>
+                  <p>A startup log prints the full config, or an error handler serializes the environment to an APM tool → the DB password lands in a third-party log store. Mask secret keys in logging and never serialize raw config objects.</p>
+                </li>
+                <li>
+                  <strong>Long-lived service credentials with no rotation</strong>
+                  <p>A shared static API key embedded in every service. Rotating it means a coordinated redeploy, so nobody does it, so it lives for years. Use per-service identities and automated rotation so revoking one doesn't break the fleet.</p>
+                </li>
+                <li>
+                  <strong>mTLS terminated at the edge then plaintext inside</strong>
+                  <p>TLS ends at the load balancer and east-west traffic is plaintext, so anyone who can sniff the pod network reads tokens and PII. Enforce mesh mTLS in <span class="mini">STRICT</span> mode and verify sidecars actually intercept the traffic.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="box">
+            <h6>Example</h6>
+            <pre><code>// Spring WebClient that forwards a DOWNSCOPED token, not the raw user token
+WebClient toNotificationSvc(OAuth2AuthorizedClient downscoped) {
+    return WebClient.builder()
+        .baseUrl("https://notifications.internal")
+        // mTLS handled by the service-mesh sidecar (STRICT mode)
+        .defaultHeader(HttpHeaders.AUTHORIZATION,
+            "Bearer " + downscoped.getAccessToken().getTokenValue())
+        .build();
+}
+
+// The downscoped token's claims: narrower aud + only the scope it needs
+// {
+//   "aud": "notifications-api",        // NOT payments-api
+//   "scope": "notifications:send",     // dropped payments:* scopes
+//   "exp": &lt;short&gt;
+// }
+// A leak here cannot touch the payments service.</code></pre>
+          </div>
+          <div class="tip"><strong>Interview answer tip:</strong> Say: 'I assume zero trust between services. Service identity comes from mTLS (mesh or SPIFFE), secrets come from a vault and rotate — never from code — and when I propagate a user token downstream I downscope it so a leak at the third service has a tiny blast radius. Being inside the cluster is never an authorization decision.'</div>
+        </section>
+
+        <section class="subtopic" id="security-3">
+          <span class="badge">Key focus</span>
+          <h5>OWASP Top 10 in practice</h5>
+          <div class="concept">
+            <h6>Concept</h6>
+            <p>The <span class="mini">OWASP Top 10</span> is the industry's list of the most common, most damaging web-app security risks. For a backend engineer it is a practical checklist: broken access control, injection, SSRF, insecure deserialization, security misconfiguration and sensitive data exposure are the ones you meet weekly.</p>
+            <p class="why"><strong>Why it exists:</strong> The same handful of mistakes cause most breaches. Knowing the concrete defensive pattern for each one turns "security" from a vague worry into specific code review checks.</p>
+            <p class="analogy">Analogy: It's a pre-flight checklist. Pilots don't rediscover how to crash each flight; they run the same list that catches the known killers.</p>
+          </div>
+          <div class="flow">
+            <h6>How it works</h6>
+            <ol class="flowList">
+              <li><strong>Broken Access Control (incl. IDOR):</strong> enforce AuthZ on the <em>object</em> (does this user own this record?), not just on the route.</li>
+              <li><strong>Injection:</strong> use parameterized queries / JPA parameters; never string-concatenate user input into SQL/JPQL/shell.</li>
+              <li><strong>SSRF:</strong> validate and allowlist any outbound URL the user can influence; block internal ranges and the cloud metadata endpoint.</li>
+              <li><strong>Deserialization / misconfiguration / data exposure:</strong> never deserialize untrusted data, lock down defaults and actuator, encrypt data and keep secrets/PII out of logs.</li>
+            </ol>
+          </div>
+          <div class="cases">
+            <h6>Common real-world scenarios</h6>
+            <ol class="caseList">
+              <li><strong>IDOR:</strong> <span class="mini">GET /invoices/{id}</span> returns any invoice because the handler loads by id without checking the owner → user 1 reads user 2's invoice by changing the number.</li>
+              <li><strong>SQL injection via search:</strong> <span class="mini">"... WHERE name LIKE '%" + q + "%'"</span> → <span class="mini">q = "'; DROP TABLE..."</span>. Use bound parameters.</li>
+              <li><strong>SSRF via "fetch image from URL":</strong> attacker passes <span class="mini">http://169.254.169.254/...</span> and the server returns cloud credentials.</li>
+              <li><strong>Open actuator / debug endpoints in prod:</strong> <span class="mini">/actuator/env</span> exposes secrets, <span class="mini">/heapdump</span> leaks tokens.</li>
+              <li><strong>Tokens / passwords / PII in logs:</strong> request logging dumps the Authorization header → credentials sit in the log store readable by half the company.</li>
+            </ol>
+          </div>
+          <p>A strong engineer doesn't recite the list — they know the one concrete defense for each: authorize the object not the route, bind parameters, allowlist outbound URLs, refuse untrusted deserialization, harden defaults, and never log secrets.</p>
+          <div class="grid2">
+            <div class="box">
+              <h6>What to understand deeply</h6>
+              <ul class="deepList">
+                <li>
+                  <strong>Broken Access Control / IDOR — authorize the object</strong>
+                  <p>The #1 risk. Loading <span class="mini">findById(id)</span> and returning it is an IDOR unless you also assert the caller may see that object. Enforce ownership/role on the concrete resource, ideally in the query itself so you cannot forget.</p>
+                  <pre><code>// Vulnerable: route is authenticated, object is not authorized
+Invoice inv = repo.findById(id).orElseThrow();
+return inv; // any logged-in user reads any invoice
+
+// Safe: scope the query to the owner
+Invoice inv = repo.findByIdAndOwnerId(id, principal.userId())
+                  .orElseThrow(() -&gt; new AccessDeniedException("not found"));</code></pre>
+                </li>
+                <li>
+                  <strong>Injection — parameterize, never concatenate</strong>
+                  <p>Any user input concatenated into a query is injectable. Use bound parameters (JPA named params, <span class="mini">PreparedStatement</span>, Panache <code>("name = ?1", name)</code>). The same rule applies to JPQL, native SQL, NoSQL filters and shell commands.</p>
+                  <pre><code>// Vulnerable
+em.createQuery("SELECT u FROM User u WHERE u.email = '" + email + "'");
+
+// Safe: bound parameter, never interpolated
+em.createQuery("SELECT u FROM User u WHERE u.email = :email")
+  .setParameter("email", email);</code></pre>
+                </li>
+                <li>
+                  <strong>SSRF — allowlist outbound URLs</strong>
+                  <p>If a user can influence a URL the server fetches (webhooks, "import from URL", image proxy), an attacker aims it at internal services or the cloud metadata endpoint <span class="mini">169.254.169.254</span>. Resolve the host, reject private/link-local/loopback ranges, and allowlist permitted destinations — denylists are bypassable.</p>
+                </li>
+                <li>
+                  <strong>Insecure deserialization &amp; misconfiguration</strong>
+                  <p>Never deserialize untrusted bytes with Java native serialization — it can instantiate arbitrary gadget chains → RCE. Prefer JSON with strict, explicit types. Separately, ship secure defaults: no default credentials, no verbose stack traces to clients, actuator endpoints locked down, debug off in prod.</p>
+                </li>
+              </ul>
+            </div>
+            <div class="box">
+              <h6>Production issues / pitfalls</h6>
+              <ul class="deepList pitfallList">
+                <li>
+                  <strong>AuthZ only at the controller, not the data</strong>
+                  <p>A <span class="mini">@PreAuthorize("hasRole('USER')")</span> guards the route, but the method then loads any id. Role checks are not ownership checks — combine route-level role guards with object-level ownership checks every time.</p>
+                </li>
+                <li>
+                  <strong>"Safe" string building that isn't</strong>
+                  <p>Dynamic <code>ORDER BY</code> or table names can't be bound as parameters, so developers concatenate them — and inject there instead. Validate such values against a fixed allowlist of column/table names, never pass them through raw.</p>
+                  <pre><code>// Injectable even though the WHERE is parameterized
+String sql = "SELECT * FROM orders ORDER BY " + sortColumn;
+// Fix: allowlist
+if (!Set.of("created_at","total").contains(sortColumn)) throw ...;</code></pre>
+                </li>
+                <li>
+                  <strong>Sensitive data exposure via logs &amp; errors</strong>
+                  <p>Logging full requests/responses, stack traces with PII, or tokens in URLs (query strings get logged everywhere). Mask Authorization headers, keep PII/secrets out of logs, return generic error messages to clients, and encrypt data at rest and in transit.</p>
+                </li>
+                <li>
+                  <strong>Security misconfiguration drifting back in</strong>
+                  <p>A new dependency re-opens <span class="mini">/actuator</span>, a debug flag survives to prod, CORS gets set to <span class="mini">*</span> "to unblock the frontend". These regress silently — add automated security tests / config scanning so a misconfig fails the build, not just a pentest months later.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="box">
+            <h6>Example</h6>
+            <pre><code>// SSRF defense: allowlist + reject internal ranges before fetching
+URI uri = URI.create(userSuppliedUrl);
+InetAddress addr = InetAddress.getByName(uri.getHost());
+
+if (addr.isLoopbackAddress() || addr.isLinkLocalAddress()
+        || addr.isSiteLocalAddress() || addr.isAnyLocalAddress()) {
+    throw new SecurityException("Blocked internal address");
+}
+if (!ALLOWED_HOSTS.contains(uri.getHost())) {
+    throw new SecurityException("Host not allowlisted");
+}
+// 169.254.169.254 (cloud metadata) is link-local -> already blocked
+return httpClient.send(HttpRequest.newBuilder(uri).build(), ...);</code></pre>
+          </div>
+          <div class="tip"><strong>Interview answer tip:</strong> Pick one risk and go deep: 'Broken access control is the one I review hardest. A valid token isn't authorization, so I scope queries by owner — findByIdAndOwnerId — rather than findById, so an IDOR is impossible by construction. Then injection: always bound parameters; and SSRF: allowlist outbound URLs and block link-local so 169.254.169.254 can't leak cloud creds.'</div>
+        </section>
+
+        <section class="deepExtras">
+          <h6>Deep dive — Security</h6>
+
+          <div class="asciiBox">
+            <h6>Architecture flow: OAuth2 Authorization Code + PKCE through an API gateway</h6>
+            <pre><code>Browser / SPA (public client)            Authorization Server (OIDC)
+      │                                          │
+      │ 1. generate verifier; challenge=S256(v)  │
+      │ 2. /authorize?code_challenge=...&amp;S256 ──▶ │
+      │                                          │  user logs in (AuthN)
+      │ 3. redirect ?code=abc  ◀──────────────── │  + consent (scopes)
+      │                                          │
+      │ 4. POST /token  code=abc &amp; verifier=v ──▶ │  recompute S256(v)==challenge?
+      │ 5. ◀── access_token (JWT) + id_token + refresh_token
+      │
+      │ 6. GET /api/orders   Authorization: Bearer &lt;JWT&gt;
+      ▼
+┌─────────────────────────┐        fetch JWKS (cache by kid)
+│      API Gateway        │ ─────────────────────────────────▶ Auth Server
+│  • verify signature     │ ◀───────────────────────────────── /jwks
+│  • check exp/iss/aud    │
+│  • basic scope check    │
+└────────────┬────────────┘
+             │  forward (often downscoped) Bearer token
+             ▼
+┌─────────────────────────┐
+│   Resource Server       │  ZERO TRUST: re-validate, don't blindly trust gateway
+│  • verify JWT again      │
+│  • @PreAuthorize scope   │  AuthZ on scope/role
+│  • object ownership chk  │  AuthZ on the resource (anti-IDOR)
+└────────────┬────────────┘
+             ▼
+        200 OK (only the caller's data)
+
+Failure modes:
+  • alg:none / wrong aud      -> reject at gateway AND service (pin alg, check aud)
+  • token valid but not owner -> 403 at object check, not just route
+  • gateway-only validation   -> compromised gateway = full bypass (re-verify downstream)</code></pre>
+          </div>
+
+          <div class="warStory">
+            <h6>War story — the invoice that wasn't yours</h6>
+            <p><strong>Service:</strong> billing-api, B2B SaaS, ~2k tenants, REST endpoint <span class="mini">GET /api/invoices/{id}</span>.</p>
+            <p><strong>Symptom:</strong> A customer support ticket: "I can see another company's invoice PDF." Reproduced in 30 seconds by incrementing the invoice id in the URL. No alerts had fired — every request was a valid, authenticated 200.</p>
+            <p><strong>Investigation:</strong> The endpoint had <span class="mini">@PreAuthorize("hasRole('USER')")</span> and a valid JWT, so AuthN and route-level AuthZ both passed. The handler did <span class="mini">invoiceRepository.findById(id)</span> and returned it. There was <em>no check that the invoice's tenant matched the caller's tenant</em>. Access logs showed one client had been walking the id space for two days.</p>
+            <p><strong>Root cause:</strong> Classic IDOR / broken access control. AuthZ was enforced on the <em>route</em> ("is a logged-in user") but never on the <em>object</em> ("does this user's tenant own this invoice"). A valid token had been mistaken for authorization.</p>
+            <p><strong>Fix (immediate):</strong> Change the query to scope by tenant: <span class="mini">findByIdAndTenantId(id, principal.tenantId())</span>, returning 404 (not 403, to avoid confirming existence). Hotfixed and deployed within the hour; rotated nothing because no credentials leaked, but notified affected tenants per policy.</p>
+            <p><strong>Fix (structural):</strong> A repository convention — entities carrying a tenant always expose only tenant-scoped finders; raw <span class="mini">findById</span> on multi-tenant entities is banned and enforced by an ArchUnit test. Added authorization integration tests that assert cross-tenant access returns 404.</p>
+            <p><strong>Lesson:</strong> Authentication is not authorization, and route-level role checks are not object-level ownership checks. Enforce AuthZ on the data — ideally in the query — so the insecure path cannot be written by accident.</p>
+          </div>
+
+          <div class="proCode">
+            <h6>Production-grade: Spring Security resource server (JWT + issuer/audience + method security)</h6>
+            <pre><code>@Configuration
+@EnableWebSecurity
+@EnableMethodSecurity   // turns on @PreAuthorize
+public class ResourceServerConfig {
+
+    @Value("${security.issuer-uri}")  private String issuerUri;
+    @Value("${security.audience}")    private String audience;
+
+    @Bean
+    SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        http
+            .authorizeHttpRequests(auth -&gt; auth
+                .requestMatchers("/actuator/health").permitAll()
+                .anyRequest().authenticated())
+            .oauth2ResourceServer(oauth -&gt; oauth
+                .jwt(jwt -&gt; jwt.jwtAuthenticationConverter(scopeConverter())))
+            // stateless API: no session, send 401 not a login redirect
+            .sessionManagement(s -&gt; s.sessionCreationPolicy(STATELESS))
+            .csrf(csrf -&gt; csrf.disable()); // bearer tokens, not cookies
+        return http.build();
+    }
+
+    @Bean
+    JwtDecoder jwtDecoder() {
+        // signature verified against the issuer's JWKS, fetched + cached by kid
+        NimbusJwtDecoder decoder =
+            (NimbusJwtDecoder) JwtDecoders.fromIssuerLocation(issuerUri);
+
+        OAuth2TokenValidator&lt;Jwt&gt; withIssuer =
+            JwtValidators.createDefaultWithIssuer(issuerUri); // exp, nbf, iss
+        OAuth2TokenValidator&lt;Jwt&gt; withAudience = jwt -&gt;
+            jwt.getAudience().contains(audience)
+                ? OAuth2TokenValidatorResult.success()
+                : OAuth2TokenValidatorResult.failure(
+                    new OAuth2Error("invalid_token", "Missing audience", null));
+
+        decoder.setJwtValidator(new DelegatingOAuth2TokenValidator&lt;&gt;(withIssuer, withAudience));
+        return decoder;
+    }
+
+    private JwtAuthenticationConverter scopeConverter() {
+        JwtGrantedAuthoritiesConverter scopes = new JwtGrantedAuthoritiesConverter();
+        scopes.setAuthorityPrefix("SCOPE_");
+        scopes.setAuthoritiesClaimName("scope");
+        JwtAuthenticationConverter c = new JwtAuthenticationConverter();
+        c.setJwtGrantedAuthoritiesConverter(scopes);
+        return c;
+    }
+}
+
+@RestController
+@RequestMapping("/api/invoices")
+class InvoiceController {
+
+    private final InvoiceRepository repo;
+
+    InvoiceController(InvoiceRepository repo) { this.repo = repo; }
+
+    // AuthZ #1: scope check (what the token is allowed to do)
+    @PreAuthorize("hasAuthority('SCOPE_invoices:read')")
+    @GetMapping("/{id}")
+    Invoice get(@PathVariable String id, @AuthenticationPrincipal Jwt jwt) {
+        String tenantId = jwt.getClaimAsString("tenant_id");
+        // AuthZ #2: object ownership (anti-IDOR) - scope the query by tenant
+        return repo.findByIdAndTenantId(id, tenantId)
+                   .orElseThrow(() -&gt; new ResponseStatusException(NOT_FOUND));
+    }
+}</code></pre>
+          </div>
+
+          <div class="interviewQa">
+            <h6>Interview scenario — "Design auth for a microservices system"</h6>
+            <p class="turn interviewer">You have a web app, a mobile app, an API gateway and a dozen backend services. How do you design authentication and authorization?</p>
+            <p class="turn candidate">Central OIDC authorization server issues tokens; clients log in via Authorization Code + PKCE — that covers both the SPA and mobile since neither can safely hold a client secret. The auth server returns an id_token for the client's own use and an access token (a JWT) for calling APIs. The gateway terminates the user-facing edge: it validates the JWT signature against the issuer JWKS and checks exp, iss and aud before routing.</p>
+            <p class="turn interviewer">Does the gateway validating the token mean the services can trust it blindly?</p>
+            <p class="turn candidate">No — that's zero trust. If a service trusts the gateway implicitly, a single compromised gateway or any path that bypasses it is a total breach. Each service re-validates the JWT itself; it's cheap because it's just signature plus claim checks against cached JWKS. The gateway is a first line, not the only line.</p>
+            <p class="turn interviewer">How do services authenticate to each other, and how does the user context flow downstream?</p>
+            <p class="turn candidate">Service identity comes from mTLS — a service mesh issues and rotates the certs, so service A cryptographically knows it's talking to service B, not just something on the network. For the user context I propagate the token, but downscoped: when service A calls B I use token exchange to mint a token with a narrower audience and only the scopes B needs. So if B is compromised, the token it holds can't be replayed against the payments service.</p>
+            <p class="turn interviewer">JWT or opaque tokens? And how do you handle revocation and logout?</p>
+            <p class="turn candidate">JWTs for the stateless, high-throughput path because services validate locally with no per-request hop. The cost is revocation — you can't kill a JWT before exp — so I keep access tokens short, 5 to 15 minutes, and use refresh tokens with rotation and reuse detection. If a refresh token is replayed, the whole family is revoked. If the business genuinely needs instant revocation everywhere, I'd switch those flows to opaque tokens with introspection and cache the result for a few seconds.</p>
+            <p class="turn interviewer">Where does authorization actually happen, and how do you stop IDOR?</p>
+            <p class="turn candidate">Two layers. Coarse-grained at the service via scopes/roles — @PreAuthorize on the method. Fine-grained at the object: I scope queries by owner or tenant, findByIdAndTenantId, so a valid token for the wrong resource returns 404 by construction. A token proves who, never what they may touch. I back that with authorization integration tests asserting cross-tenant access fails, and an ArchUnit rule banning raw findById on tenant-scoped entities.</p>
+            <p class="turn interviewer">And secrets — the DB passwords, signing keys, downstream API keys?</p>
+            <p class="turn candidate">Never in code or images. They come from a secret manager — Vault or the cloud equivalent — ideally as short-lived dynamic credentials so there's little to leak and rotation is automatic. The token-signing keys live on the auth server and are exposed only as public keys via JWKS, rotated with a kid so services pick up new keys without downtime. And I keep secrets out of logs and error responses, which is where they tend to leak in practice.</p>
+          </div>
+        </section>
+
+      </div>
+    </article>
+
+    <article class="topic" id="testing" data-rank="16" data-search="testing strategy for backend engineers do not chase coverage percentage. engineers are judged on testability and confidence-per-second, not raw coverage. pick the right test at the right level. test pyramid unit integration end to end e2e. many fast unit tests fewer integration tests few e2e tests. ice cream cone anti-pattern is inverted pyramid with too many slow brittle e2e tests. test doubles stub mock fake spy dummy. stub returns canned values, mock verifies interactions, fake is a working lightweight implementation like in-memory repository, spy records calls on a real object. what to mock: external boundaries third party http apis, payment gateway, clock and time, randomness uuid, message broker. what not to mock: your own domain logic, the database when behavior depends on it like constraints transactions native queries dialect. over-mocking makes tests pass but production breaks because the mock encodes assumptions that drift from reality. solitary unit test isolates the class under test mocking all collaborators. sociable unit test lets the class talk to real collaborators only stubbing the edges. integration testing with testcontainers spins up real postgres kafka redis in docker for tests instead of h2 or embedded fakes which behave differently. testcontainers junit5 extension @testcontainers @container annotation. spring boot dynamicpropertysource registers jdbc url username password from the running container. spring boot 3.1 serviceconnection annotation autoconfigures datasource from container. reuse containers across test classes for speed using withreuse and singleton container pattern, testcontainers.reuse.enable. a real database catches dialect bugs constraint violations migration flyway liquibase failures unique index ddl that an in-memory h2 hides. h2 postgresql compatibility mode is a lie, json jsonb arrays window functions lateral joins differ. contract testing consumer driven contracts pact spring cloud contract verify producer consumer compatibility without slow brittle end to end tests across services. the consumer defines expectations as a contract, the provider verifies it can satisfy them, broker stores pacts pact broker can-i-deploy. contracts prevent breaking changes when a producer changes a response field the provider verification fails in ci before deploy. mutation testing pit pitest measures test effectiveness does a test actually fail when the production code is mutated. mutators flip conditionals negate boundaries remove method calls return null. mutation score is killed mutants over total. line coverage only measures execution not assertion strength, a test with no assertions still has 100 percent coverage but kills zero mutants. flaky test shared mutable state test ordering dependence real clock wall clock instant.now nondeterminism thread sleep timing leaking state between tests. n+1 query lazy loading lazyinitializationexception transaction boundary open session in view. ci pipeline unit then integration testcontainers then contract then deploy. junit 5 jupiter assertj mockito. determinism quarantine retry root cause.">
+      <div class="topicHeader">
+        <div>
+          <h4>16. Testing Strategy</h4>
+          <p>Engineers are judged on testability and confidence-per-second, not raw coverage % — the skill is picking the right test at the right level.</p>
+        </div>
+        <div class="rank">#16</div>
+      </div>
+      <div class="topicBody">
+
+        <section class="subtopic" id="testing-1">
+          <span class="badge">Key focus</span>
+          <h5>The Test Pyramid — unit vs integration vs E2E, what to mock</h5>
+          <div class="concept">
+            <h6>Concept</h6>
+            <p>The Test Pyramid is a shape that tells you the <em>proportion</em> of each test type: many fast <span class="mini">unit</span> tests at the base, fewer <span class="mini">integration</span> tests in the middle, very few slow <span class="mini">end-to-end (E2E)</span> tests at the top. A <span class="mini">test double</span> is any fake object you swap in for a real collaborator.</p>
+            <p class="why"><strong>Why it exists:</strong> Tests cost time to run and maintain. The pyramid maximizes <em>confidence per second</em> — push as much verification as possible down to the cheap, fast, reliable layer, and reserve the expensive slow layer for the few things only it can prove.</p>
+            <p class="analogy">Analogy: Like quality control in a factory — you check each part on the line (unit), check sub-assemblies fit together (integration), and only fully assemble & road-test a handful of finished cars (E2E). You don't road-test every bolt.</p>
+          </div>
+          <div class="flow">
+            <h6>How it works</h6>
+            <ol class="flowList">
+              <li><strong>Unit:</strong> one class/method in isolation, no I/O, milliseconds. Thousands of them, run on every save.</li>
+              <li><strong>Integration:</strong> your code + one real dependency (DB, broker, HTTP) wired together. Hundreds, run in CI.</li>
+              <li><strong>E2E:</strong> the whole system deployed, driven through its real entry point. A handful, slow and flaky-prone.</li>
+              <li><strong>Doubles:</strong> <code>stub</code> (canned answers), <code>mock</code> (verifies calls), <code>fake</code> (working lightweight impl), <code>spy</code> (real object that records calls).</li>
+            </ol>
+          </div>
+          <div class="cases">
+            <h6>Common real-world scenarios</h6>
+            <ol class="caseList">
+              <li><strong>Inverted pyramid (ice-cream cone):</strong> mostly Selenium/E2E, almost no unit tests → suite takes 40 min, flakes constantly, nobody trusts a red build. Push logic down into fast unit tests.</li>
+              <li><strong>Mock the payment gateway / SMS provider:</strong> external boundary you don't own and can't call for free in CI → stub it. Verify your code sends the right request shape.</li>
+              <li><strong>Mocking <span class="mini">Clock</span> and <span class="mini">UUID</span>:</strong> a test that asserts "expires in 24h" fails at midnight. Inject a <span class="mini">Clock</span> and an id generator so time and randomness are deterministic.</li>
+              <li><strong>Over-mocked service test:</strong> every collaborator mocked, the test asserts the mock was called — it passes forever even after the real logic breaks. False confidence.</li>
+              <li><strong>Mocking the repository when behavior depends on the DB:</strong> a query with a real <span class="mini">UNIQUE</span> constraint / native SQL → the mock can't reproduce constraint violations; use a real DB (Testcontainers).</li>
+            </ol>
+          </div>
+          <p>A strong engineer doesn't aim for a coverage number. They decide, per behavior, the cheapest level that can actually prove it correct — and know that the most dangerous test is one that passes whether the code works or not.</p>
+          <div class="grid2">
+            <div class="box">
+              <h6>What to understand deeply</h6>
+              <ul class="deepList">
+                <li>
+                  <strong>Solitary vs sociable unit tests</strong>
+                  <p>A <em>solitary</em> test mocks all collaborators and isolates one class — fast, but couples the test to the implementation's call structure. A <em>sociable</em> test lets the class use real collaborators (pure domain objects) and only stubs the true edges (I/O). Prefer sociable for the domain: it tests behavior, not wiring, so it survives refactors.</p>
+                  <pre><code>// Solitary — every collaborator mocked, tests the wiring
+when(discountPolicy.apply(any())).thenReturn(Money.of(10));
+when(taxCalculator.tax(any())).thenReturn(Money.of(2));
+// asserts mocks were called in order — brittle
+
+// Sociable — real domain objects, only the DB edge is faked
+var order = new Order(realDiscountPolicy, realTaxCalculator);
+order.addLine(item, 3);
+assertThat(order.total()).isEqualTo(Money.of(257));</code></pre>
+                </li>
+                <li>
+                  <strong>Know your four doubles — stub ≠ mock</strong>
+                  <p>A <span class="mini">stub</span> provides input (state verification: assert the result). A <span class="mini">mock</span> verifies output calls (behavior verification: <span class="mini">verify(x).send(...)</span>). A <span class="mini">fake</span> is a real but lightweight implementation (in-memory repo). A <span class="mini">spy</span> wraps a real object and records calls. Reaching for <span class="mini">verify()</span> when an assertion on the result would do is the #1 cause of brittle tests.</p>
+                </li>
+                <li>
+                  <strong>What to mock: things at the boundary you don't control</strong>
+                  <p>Mock <em>external</em> HTTP APIs (payment, KYC), the message broker, the system clock (<span class="mini">Clock</span>), randomness (<span class="mini">UUID</span>, <span class="mini">Random</span>), and the current user/principal. These are non-deterministic or cost money. Inject them as dependencies so a test can pin them.</p>
+                  <pre><code>// Inject Clock — never call Instant.now() directly in logic
+public Token issue(User u) {
+    return new Token(u.id(), clock.instant().plus(Duration.ofHours(24)));
+}
+// test: Clock.fixed(...) → exact, repeatable expiry assertion</code></pre>
+                </li>
+                <li>
+                  <strong>What NOT to mock: your own domain & the DB when behavior depends on it</strong>
+                  <p>Don't mock value objects, entities, or domain services — they have no I/O, run in microseconds, and mocking them only tests that you wrote the test. Don't mock the repository when the <em>behavior under test is the query itself</em> (joins, constraints, pagination, native SQL). A mocked <span class="mini">findByEmail</span> proves nothing about whether the SQL is correct.</p>
+                </li>
+              </ul>
+            </div>
+            <div class="box">
+              <h6>Production issues / pitfalls</h6>
+              <ul class="deepList pitfallList">
+                <li>
+                  <strong>Over-mocking → "tests pass but prod breaks"</strong>
+                  <p>When every dependency is a mock, the test encodes <em>your assumptions</em> about how the dependency behaves. If the real dependency behaves differently (different error, different null handling), the mock keeps lying and the green build ships a bug. Mocks freeze a contract that nobody re-verifies against reality.</p>
+                </li>
+                <li>
+                  <strong>Mocking the repository hides DB-only failures</strong>
+                  <p>A unit test mocks <span class="mini">orderRepo.save()</span> to return the entity. In production the DB rejects it on a <span class="mini">UNIQUE</span> / <span class="mini">NOT NULL</span> / FK constraint, or a lazy association throws <span class="mini">LazyInitializationException</span> outside the transaction. The mock can't reproduce any of this — only a real DB integration test can.</p>
+                  <pre><code>// Mock says "all good"
+when(orderRepo.save(any())).thenReturn(order);
+// Real Postgres: ERROR: duplicate key value violates
+//   unique constraint "uq_order_idempotency_key"</code></pre>
+                </li>
+                <li>
+                  <strong>Asserting on interactions instead of outcomes</strong>
+                  <p>A test full of <span class="mini">verify(mock, times(1))...</span> couples to <em>how</em> the code works. Rename a method or reorder two calls and a dozen tests go red even though behavior is identical. Verify interactions only for true side-effects (an email was sent); for everything else assert the observable result.</p>
+                </li>
+                <li>
+                  <strong>The inverted pyramid kills velocity</strong>
+                  <p>Heavy E2E + thin unit layer means every bug investigation starts from a 40-minute, flaky suite. Mean-time-to-feedback explodes, developers stop running tests locally, and red builds get rubber-stamped. Coverage % can still look high while confidence is low.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="box">
+            <h6>Example</h6>
+            <pre><code>// Solitary unit test (JUnit 5 + Mockito) — boundary mocked, logic real
+@ExtendWith(MockitoExtension.class)
+class SubscriptionServiceTest {
+
+    @Mock PaymentGateway gateway;          // external boundary → mock
+    @Mock SubscriptionRepository repo;     // (better: a fake or a Testcontainers test)
+
+    @Test
+    void chargesAndActivatesOnSuccess() {
+        var clock = Clock.fixed(Instant.parse("2026-06-16T00:00:00Z"), ZoneOffset.UTC);
+        var service = new SubscriptionService(gateway, repo, clock);
+        when(gateway.charge(any())).thenReturn(PaymentResult.ok("txn_1"));
+
+        Subscription sub = service.subscribe(userId, Plan.PRO);
+
+        // assert the OUTCOME, not "the mock was called"
+        assertThat(sub.status()).isEqualTo(ACTIVE);
+        assertThat(sub.renewsAt()).isEqualTo(Instant.parse("2026-07-16T00:00:00Z"));
+    }
+}</code></pre>
+          </div>
+          <div class="tip"><strong>Interview answer tip:</strong> Don't recite "unit, integration, E2E." Say: 'I mock what I don't own and what's non-deterministic — clock, randomness, external HTTP. I do NOT mock my own domain or the DB when the query is the thing under test. Over-mocking gives a green build that ships bugs, so I optimize for confidence per second, not coverage %.'</div>
+        </section>
+
+        <section class="subtopic" id="testing-2">
+          <span class="badge">Key focus</span>
+          <h5>Integration testing with Testcontainers</h5>
+          <div class="concept">
+            <h6>Concept</h6>
+            <p>Testcontainers is a library that boots <em>real</em> dependencies — Postgres, Kafka, Redis — inside throwaway Docker containers for the duration of your tests, then tears them down automatically. Your test talks to the genuine engine, not a substitute.</p>
+            <p class="why"><strong>Why it exists:</strong> In-memory fakes (H2, embedded Kafka) <em>behave differently</em> from production. They hide dialect quirks, constraint enforcement, and migration failures. Testcontainers gives you production-fidelity at the cost of a few seconds of startup, so integration tests catch real bugs instead of fake-engine bugs.</p>
+            <p class="analogy">Analogy: Like rehearsing a play on the actual stage with the real lighting rig, instead of in someone's living room. The living room "works" but the trapdoor on the real stage is exactly what trips you in front of the audience.</p>
+          </div>
+          <div class="flow">
+            <h6>How it works</h6>
+            <ol class="flowList">
+              <li><code>@Testcontainers</code> on the class activates the JUnit 5 extension that manages container lifecycle.</li>
+              <li><code>@Container static PostgreSQLContainer&lt;&gt; pg = ...</code> — a <em>static</em> field starts once per class; an instance field starts per test method.</li>
+              <li><code>@DynamicPropertySource</code> injects the container's randomized JDBC url/user/password into Spring's <span class="mini">Environment</span> before the context starts.</li>
+              <li>Spring Boot 3.1+: annotate the container <code>@ServiceConnection</code> and Spring auto-wires the DataSource — no manual property plumbing.</li>
+            </ol>
+          </div>
+          <div class="cases">
+            <h6>Common real-world scenarios</h6>
+            <ol class="caseList">
+              <li><strong>H2 "PostgreSQL mode" passes, prod fails:</strong> <span class="mini">jsonb</span>, arrays, <span class="mini">ON CONFLICT</span>, window functions, <span class="mini">LATERAL</span> joins behave differently or don't exist in H2. A Postgres container catches it in CI.</li>
+              <li><strong>Flyway/Liquibase migration test:</strong> run migrations against a fresh container to prove they apply cleanly on an empty DB — catches a forgotten DDL change before it hits staging.</li>
+              <li><strong>Kafka consumer logic:</strong> a real <span class="mini">KafkaContainer</span> verifies serialization, partition assignment, and offset commit semantics that an embedded mock glosses over.</li>
+              <li><strong>Slow suite from container churn:</strong> 200 test classes each starting Postgres → minutes wasted. Reuse a singleton container so it starts once for the whole run.</li>
+              <li><strong>Constraint / unique-index behavior:</strong> a concurrent insert idempotency test needs a real <span class="mini">UNIQUE</span> index to throw — H2 enforces it differently or not at all.</li>
+            </ol>
+          </div>
+          <p>A strong engineer treats "it passes on H2" as no evidence at all. They run integration tests on the same engine and version as production, and they tune container reuse so fidelity doesn't cost developer patience.</p>
+          <div class="grid2">
+            <div class="box">
+              <h6>What to understand deeply</h6>
+              <ul class="deepList">
+                <li>
+                  <strong>Static container = once per class, and why it matters</strong>
+                  <p>A <span class="mini">static @Container</span> starts before any test and stops after all tests in the class — paying the ~2s startup once. An instance field restarts per method and balloons the suite. For a whole module, go further with the <em>singleton container pattern</em>: a manually-started static container in a base class, never stopped (Ryuk cleans it up at JVM exit).</p>
+                  <pre><code>abstract class IntegrationTest {
+    static final PostgreSQLContainer&lt;?&gt; PG =
+        new PostgreSQLContainer&lt;&gt;("postgres:16-alpine");
+    static { PG.start(); } // started once, shared by all subclasses
+}</code></pre>
+                </li>
+                <li>
+                  <strong>@DynamicPropertySource vs @ServiceConnection</strong>
+                  <p>The container's port is random, so you can't hardcode the JDBC url. <span class="mini">@DynamicPropertySource</span> registers <span class="mini">getJdbcUrl()</span>/user/password lazily, before context startup. Since Spring Boot 3.1, <span class="mini">@ServiceConnection</span> does this automatically for known containers — less boilerplate, fewer typos.</p>
+                  <pre><code>@DynamicPropertySource
+static void props(DynamicPropertyRegistry r) {
+    r.add("spring.datasource.url", PG::getJdbcUrl);
+    r.add("spring.datasource.username", PG::getUsername);
+    r.add("spring.datasource.password", PG::getPassword);
+}</code></pre>
+                </li>
+                <li>
+                  <strong>Container reuse for speed (opt-in, dev machines)</strong>
+                  <p><span class="mini">.withReuse(true)</span> plus <span class="mini">testcontainers.reuse.enable=true</span> in <span class="mini">~/.testcontainers.properties</span> keeps the container alive <em>between test runs</em> on a developer's machine — huge feedback-loop win. Disable in CI where each run should be pristine. Always reset state (truncate / <span class="mini">@Sql</span>) between tests since the container is shared.</p>
+                </li>
+                <li>
+                  <strong>Why a real DB catches what H2 hides</strong>
+                  <p>SQL dialect (Postgres <span class="mini">jsonb</span>, <span class="mini">RETURNING</span>, partial indexes), constraint timing (deferred FKs), isolation-level behavior, sequence/identity generation, and migration scripts all differ. An in-memory DB silently rewrites or ignores them, so the bug ships. Same engine + same major version is the rule.</p>
+                </li>
+              </ul>
+            </div>
+            <div class="box">
+              <h6>Production issues / pitfalls</h6>
+              <ul class="deepList pitfallList">
+                <li>
+                  <strong>State leaking between shared-container tests</strong>
+                  <p>A reused/static container keeps data from the previous test → order-dependent flakiness. Fix: <span class="mini">@Sql</span> cleanup, <span class="mini">TRUNCATE ... RESTART IDENTITY</span>, or <span class="mini">@Transactional</span> rollback per test (careful: rollback hides commit-time constraint checks).</p>
+                </li>
+                <li>
+                  <strong>Wrong image version → false confidence</strong>
+                  <p>Testing on <span class="mini">postgres:13</span> while prod runs <span class="mini">16</span>, or using <span class="mini">postgres:latest</span> (non-deterministic). Pin the exact production major version, and a digest if you need reproducibility.</p>
+                </li>
+                <li>
+                  <strong>No Docker in CI / slow cold starts</strong>
+                  <p>CI runner without a Docker daemon → every test errors. And cold-pulling images each build adds minutes. Fix: ensure Docker-in-Docker or a socket mount, cache images, and prefer <span class="mini">-alpine</span> slim images.</p>
+                </li>
+                <li>
+                  <strong>Per-method container start blows up the suite</strong>
+                  <p>Forgetting <span class="mini">static</span> on the <span class="mini">@Container</span> field restarts Postgres for every <span class="mini">@Test</span> — a 30-test class goes from 4s to 60s+. The class-level lifecycle is almost always what you want.</p>
+                  <pre><code>// Bug: restarts per test (no 'static')
+@Container PostgreSQLContainer&lt;?&gt; pg = new PostgreSQLContainer&lt;&gt;("postgres:16");
+// Fix:
+@Container static PostgreSQLContainer&lt;?&gt; pg = new PostgreSQLContainer&lt;&gt;("postgres:16");</code></pre>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="box">
+            <h6>Example</h6>
+            <pre><code>@SpringBootTest
+@Testcontainers
+class OrderRepositoryIT {
+
+    @Container
+    static PostgreSQLContainer&lt;?&gt; postgres =
+        new PostgreSQLContainer&lt;&gt;("postgres:16-alpine");
+
+    @DynamicPropertySource
+    static void datasourceProps(DynamicPropertyRegistry registry) {
+        registry.add("spring.datasource.url", postgres::getJdbcUrl);
+        registry.add("spring.datasource.username", postgres::getUsername);
+        registry.add("spring.datasource.password", postgres::getPassword);
+        registry.add("spring.flyway.enabled", () -&gt; "true");
+    }
+
+    @Autowired OrderRepository repository;
+
+    @Test
+    void rejectsDuplicateIdempotencyKey() {
+        repository.save(new Order("idem-123"));
+        // real Postgres UNIQUE index — a mock could never prove this
+        assertThatThrownBy(() -&gt; repository.save(new Order("idem-123")))
+            .isInstanceOf(DataIntegrityViolationException.class);
+    }
+}</code></pre>
+          </div>
+          <div class="tip"><strong>Interview answer tip:</strong> Say: 'I run integration tests on a real Postgres via Testcontainers, not H2 — H2's "Postgres mode" is a lie that hides jsonb, constraints, and migration bugs. I use a static/singleton container with @DynamicPropertySource (or @ServiceConnection on Boot 3.1+) and reuse on dev machines for fast feedback, pristine containers in CI, pinned to the production major version.'</div>
+        </section>
+
+        <section class="subtopic" id="testing-3">
+          <span class="badge">Key focus</span>
+          <h5>Contract testing &amp; mutation testing</h5>
+          <div class="concept">
+            <h6>Concept</h6>
+            <p><span class="mini">Contract testing</span> verifies that a service consumer and producer still agree on the message shape — without deploying both and running slow cross-service E2E. <span class="mini">Mutation testing</span> measures how <em>effective</em> your tests are by deliberately introducing bugs and checking whether a test catches them.</p>
+            <p class="why"><strong>Why it exists:</strong> E2E across many services is slow, flaky, and needs everything deployed at once. Contracts let each side test alone yet stay compatible. And line coverage lies — it proves code <em>ran</em>, not that anything was <em>asserted</em>; mutation testing measures the assertions, not the execution.</p>
+            <p class="analogy">Analogy: A contract is the agreed shape of a plug and socket — each factory tests its half against the spec, no need to ship both to one room. Mutation testing is a fire drill: deliberately start a small fire to check the alarm actually goes off.</p>
+          </div>
+          <div class="flow">
+            <h6>How it works</h6>
+            <ol class="flowList">
+              <li><strong>Consumer-driven contract:</strong> the consumer writes its expectation of the response → a <em>contract</em> (a Pact JSON / Spring Cloud Contract DSL).</li>
+              <li>The contract is published (e.g. to a Pact Broker); the producer runs <em>provider verification</em> to prove its real responses satisfy it.</li>
+              <li><strong>can-i-deploy:</strong> CI asks the broker whether this version is compatible with everything currently deployed before shipping.</li>
+              <li><strong>Mutation testing (PIT):</strong> mutate the bytecode (flip <code>&gt;</code> to <code>&gt;=</code>, return null, remove a call), re-run tests; a <em>killed</em> mutant means a test failed = good.</li>
+            </ol>
+          </div>
+          <div class="cases">
+            <h6>Common real-world scenarios</h6>
+            <ol class="caseList">
+              <li><strong>Producer renames a JSON field:</strong> <span class="mini">total_amount</span> → <span class="mini">amount</span>. Provider verification against the consumer's contract goes red in the producer's CI <em>before</em> deploy, not at 2 AM in prod.</li>
+              <li><strong>Replacing brittle cross-service E2E:</strong> 12 microservices, a full E2E suite that flakes weekly → swap most of it for contract tests each service runs in isolation.</li>
+              <li><strong>90% coverage, weak tests:</strong> mutation testing shows a 45% mutation score — half the "covered" code has no real assertion. The number reveals theatre.</li>
+              <li><strong>Boundary bug survives:</strong> code uses <span class="mini">&gt;=</span> but tests never probe the boundary; PIT mutates it to <span class="mini">&gt;</span> and the surviving mutant pinpoints the missing test case.</li>
+              <li><strong>can-i-deploy gate in the pipeline:</strong> a deploy is blocked because a not-yet-updated consumer still depends on the old contract — caught automatically.</li>
+            </ol>
+          </div>
+          <p>A strong engineer knows coverage is an execution metric, not a quality metric, and reaches for mutation testing to prove the test suite has teeth — while using contracts to get cross-service safety without the cost and flakiness of full E2E.</p>
+          <div class="grid2">
+            <div class="box">
+              <h6>What to understand deeply</h6>
+              <ul class="deepList">
+                <li>
+                  <strong>Consumer-driven: the consumer's needs define the contract</strong>
+                  <p>The consumer only encodes the fields <em>it actually uses</em>. The producer is free to add fields (backward-compatible) but must not remove or retype a consumed one without the verification failing. This catches breaking changes at the producer, in isolation, with no running consumer.</p>
+                  <pre><code>// Pact consumer test (defines the expectation)
+builder.given("user 42 exists")
+  .uponReceiving("a request for user 42")
+  .path("/users/42").method("GET")
+  .willRespondWith().status(200)
+  .body(newJsonBody(o -&gt; {
+      o.numberType("id", 42);
+      o.stringType("email", "a@x.com"); // only fields the consumer uses
+  }).build());</code></pre>
+                </li>
+                <li>
+                  <strong>Contracts ≠ E2E — and that's the point</strong>
+                  <p>A contract test never starts both services together. The consumer test runs against a mock that <em>is the contract</em>; the producer test replays the contract against its real controller. Compatibility is proven without orchestrating a whole environment — fast, deterministic, parallelizable.</p>
+                </li>
+                <li>
+                  <strong>Mutation score vs line coverage</strong>
+                  <p>Line coverage = "did this line execute during a test." A test with zero assertions can hit 100% coverage. Mutation score = "of all the deliberate bugs PIT injected, what fraction did a test catch (kill)." It directly measures assertion strength — the metric that actually correlates with finding regressions.</p>
+                  <pre><code>// 100% line coverage, 0% mutation score:
+@Test void runsWithoutError() {
+    calculator.discount(order); // executes, asserts NOTHING
+}
+// PIT mutates discount() → every mutant SURVIVES → test is worthless</code></pre>
+                </li>
+                <li>
+                  <strong>Mutators and where to spend the budget</strong>
+                  <p>PIT applies mutators: negate conditionals, change boundaries (<span class="mini">&lt;</span>↔<span class="mini">&lt;=</span>), return defaults (null/0/empty), remove void calls. A <em>surviving</em> mutant is a precise pointer to a missing assertion. It's expensive, so run it on critical domain logic (pricing, auth) — not getters or DTOs.</p>
+                </li>
+              </ul>
+            </div>
+            <div class="box">
+              <h6>Production issues / pitfalls</h6>
+              <ul class="deepList pitfallList">
+                <li>
+                  <strong>Treating coverage % as a quality gate</strong>
+                  <p>"80% coverage required" leads to assertion-free tests written purely to pass the gate — coverage theatre. The number rises, real safety doesn't. Gate on mutation score for critical packages instead, and treat coverage as a rough floor, not a ceiling.</p>
+                </li>
+                <li>
+                  <strong>Contracts that drift / aren't verified in CI</strong>
+                  <p>Contracts written once and never run in the producer's pipeline rot silently. Without provider verification on every producer build (and <span class="mini">can-i-deploy</span> before release), the contract is just stale documentation that gives false safety.</p>
+                </li>
+                <li>
+                  <strong>Over-specified contracts (matching exact values)</strong>
+                  <p>Asserting <span class="mini">id == 42</span> instead of "is a number" makes the producer verification break on unrelated data changes. Use type/regex matchers so the contract pins <em>shape</em>, not incidental example values.</p>
+                </li>
+                <li>
+                  <strong>Mutation testing too slow / run on everything</strong>
+                  <p>PIT runs the test suite once per mutant — minutes to hours on a large codebase. Running it on the whole project in CI stalls the pipeline. Scope it to changed classes (incremental analysis) or critical packages, and run the full pass nightly.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="box">
+            <h6>Example</h6>
+            <pre><code>// Producer-side verification (Spring Cloud Contract generated base)
+// Contract (Groovy DSL) lives with the producer, published to consumers:
+Contract.make {
+    request {
+        method GET()
+        url '/users/42'
+    }
+    response {
+        status OK()
+        headers { contentType(applicationJson()) }
+        body(
+            id: 42,
+            email: $(regex('[^@]+@[^@]+')) // shape, not exact value
+        )
+    }
+}
+
+// PIT (Maven) — measure test effectiveness, not coverage
+// mvn org.pitest:pitest-maven:mutationCoverage
+//   -DtargetClasses=com.shop.pricing.*
+//   -DmutationThreshold=80   // fail build if mutation score &lt; 80%</code></pre>
+          </div>
+          <div class="tip"><strong>Interview answer tip:</strong> Say: 'Contract tests give me cross-service safety without slow flaky E2E — the consumer defines the shape, the producer verifies it in its own CI, and can-i-deploy gates the release. And I don't trust coverage %: a test with no assertion still shows green. I run mutation testing (PIT) on critical logic — if a mutant survives, that line had no real assertion.'</div>
+        </section>
+
+        <section class="deepExtras">
+          <h6>Deep dive — Testing</h6>
+
+          <div class="asciiBox">
+            <h6>Architecture flow: the test pyramid mapped onto a CI pipeline</h6>
+            <pre><code>            ▲  slower, fewer, more brittle
+            │
+     ┌──────┴───────┐
+     │     E2E       │   ~10 tests   ~5-15 min   real env, smoke only
+     ├──────────────┤
+     │  Contract     │   ~80 tests   ~30 s       Pact / Spring Cloud Contract
+     ├──────────────┤                            (per-service, no full env)
+     │ Integration   │   ~300 tests  ~2-4 min    Testcontainers: real PG/Kafka
+     ├──────────────┤
+     │     Unit      │   ~3000 tests ~20 s       pure logic, mocked boundaries
+     └──────────────┘
+            │  faster, more, more reliable
+            ▼
+
+CI pipeline (fail fast, cheapest stage first):
+
+  push ─▶ [unit] ─▶ [integration: Testcontainers] ─▶ [contract verify]
+   20s        2-4 min                                 30s
+                                                        │
+                                                        ▼
+                                              [can-i-deploy?] ──no──▶ block
+                                                        │ yes
+                                                        ▼
+                                              [deploy] ─▶ [E2E smoke]
+
+  • each stage runs only if the previous is green (fail fast = cheap feedback)
+  • mutation testing (PIT) runs NIGHTLY on critical packages, not per-push
+  • E2E is a thin smoke layer, NOT where logic is verified
+Anti-pattern (ice-cream cone): huge E2E layer, thin unit layer
+  → 40-min flaky suite, nobody trusts red, coverage% high / confidence low</code></pre>
+          </div>
+
+          <div class="warStory">
+            <h6>War story — the mock that hid an N+1</h6>
+            <p><strong>Service:</strong> billing-export-api, generates monthly invoices for ~50k customers in a nightly batch.</p>
+            <p><strong>Symptom:</strong> Green build, 92% coverage, shipped Friday. Saturday's batch ran 6 hours instead of 8 minutes and held a DB connection the whole time, tripping the connection-leak alarm. No exception, just glacial.</p>
+            <p><strong>Investigation:</strong> The service test mocked <span class="mini">invoiceRepository.findForMonth()</span> to return a hand-built list of fully-populated <span class="mini">Invoice</span> objects with their <span class="mini">lineItems</span> already in memory. Every assertion passed. Enabling Hibernate SQL logging against a real DB showed 50,001 queries: one to load invoices, then one lazy <span class="mini">SELECT</span> per invoice for its line items — a textbook N+1.</p>
+            <p><strong>Root cause:</strong> <span class="mini">Invoice.lineItems</span> was <span class="mini">@OneToMany(fetch = LAZY)</span>. The mock returned objects whose collections were already initialized, so the lazy proxy / N+1 behavior <em>could not exist</em> in the test. The mock encoded an assumption (collections pre-loaded) that production never honored. The test proved the mapping logic, never the data access.</p>
+            <p><strong>Fix (immediate):</strong> Add a Testcontainers integration test that runs the real query against Postgres and asserts the SQL count via a <span class="mini">datasource-proxy</span> / <span class="mini">QueryCountHolder</span> assertion (≤ 2 queries). It went red instantly. Fixed with a <span class="mini">JOIN FETCH</span> / <span class="mini">@EntityGraph</span>.</p>
+            <p><strong>Fix (structural):</strong> Rule: any code whose <em>behavior is the query</em> (fetch strategy, transaction boundary, pagination) must have a Testcontainers test; repositories are not unit-tested with mocks. Added an N+1 detector (query-count assertion) to the integration base class.</p>
+            <p><strong>Lesson:</strong> A mock can only be as correct as your assumptions about the thing it replaces — and lazy loading, transaction boundaries, and N+1 are exactly the assumptions developers get wrong. Mocking the DB tests your beliefs about the DB, not the DB.</p>
+          </div>
+
+          <div class="proCode">
+            <h6>Production-grade integration test (Testcontainers + @DynamicPropertySource) + a contract stub</h6>
+            <pre><code>// ---- Shared base: singleton container started once for the whole module ----
+@SpringBootTest
+@Testcontainers
+@Sql(scripts = "/sql/clean.sql", executionPhase = BEFORE_TEST_METHOD)
+abstract class AbstractIntegrationTest {
+
+    @Container
+    static final PostgreSQLContainer&lt;?&gt; POSTGRES =
+        new PostgreSQLContainer&lt;&gt;("postgres:16-alpine")
+            .withReuse(true); // dev machines reuse; CI uses a fresh daemon
+
+    @DynamicPropertySource
+    static void registerProps(DynamicPropertyRegistry registry) {
+        registry.add("spring.datasource.url", POSTGRES::getJdbcUrl);
+        registry.add("spring.datasource.username", POSTGRES::getUsername);
+        registry.add("spring.datasource.password", POSTGRES::getPassword);
+        registry.add("spring.jpa.hibernate.ddl-auto", () -&gt; "validate");
+        registry.add("spring.flyway.enabled", () -&gt; "true"); // run real migrations
+    }
+}
+
+// ---- The actual integration test: proves the QUERY, with an N+1 guard ----
+class InvoiceRepositoryIT extends AbstractIntegrationTest {
+
+    @Autowired InvoiceRepository repository;
+    @Autowired TestEntityManager em;
+
+    @Test
+    void loadsInvoicesWithLineItemsWithoutNPlusOne() {
+        seedInvoicesWithLines(50);
+        QueryCountHolder.clear();
+
+        List&lt;Invoice&gt; invoices = repository.findForMonth(YearMonth.of(2026, 6));
+
+        // real Postgres + real fetch strategy — a mock could not catch this
+        assertThat(invoices).hasSize(50);
+        assertThat(invoices.get(0).getLineItems()).isNotEmpty();
+        long selects = QueryCountHolder.getGrandTotal().getSelect();
+        assertThat(selects)
+            .as("must JOIN FETCH, not N+1")
+            .isLessThanOrEqualTo(2);
+    }
+
+    @Test
+    void enforcesUniqueIdempotencyKeyAtDbLevel() {
+        repository.saveAndFlush(new Invoice("idem-001"));
+        assertThatThrownBy(() -&gt; repository.saveAndFlush(new Invoice("idem-001")))
+            .isInstanceOf(DataIntegrityViolationException.class);
+    }
+}
+
+// ---- Consumer-driven contract stub (Pact + JUnit 5) ----
+@ExtendWith(PactConsumerTestExt.class)
+@PactTestFor(providerName = "user-service", pactMethod = "userExists")
+class UserClientContractTest {
+
+    @Pact(consumer = "billing-export-api")
+    V4Pact userExists(PactDslWithProvider builder) {
+        return builder
+            .given("user 42 exists")
+            .uponReceiving("a lookup for user 42")
+                .path("/users/42").method("GET")
+            .willRespondWith().status(200)
+                .body(newJsonBody(o -&gt; {
+                    o.numberType("id", 42);          // shape, not exact value
+                    o.stringMatcher("email", "[^@]+@[^@]+", "a@x.com");
+                }).build())
+            .toPact(V4Pact.class);
+    }
+
+    @Test
+    void clientParsesUser(MockServer mockServer) {
+        var client = new UserClient(mockServer.getUrl());
+        User u = client.findById(42);
+        assertThat(u.email()).contains("@"); // verify the consumer can read it
+    }
+}</code></pre>
+          </div>
+
+          <div class="interviewQa">
+            <h6>Interview scenario — "How do you decide what to test where, and how do you handle a flaky suite?"</h6>
+            <p class="turn interviewer">You join a team with 85% coverage but bugs keep reaching production. Where do you start?</p>
+            <p class="turn candidate">Coverage tells me code <em>ran</em>, not that it was <em>asserted</em>. My first move is to run mutation testing — PIT — on the critical packages: pricing, auth, anything money-touching. If the mutation score is, say, 45% while line coverage is 85%, that gap is exactly the bugs leaking out: half the "covered" code has tests with no real assertion. I'd fix the weak tests the surviving mutants point at before writing any new ones.</p>
+            <p class="turn interviewer">A teammate wrote a service test that mocks the repository. Is that fine?</p>
+            <p class="turn candidate">It depends what the test is proving. If the behavior under test is pure logic — a discount calculation — mocking the repo to feed it data is fine; it's a fast solitary unit test. But if the behavior <em>is</em> the data access — the query, the fetch strategy, a unique constraint, a transaction boundary — a mock proves nothing and actively hides N+1s and lazy-loading bugs. That class of behavior must go through a Testcontainers integration test against real Postgres. The mock only encodes our assumptions about the DB.</p>
+            <p class="turn interviewer">Why Testcontainers and not just H2 for speed?</p>
+            <p class="turn candidate">Because H2's "Postgres compatibility mode" is a lie for exactly the things that break in prod — jsonb, arrays, ON CONFLICT, partial indexes, migration DDL. A green H2 test gives false confidence. Testcontainers runs the same engine and major version as prod. I pay for the startup once with a static singleton container, reuse it on dev machines for fast feedback, and use fresh containers in CI. Cross-service compatibility I cover with contract tests, not slow E2E — the consumer defines the shape, the producer verifies it in its own pipeline, and can-i-deploy gates the release.</p>
+            <p class="turn interviewer">Your integration suite is flaky — passes locally, fails 1 in 10 in CI. How do you handle it?</p>
+            <p class="turn candidate">First, I do <em>not</em> add a blanket retry — that hides the defect and erodes trust in the suite. I quarantine the flaky tests out of the gating job so they stop blocking everyone, but I track them as bugs, not "known flakes." Then I hunt the usual root causes: shared mutable state between tests — a static container not cleaned between methods, a singleton holding data; test-ordering dependence — one test relying on another's side effect; and the real clock — code calling <span class="mini">Instant.now()</span> instead of an injected <span class="mini">Clock</span>, so an assertion straddles a second boundary or midnight.</p>
+            <p class="turn interviewer">Give me a concrete one you've actually fixed.</p>
+            <p class="turn candidate">A token-expiry test asserted "expires in exactly 24h" using <span class="mini">Instant.now()</span> in both the code and the assertion. They were computed microseconds apart, so 99% of the time they matched — but when the run crossed a second tick, off by one. The fix was structural: inject a <span class="mini">Clock</span> everywhere time is read, and pin it with <span class="mini">Clock.fixed(...)</span> in tests. That killed a whole category of flakiness. The principle is the same as the mocking question — non-determinism (time, randomness, ordering, shared state) is what makes tests flaky, so you make it deterministic at the boundary instead of papering over it with retries.</p>
+          </div>
+        </section>
+
+      </div>
+    </article>
+
+    <article class="topic" id="resilience" data-rank="17" data-is-last="true" data-search="resilience fault tolerance distributed systems failure is the normal case design so that one slow or broken dependency cannot take the whole system down. in a distributed system networks partition, downstreams get slow, timeouts happen, retries amplify load and one bad dependency can cascade into a full outage. every remote call needs a timeout. no timeout is the root cause of most outages because a thread waits forever, the pool fills and the app hangs even though cpu is idle. set connect timeout and read timeout on every http client, rest template, okhttp, webclient, feign, grpc deadline, jdbc and database query timeout. retries should only be used for transient or idempotent operations such as get, put, delete, network blip, 503, connection reset. do not blindly retry non idempotent post like charge payment or place order because a retry can double charge. use idempotency keys so a retry is deduplicated on the server and a stored result is returned instead of executing twice. exponential backoff with jitter avoids synchronized retry storms and thundering herd where all clients retry at the same instant and hammer a recovering downstream. full jitter, equal jitter, decorrelated jitter. retry budget limits total retries to a percentage of requests so retries do not amplify load 3x and turn a small blip into an outage. circuit breaker states closed open half_open. closed means calls pass through and failures are counted. open means fail fast immediately without calling the dependency to give it time to recover, return error or fallback. half_open means allow a limited number of trial calls, if they succeed close again, if they fail go back to open. fail fast beats piling requests on a dying dependency. failure rate threshold, slow call rate threshold, sliding window count based or time based, wait duration in open state, permitted number of calls in half open state, minimum number of calls. bulkhead isolation separate thread pools or semaphores per dependency so one slow dependency cannot starve the threads needed by others, like watertight compartments in a ship. semaphore bulkhead limits concurrent calls, thread pool bulkhead isolates on a separate pool with a bounded queue. fallback graceful degradation returns a cached or default or partial response instead of failing the whole request, serve stale, default, empty. decorator order matters in resilience4j the recommended order from outside to inside is retry wraps circuit breaker wraps rate limiter wraps time limiter wraps bulkhead so that a retry sees a single logical attempt of the inner stack, the circuit breaker counts the timeout as a failure, and the bulkhead protects concurrency, retry of circuitbreaker of ratelimiter of timelimiter of bulkhead. rate limiting protects downstreams and yourself by capping the request rate, token bucket allows bursts up to bucket capacity refilled at a steady rate, leaky bucket smooths to a constant outflow rate, fixed window, sliding window log, sliding window counter. client side rate limiting versus server side and distributed rate limiting with redis using incr with expire or a lua script or token bucket in redis so the limit is shared across many instances. load shedding rejects early with 429 too many requests or 503 service unavailable when overloaded instead of accepting work that collapses the system, prioritize critical traffic, shed low priority, queue length and latency based shedding, adaptive concurrency limit, brownout. backpressure in reactive and streaming systems project reactor flux backpressure request n, onbackpressurebuffer, onbackpressuredrop, onbackpressurelatest, kafka consumer pause resume and max poll records, bounded queue, reject when full caller runs policy. the difference rate limiting protects the downstream from you, load shedding protects you from incoming traffic you cannot handle. retry storm thundering herd cascading failure war story a downstream blip turned into a full outage because every client retried 3 times with no jitter and no circuit breaker, the recovering service got hit by 3x load at the same instant and fell over again, retry amplification. resilience4j application.yml configuration circuitbreaker retry bulkhead timelimiter ratelimiter annotations CircuitBreaker Retry Bulkhead TimeLimiter RateLimiter fallbackMethod. little law concurrency equals arrival rate times latency. sre site reliability error budget graceful degradation defense in depth.">
+      <div class="topicHeader">
+        <div>
+          <h4>17. Resilience &amp; Fault Tolerance</h4>
+          <p>In a distributed system, failure is the normal case — design so that one slow or broken dependency cannot take the whole system down.</p>
+        </div>
+        <div class="rank">#17</div>
+      </div>
+      <div class="topicBody">
+
+        <section class="subtopic" id="resilience-1">
+          <span class="badge">Key focus</span>
+          <h5>Timeouts, retries (backoff + jitter), idempotency</h5>
+          <div class="concept">
+            <h6>Concept</h6>
+            <p>A <span class="mini">timeout</span> caps how long you wait for a remote call. A <span class="mini">retry</span> re-attempts a failed call. <span class="mini">Backoff + jitter</span> spreads retries out over time; an <span class="mini">idempotency key</span> lets the server recognize a duplicate request and not perform the action twice.</p>
+            <p class="why"><strong>Why it exists:</strong> Across a network, calls don't fail cleanly — they hang. A call with no timeout holds a thread forever; enough of them and the pool drains and the whole app "hangs" while CPU is idle. Retries recover from transient blips, but only safely when bounded, jittered and idempotent.</p>
+            <p class="analogy">Analogy: Calling someone who doesn't pick up — a timeout is hanging up after 5 rings instead of holding the line all day; jitter is everyone NOT redialling at the exact same second.</p>
+          </div>
+          <div class="flow">
+            <h6>How it works</h6>
+            <ol class="flowList">
+              <li><strong>Timeout:</strong> every remote call gets a connect timeout + a read timeout (and a DB query timeout). When it fires, the thread is freed and the call fails fast instead of hanging.</li>
+              <li><strong>Classify the failure:</strong> retry only <em>transient</em> errors (connection reset, 503, timeout) on <em>idempotent</em> operations; never blindly retry a non-idempotent write.</li>
+              <li><strong>Backoff + jitter:</strong> wait <code>base * 2^attempt</code> plus a random jitter so clients don't all retry on the same tick (avoids a synchronized retry storm).</li>
+              <li><strong>Retry budget + idempotency key:</strong> cap total retries to a small % of traffic; attach an idempotency key so a duplicated write is deduplicated server-side.</li>
+            </ol>
+          </div>
+          <div class="cases">
+            <h6>Common real-world scenarios</h6>
+            <ol class="caseList">
+              <li><strong>HTTP client with no read timeout:</strong> downstream gets slow, every worker thread blocks on the socket, the pool drains → the app looks "hung" while CPU is ~0%. Set connect + read timeouts on every client.</li>
+              <li><strong>Retrying a payment POST:</strong> the charge succeeded but the response timed out; a blind retry charges the customer twice. Use an idempotency key so the gateway returns the stored result.</li>
+              <li><strong>Retry storm:</strong> a downstream hiccups, every client retries 3× at the same instant → 3× load lands on a recovering service → it falls over again. Add jitter + a retry budget + a circuit breaker.</li>
+              <li><strong>Retrying a 400/409:</strong> retrying a non-transient client error wastes capacity and never succeeds. Only retry on transient codes (timeouts, 502/503/504, connection errors).</li>
+              <li><strong>Inner + outer retries stacked:</strong> the HTTP client retries 3×, the service retries 3×, the gateway retries 3× → 27× amplification. Retry at exactly one layer.</li>
+            </ol>
+          </div>
+          <p>A strong engineer treats a missing timeout as a production incident waiting to happen, retries only what is transient and idempotent, and assumes that any retry can and will be duplicated.</p>
+          <div class="grid2">
+            <div class="box">
+              <h6>What to understand deeply</h6>
+              <ul class="deepList">
+                <li>
+                  <strong>No timeout is the root cause of most outages</strong>
+                  <p>Defaults lie: many HTTP/JDBC clients default to an infinite read timeout. One slow downstream then converts into "all my threads are blocked." Set both a connect timeout (TCP handshake) and a read timeout (waiting for bytes), and a DB statement/query timeout. The total budget for a request must be larger than the sum of its inner timeouts, or the outer one fires first and masks the real failure.</p>
+                  <pre><code>// Every client gets explicit timeouts
+OkHttpClient client = new OkHttpClient.Builder()
+    .connectTimeout(Duration.ofMillis(500))
+    .readTimeout(Duration.ofSeconds(2))
+    .callTimeout(Duration.ofSeconds(3)) // hard ceiling for the whole call
+    .build();</code></pre>
+                </li>
+                <li>
+                  <strong>Retry only transient + idempotent operations</strong>
+                  <p>GET/PUT/DELETE are naturally idempotent; POST usually is not. Retry on connection errors, timeouts and 502/503/504 — never on 4xx (the request itself is wrong). For a non-idempotent write, make it idempotent first (idempotency key) before allowing any retry.</p>
+                </li>
+                <li>
+                  <strong>Exponential backoff WITH jitter — not without</strong>
+                  <p>Plain exponential backoff still synchronizes: every client that failed at T retries at T+1s, T+3s, T+7s together. Adding randomness ("full jitter": <code>sleep = random(0, base * 2^attempt)</code>) de-correlates clients so the recovering downstream sees a smooth trickle, not a wall.</p>
+                  <pre><code>// Full jitter
+long cap = 8_000, base = 200;
+long expo = Math.min(cap, base * (1L &lt;&lt; attempt));
+long sleep = ThreadLocalRandom.current().nextLong(0, expo + 1);</code></pre>
+                </li>
+                <li>
+                  <strong>Retry budgets stop amplification</strong>
+                  <p>Without a budget, retries multiply load exactly when the system is weakest. A retry budget caps retries to e.g. 10% of requests; once exceeded, calls fail fast instead of retrying. This bounds the extra load a struggling downstream can ever receive from you.</p>
+                </li>
+                <li>
+                  <strong>Idempotency keys make retries safe</strong>
+                  <p>The client generates a unique key per logical operation and sends it on every attempt. The server stores <code>(key → result)</code>; a repeated key returns the stored result without re-executing. This is what makes "retry the charge" safe.</p>
+                  <pre><code>// Server side: dedup on the key
+var existing = idempotencyStore.find(key);
+if (existing != null) return existing.result();   // replay, do not re-charge
+PaymentResult r = gateway.charge(req);
+idempotencyStore.save(key, r, Duration.ofHours(24));
+return r;</code></pre>
+                </li>
+              </ul>
+            </div>
+            <div class="box">
+              <h6>Production issues / pitfalls</h6>
+              <ul class="deepList pitfallList">
+                <li>
+                  <strong>Blind retries amplify load → retry storm</strong>
+                  <p>A downstream returns a few errors; the client library silently retries 3× with no jitter. Now a 1% error blip becomes 3× traffic, all synchronized, on a service that was already struggling → it tips over completely. The retry was the outage, not the original blip.</p>
+                </li>
+                <li>
+                  <strong>Retries layered at every tier</strong>
+                  <p>Feign retries, the service retries, the API gateway retries. 3 × 3 × 3 = 27 attempts per user click. Pick exactly ONE layer to retry (usually closest to the call) and disable retries everywhere else — including the hidden defaults in HTTP clients.</p>
+                </li>
+                <li>
+                  <strong>Double-charge from a retried non-idempotent POST</strong>
+                  <p>The charge succeeded but the 200 response was lost to a timeout; the client retries and charges again. Without an idempotency key the customer pays twice and reconciliation is a nightmare.</p>
+                  <pre><code>// Bad: retry a raw charge
+@Retryable // on a POST /charge with no idempotency key
+PaymentResult charge(ChargeRequest r) { ... } // can double-charge
+
+// Good: caller supplies a stable key, server dedups
+PaymentResult charge(ChargeRequest r, String idempotencyKey) { ... }</code></pre>
+                </li>
+                <li>
+                  <strong>Outer timeout shorter than inner timeout</strong>
+                  <p>Request budget is 1s but the read timeout is 2s → the request always aborts before the call could finish, every call looks like a timeout, and retries pile on. Budget timeouts top-down: outer &gt; sum of inner.</p>
+                </li>
+                <li>
+                  <strong>"Timeout" that doesn't cancel the work</strong>
+                  <p><span class="mini">orTimeout()</span> on a CompletableFuture completes the future but the underlying thread/socket may keep running, still holding a connection. Pair timeouts with real cancellation (interrupt, close, gRPC deadline) so resources are actually released.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="box">
+            <h6>Example</h6>
+            <pre><code>// Transient-only retry with exponential backoff + full jitter + budget
+public &lt;T&gt; T callWithRetry(Supplier&lt;T&gt; call) {
+    int maxAttempts = 3;
+    for (int attempt = 0; ; attempt++) {
+        try {
+            return call.get();
+        } catch (TransientException e) {           // timeout / 503 / conn reset only
+            if (attempt &gt;= maxAttempts - 1 || !budget.tryConsume()) {
+                throw e;                            // budget exhausted → fail fast
+            }
+            long expo = Math.min(8_000L, 200L * (1L &lt;&lt; attempt));
+            long jittered = ThreadLocalRandom.current().nextLong(0, expo + 1);
+            sleep(jittered);
+        }
+        // NOTE: never reaches here for non-transient (4xx) errors — they propagate
+    }
+}</code></pre>
+          </div>
+          <div class="tip"><strong>Interview answer tip:</strong> Say: 'Every remote call gets a timeout — no timeout is how a slow dependency hangs the whole app. I only retry transient, idempotent calls, with exponential backoff plus jitter and a retry budget, and I make writes safe with an idempotency key so a retry can never double-charge.'</div>
+        </section>
+
+        <section class="subtopic" id="resilience-2">
+          <span class="badge">Key focus</span>
+          <h5>Circuit breaker, bulkhead, fallback (Resilience4j)</h5>
+          <div class="concept">
+            <h6>Concept</h6>
+            <p>A <span class="mini">circuit breaker</span> stops calling a failing dependency and fails fast. A <span class="mini">bulkhead</span> isolates each dependency into its own pool/permit set so one cannot starve the others. A <span class="mini">fallback</span> returns a degraded-but-useful response instead of an error.</p>
+            <p class="why"><strong>Why it exists:</strong> Piling more requests onto a dying dependency only makes it die faster and ties up your threads. Failing fast frees resources and gives the downstream room to recover; isolation contains the blast radius; fallbacks keep the user experience alive.</p>
+            <p class="analogy">Analogy: A circuit breaker in your house — it trips to stop a fault from burning the building down. Bulkheads are the watertight compartments of a ship: one flooded compartment doesn't sink the vessel.</p>
+          </div>
+          <div class="flow">
+            <h6>How it works</h6>
+            <ol class="flowList">
+              <li><strong>CLOSED:</strong> calls pass through; the breaker records success/failure over a sliding window.</li>
+              <li><strong>→ OPEN:</strong> when the failure rate (or slow-call rate) crosses the threshold, the breaker opens and short-circuits every call for <code>waitDurationInOpenState</code> — instant failure, no downstream contact.</li>
+              <li><strong>→ HALF_OPEN:</strong> after the wait, it permits a small number of trial calls. If they succeed → back to CLOSED; if they fail → back to OPEN.</li>
+              <li><strong>Bulkhead + fallback:</strong> each dependency runs behind its own bulkhead (semaphore or thread pool); when a call is rejected, open, or timed out, the fallback method supplies a cached/default value.</li>
+            </ol>
+          </div>
+          <div class="cases">
+            <h6>Common real-world scenarios</h6>
+            <ol class="caseList">
+              <li><strong>Recommendations service is down:</strong> the product page must still render. Circuit breaker opens, fallback returns a cached "popular items" list — degraded, not broken.</li>
+              <li><strong>One slow dependency starves the pool:</strong> without a bulkhead, slow score-api calls consume every shared thread and unrelated endpoints hang. A per-dependency bulkhead caps its concurrency so others keep flowing.</li>
+              <li><strong>Slow calls, not errors:</strong> the dependency returns 200 but takes 9s. A failure-rate breaker never trips; configure a <span class="mini">slowCallRateThreshold</span> so "slow" counts as failure.</li>
+              <li><strong>Breaker flaps open/closed:</strong> <span class="mini">minimumNumberOfCalls</span> too low → one or two failures trip it on a tiny sample. Raise the minimum sample size and tune the window.</li>
+              <li><strong>Fallback that also calls the network:</strong> the fallback hits another remote service that's also down → it fails too. Fallbacks must be local: cache, default, or empty.</li>
+            </ol>
+          </div>
+          <p>A strong engineer wires breaker + bulkhead + fallback together and, crucially, gets the decorator order right — because the order changes what each layer actually counts and protects.</p>
+          <div class="grid2">
+            <div class="box">
+              <h6>What to understand deeply</h6>
+              <ul class="deepList">
+                <li>
+                  <strong>The three states and their transitions</strong>
+                  <p>CLOSED → OPEN on threshold breach; OPEN → HALF_OPEN after the wait timer; HALF_OPEN → CLOSED if trial calls pass, or HALF_OPEN → OPEN if they fail. The point of OPEN is to <em>stop calling</em> — fail fast frees your threads and lets the downstream breathe instead of being hammered while it's down.</p>
+                  <pre><code>resilience4j.circuitbreaker.instances.scoreApi:
+  sliding-window-type: COUNT_BASED
+  sliding-window-size: 50
+  minimum-number-of-calls: 20      # don't judge on a tiny sample
+  failure-rate-threshold: 50       # % failures → OPEN
+  slow-call-rate-threshold: 80     # % slow calls → OPEN
+  slow-call-duration-threshold: 2s
+  wait-duration-in-open-state: 10s
+  permitted-number-of-calls-in-half-open-state: 5</code></pre>
+                </li>
+                <li>
+                  <strong>Bulkhead isolation: semaphore vs thread-pool</strong>
+                  <p>A <em>semaphore</em> bulkhead caps the number of concurrent calls on the caller's own thread — cheap, no context switch, but it can't enforce a timeout on a blocking call. A <em>thread-pool</em> bulkhead runs the call on a separate bounded pool, isolating it fully and enabling a real timeout — at the cost of a thread hop and lost ThreadLocals/MDC. Use a pool bulkhead for slow blocking dependencies; semaphore for fast ones.</p>
+                </li>
+                <li>
+                  <strong>Fallback / graceful degradation must be local</strong>
+                  <p>A fallback fires when the call is rejected (bulkhead full), short-circuited (breaker open), or times out. It should return something cheap and local — a cached value, a sensible default, an empty list — and it should be wired per-failure-type, not "catch Throwable and hide it."</p>
+                  <pre><code>private Score scoreFallback(CustomerId id, Throwable t) {
+    Log.warnf(t, "score fallback for %s", id);
+    return cache.getIfPresent(id)      // stale-but-useful
+        != null ? cache.get(id) : Score.unscored();
+}</code></pre>
+                </li>
+                <li>
+                  <strong>Decorator order: Retry ▸ CircuitBreaker ▸ RateLimiter ▸ TimeLimiter ▸ Bulkhead</strong>
+                  <p>From outermost to innermost. Retry is outermost so one retry attempt is a full pass through the inner stack (and a retry can re-close a flapping path). The circuit breaker sits inside retry so it counts each real attempt — including a timeout — as a failure, and once OPEN it short-circuits before any retry burns budget. TimeLimiter wraps the bulkhead-isolated call so a slow call is converted into a countable failure. Bulkhead is innermost, right around the actual blocking call, to cap its concurrency. Get this backwards and, e.g., the breaker counts retries as separate calls, or the timeout never sees the real call.</p>
+                  <pre><code>// Resilience4j programmatic order (innermost first to outermost)
+Supplier&lt;T&gt; decorated = Decorators.ofSupplier(call)
+    .withBulkhead(bulkhead)            // innermost: cap concurrency
+    .withTimeLimiter(timeLimiter, sched)
+    .withRateLimiter(rateLimiter)
+    .withCircuitBreaker(circuitBreaker)
+    .withRetry(retry)                  // outermost: retries the whole stack
+    .decorate();</code></pre>
+                </li>
+              </ul>
+            </div>
+            <div class="box">
+              <h6>Production issues / pitfalls</h6>
+              <ul class="deepList pitfallList">
+                <li>
+                  <strong>No breaker → cascading failure</strong>
+                  <p>Without a breaker, every request keeps calling the dead dependency, every thread blocks on its timeout, your pool drains, and your service goes down too — the failure cascades upstream. A breaker turns a downstream outage into fast local errors you can fall back from.</p>
+                </li>
+                <li>
+                  <strong>Breaker on failure rate but the problem is latency</strong>
+                  <p>The dependency returns HTTP 200 in 9 seconds. Failures = 0%, so a failure-rate-only breaker never opens while your threads drown in slow calls. You must configure <span class="mini">slowCallRateThreshold</span> + <span class="mini">slowCallDurationThreshold</span>.</p>
+                </li>
+                <li>
+                  <strong>Wrong decorator order</strong>
+                  <p>If the circuit breaker is OUTSIDE the retry, the breaker sees one "logical" call and the retries hammer the downstream behind its back; if the TimeLimiter is outside the breaker, slow calls aren't counted as breaker failures. The recommended order (Retry ▸ Breaker ▸ RateLimiter ▸ TimeLimiter ▸ Bulkhead) exists for these reasons.</p>
+                </li>
+                <li>
+                  <strong>Shared thread pool instead of per-dependency bulkhead</strong>
+                  <p>All dependencies share one executor; the slowest one consumes every thread and starves the rest. This is exactly the "one slow dependency takes everything down" failure. Give each dependency its own bulkhead with a bounded limit.</p>
+                </li>
+                <li>
+                  <strong>Fallback hides real errors / does I/O</strong>
+                  <p>A fallback that catches everything and returns "OK" masks incidents (your dashboards stay green during an outage), and a fallback that itself calls another service can fail or slow down too. Keep fallbacks local and keep emitting metrics for fallback rate.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="box">
+            <h6>Example</h6>
+            <pre><code>@CircuitBreaker(name = "scoreApi", fallbackMethod = "scoreFallback")
+@Bulkhead(name = "scoreApi", type = Bulkhead.Type.SEMAPHORE)
+@Retry(name = "scoreApi")            // retries the whole annotated stack
+public Score fetchScore(CustomerId id) {
+    return scoreClient.fetch(id);    // remote call with its own timeout
+}
+
+// Fallback signature = same args + a trailing Throwable
+private Score scoreFallback(CustomerId id, CallNotPermittedException open) {
+    // breaker is OPEN → don't even try; serve a default fast
+    return Score.unscored();
+}
+
+private Score scoreFallback(CustomerId id, Throwable t) {
+    Log.warnf(t, "score fallback for %s", id);
+    return Score.unscored();         // degraded but the page still renders
+}</code></pre>
+          </div>
+          <div class="tip"><strong>Interview answer tip:</strong> Say: 'A circuit breaker fails fast so I stop hammering a dying dependency and free my threads — CLOSED, OPEN, HALF_OPEN. I isolate each dependency with a bulkhead so one slow one can't starve the others, and I add a local fallback for graceful degradation. Order matters: retry outside the breaker, breaker counting timeouts as failures, bulkhead innermost around the real call.'</div>
+        </section>
+
+        <section class="subtopic" id="resilience-3">
+          <span class="badge">Key focus</span>
+          <h5>Rate limiting, load shedding &amp; backpressure</h5>
+          <div class="concept">
+            <h6>Concept</h6>
+            <p><span class="mini">Rate limiting</span> caps how many requests are allowed per unit time. <span class="mini">Load shedding</span> rejects work early when you're already overloaded. <span class="mini">Backpressure</span> is a consumer signalling a producer to slow down so queues don't grow unbounded.</p>
+            <p class="why"><strong>Why it exists:</strong> Capacity is finite. It's far better to reject some requests cleanly (429/503) than to accept everything and collapse — a half-served system that's falling over serves nobody. These three protect against being overwhelmed, from outside (rate limit) and inside (shed/backpressure).</p>
+            <p class="analogy">Analogy: A nightclub with a fixed capacity — the bouncer (rate limiter/load shedder) turns people away at the door so the people already inside aren't crushed.</p>
+          </div>
+          <div class="flow">
+            <h6>How it works</h6>
+            <ol class="flowList">
+              <li><strong>Rate limit:</strong> a token bucket holds N tokens, refilled at a steady rate; a request consumes a token or is rejected/queued. Allows bursts up to the bucket size.</li>
+              <li><strong>Distributed:</strong> for many instances, keep the counter/bucket in Redis (INCR+EXPIRE or a Lua token-bucket script) so the limit is shared, not per-pod.</li>
+              <li><strong>Load shed:</strong> when queue depth or latency crosses a threshold, reject low-priority work early with 429/503 instead of accepting it and dying.</li>
+              <li><strong>Backpressure:</strong> in reactive/streaming pipelines the consumer requests <code>n</code> items at a time; producers buffer/drop/pause (Reactor <span class="mini">onBackpressure*</span>, Kafka <span class="mini">pause()/resume()</span>) rather than overrun memory.</li>
+            </ol>
+          </div>
+          <div class="cases">
+            <h6>Common real-world scenarios</h6>
+            <ol class="caseList">
+              <li><strong>Public API abuse / runaway client:</strong> one tenant sends 10k req/s. Per-key rate limiting (token bucket in Redis) caps them at the agreed quota and returns 429 with <span class="mini">Retry-After</span>.</li>
+              <li><strong>Protecting a fragile downstream:</strong> a legacy mainframe handles 50 req/s. A client-side rate limiter in front of it ensures you never exceed that, even under a traffic spike.</li>
+              <li><strong>Overload collapse:</strong> traffic doubles; instead of queueing everything until it OOMs, the service sheds load — rejects new requests early with 503 so in-flight work completes.</li>
+              <li><strong>Kafka consumer falling behind:</strong> processing is slower than the incoming rate; without backpressure (max.poll.records / pause), the consumer buffers unboundedly and OOMs. Bound the in-flight work.</li>
+              <li><strong>Fast producer, slow DB sink:</strong> a reactive stream reads faster than it writes → <span class="mini">onBackpressureBuffer</span> grows without limit → OOM. Use a bounded buffer with a drop/latest strategy or signal demand upstream.</li>
+            </ol>
+          </div>
+          <p>A strong engineer separates the two intents clearly: rate limiting protects the <em>downstream from you</em>; load shedding protects <em>you from incoming traffic you can't handle</em>.</p>
+          <div class="grid2">
+            <div class="box">
+              <h6>What to understand deeply</h6>
+              <ul class="deepList">
+                <li>
+                  <strong>Token bucket vs leaky bucket</strong>
+                  <p><em>Token bucket</em>: tokens refill at rate R into a bucket of size B; a request spends a token. It permits bursts up to B then settles to R — good for APIs where short bursts are fine. <em>Leaky bucket</em>: requests enter a queue that drains at a constant rate — output is perfectly smooth regardless of input burstiness, good for protecting a downstream that demands a steady rate. Token bucket = burst-tolerant; leaky bucket = smoothing.</p>
+                </li>
+                <li>
+                  <strong>Client-side vs server-side vs distributed</strong>
+                  <p>Server-side limits protect the server from clients; client-side limits protect a fragile downstream from your own service. With many instances, an in-memory limit of "100/s" becomes "100/s × pods" — you must use a shared store (Redis) for a true global limit.</p>
+                  <pre><code>-- Redis token bucket (Lua, atomic): refill + try-consume
+local tokens = tonumber(redis.call('HGET', KEYS[1], 'tokens') or capacity)
+local last   = tonumber(redis.call('HGET', KEYS[1], 'ts') or now)
+tokens = math.min(capacity, tokens + (now - last) * refillPerMs)
+if tokens &lt; 1 then return 0 end          -- reject → caller returns 429
+redis.call('HSET', KEYS[1], 'tokens', tokens - 1, 'ts', now)
+return 1                                   -- allow</code></pre>
+                </li>
+                <li>
+                  <strong>Load shedding: reject early, fail cheap</strong>
+                  <p>When overloaded, accepting a request and timing out 30s later is the worst outcome — you spent resources and still failed. Shed early: when concurrency/queue/latency exceeds a limit, immediately return 429 (rate) or 503 (overload) with <span class="mini">Retry-After</span>, and prioritize — shed low-value traffic (e.g. bulk/anonymous) before critical (checkout) traffic. Adaptive concurrency limits (gradient/AIMD) discover the safe limit automatically.</p>
+                </li>
+                <li>
+                  <strong>Backpressure = bounded demand, not unbounded buffers</strong>
+                  <p>The fix for "consumer slower than producer" is never "a bigger buffer" — that just delays the OOM. The consumer must signal demand. In Reactor, <code>request(n)</code> pulls only what it can handle; <code>onBackpressureBuffer/Drop/Latest</code> define the overflow policy. In Kafka, tune <span class="mini">max.poll.records</span> and <span class="mini">pause()/resume()</span> partitions while you catch up. A bounded queue with a rejection policy is backpressure for thread pools.</p>
+                </li>
+              </ul>
+            </div>
+            <div class="box">
+              <h6>Production issues / pitfalls</h6>
+              <ul class="deepList pitfallList">
+                <li>
+                  <strong>In-memory rate limit × N pods</strong>
+                  <p>You configure "1000 req/s per key" in-process and run 8 pods → the real global limit is 8000/s and the downstream still gets crushed. Either divide the limit by replica count (fragile during scaling) or use a shared Redis limiter.</p>
+                </li>
+                <li>
+                  <strong>No load shedding → queue-of-death</strong>
+                  <p>Under overload the service accepts everything; the request queue and connection pool grow until latency is 30s+ and it OOMs or the LB marks it unhealthy and removes it — sending its load to the remaining pods, which then also fall over. Shedding early breaks this spiral.</p>
+                </li>
+                <li>
+                  <strong>Unbounded buffer "fixing" backpressure</strong>
+                  <p><span class="mini">onBackpressureBuffer()</span> with no max, or an unbounded <span class="mini">LinkedBlockingQueue</span> in an executor → memory grows until OOM under a sustained burst. Always bound the buffer/queue and choose an explicit overflow policy (drop, latest, or block/CallerRuns).</p>
+                  <pre><code>// Bad: unbounded — OOM under sustained load
+flux.onBackpressureBuffer();              // no limit
+new ThreadPoolExecutor(.., new LinkedBlockingQueue&lt;&gt;()); // unbounded queue
+
+// Good: bounded + explicit overflow policy
+flux.onBackpressureBuffer(1000, BufferOverflowStrategy.DROP_OLDEST);
+new ThreadPoolExecutor(.., new ArrayBlockingQueue&lt;&gt;(1000),
+    new ThreadPoolExecutor.CallerRunsPolicy()); // backpressure</code></pre>
+                </li>
+                <li>
+                  <strong>429 with no Retry-After / no jitter</strong>
+                  <p>You correctly reject with 429 but give no <span class="mini">Retry-After</span>; clients retry instantly and in lockstep → a self-inflicted retry storm. Return Retry-After and expect clients to back off with jitter.</p>
+                </li>
+                <li>
+                  <strong>Confusing rate limiting with load shedding</strong>
+                  <p>Treating them as the same control leads to limits that protect neither party well. Rate limiting is a contract about steady throughput to a downstream; load shedding is an emergency valve based on your own real-time health (queue depth, latency, CPU). You usually need both.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="box">
+            <h6>Example</h6>
+            <pre><code>// Resilience4j RateLimiter (protect a fragile downstream at 50/s)
+resilience4j.ratelimiter.instances.legacyCore:
+  limit-for-period: 50         # permits per refresh period
+  limit-refresh-period: 1s
+  timeout-duration: 0          # 0 = fail fast (shed) instead of queueing
+
+@RateLimiter(name = "legacyCore", fallbackMethod = "shed")
+public Quote getQuote(QuoteRequest r) {
+    return legacyClient.quote(r);
+}
+
+// Load shedding: over the limit → fail fast with 429, don't queue
+private Quote shed(QuoteRequest r, RequestNotPermitted ex) {
+    throw new TooManyRequestsException("rate limited", Duration.ofSeconds(1));
+    // mapped to HTTP 429 with Retry-After: 1
+}</code></pre>
+          </div>
+          <div class="tip"><strong>Interview answer tip:</strong> Say: 'I distinguish rate limiting — protecting a downstream with a token bucket, distributed via Redis when I have many instances — from load shedding, which protects me by rejecting early with 429/503 when my queue depth or latency says I'm overloaded. In streaming systems I rely on backpressure with bounded buffers, never an unbounded queue, because a bigger buffer just delays the OOM.'</div>
+        </section>
+
+        <section class="deepExtras">
+          <h6>Deep dive — Resilience</h6>
+
+          <div class="asciiBox">
+            <h6>Architecture flow: the resilience decorator stack + circuit-breaker state machine</h6>
+            <pre><code>Request: GET /products/{id}  (needs score from score-api)
+                       │
+                       ▼
+            ┌──────────────────────┐
+            │   Retry (outermost)  │  transient only, backoff + jitter, budget
+            └──────────┬───────────┘
+                       ▼
+            ┌──────────────────────┐
+            │   Circuit Breaker    │  OPEN → fail fast (no downstream call)
+            └──────────┬───────────┘
+                       ▼
+            ┌──────────────────────┐
+            │   Rate Limiter       │  cap req/s to protect downstream
+            └──────────┬───────────┘
+                       ▼
+            ┌──────────────────────┐
+            │   Time Limiter       │  slow call → timeout → counts as failure
+            └──────────┬───────────┘
+                       ▼
+            ┌──────────────────────┐
+            │   Bulkhead (inner)   │  cap concurrency to score-api
+            └──────────┬───────────┘
+                       ▼
+                 [ score-api ]  →  on any failure: fallback() → cached/default Score
+
+
+Circuit-breaker state machine:
+
+        failureRate ≥ threshold
+        OR slowCallRate ≥ threshold
+   ┌────────────┐ ───────────────────────────▶ ┌────────────┐
+   │   CLOSED   │                               │    OPEN    │
+   │ calls pass │                               │ fail fast, │
+   │ count fails│ ◀─────────────────────────── │ no calls   │
+   └────────────┘   trial calls succeed         └─────┬──────┘
+         ▲                                            │ after
+         │                                            │ waitDurationInOpenState
+         │          trial calls fail                  ▼
+         │     ┌──────────────────────────────┐ ┌────────────┐
+         └──── │  back to OPEN on failure      │ │ HALF_OPEN  │
+               └──────────────────────────────┘ │ N trial    │
+                                                 │ calls only │
+                                                 └────────────┘
+  CLOSED ──(too many failures/slow)──▶ OPEN ──(timer)──▶ HALF_OPEN
+  HALF_OPEN ──(trials pass)──▶ CLOSED   |   HALF_OPEN ──(trials fail)──▶ OPEN</code></pre>
+          </div>
+
+          <div class="warStory">
+            <h6>War story — the retry storm that ate the cluster</h6>
+            <p><strong>Service:</strong> checkout-api → tax-api (one call per checkout), ~1,200 RPS peak, 40 client pods.</p>
+            <p><strong>Symptom:</strong> 14:02 — tax-api p99 blipped from 120ms to ~3s for ~20 seconds (a GC pause on their side). By 14:03 tax-api was returning 100% errors and checkout-api error rate hit 90%. The blip should have been invisible to users.</p>
+            <p><strong>Investigation:</strong> tax-api's inbound RPS graph showed traffic spike from 1,200 to ~4,800 the instant it got slow — then stay there. checkout-api's Feign client was configured with <span class="mini">maxAttempts=3</span> and a fixed 100ms backoff, no jitter, no circuit breaker. Every request that hit the 3s slowness retried 3× — and because there was no jitter, all 40 pods retried on the same 100ms/200ms ticks.</p>
+            <p><strong>Root cause:</strong> A small latency blip caused mass timeouts; blind synchronized retries multiplied load 3–4× and landed it in tight waves on a service that was already GC-thrashing. tax-api couldn't recover under 4× load, so it stayed down — a self-sustaining retry storm / thundering herd. The original 20-second GC pause turned into a 25-minute outage.</p>
+            <p><strong>Fix (immediate):</strong> Drop Feign retries to maxAttempts=1 at the edge; add a Resilience4j circuit breaker on the tax-api client (failureRate 50%, slowCallRate 80% over a 50-call window, open 10s). Once it opened, checkout-api fell back to a cached tax estimate and tax-api saw only its real 1,200 RPS and recovered in seconds.</p>
+            <p><strong>Fix (structural):</strong> Exponential backoff WITH full jitter on the single remaining retry layer; a retry budget capping retries to 10% of traffic; <span class="mini">Retry-After</span> on tax-api's 429s; and a load-shedding filter on tax-api that returns 503 early when its queue depth exceeds a threshold so it degrades instead of collapsing.</p>
+            <p><strong>Lesson:</strong> Retries without jitter, a budget, and a circuit breaker don't add resilience — they convert a brief downstream blip into a cascading outage. The retry was the outage. Fail fast and shed load beat "try harder."</p>
+          </div>
+
+          <div class="proCode">
+            <h6>Production-grade Resilience4j config + annotated client (correct decorator order)</h6>
+            <pre><code># application.yml — per-dependency instances
+resilience4j:
+  circuitbreaker:
+    instances:
+      taxApi:
+        sliding-window-type: COUNT_BASED
+        sliding-window-size: 50
+        minimum-number-of-calls: 20          # don't trip on a tiny sample
+        failure-rate-threshold: 50           # % failures → OPEN
+        slow-call-rate-threshold: 80         # % slow calls → OPEN
+        slow-call-duration-threshold: 2s     # a 200 in 9s is still a failure
+        wait-duration-in-open-state: 10s
+        permitted-number-of-calls-in-half-open-state: 5
+        register-health-indicator: true
+  retry:
+    instances:
+      taxApi:
+        max-attempts: 3                      # 1 call + 2 retries
+        wait-duration: 200ms
+        enable-exponential-backoff: true
+        exponential-backoff-multiplier: 2
+        enable-randomized-wait: true         # JITTER — critical
+        randomized-wait-factor: 0.5
+        retry-exceptions:                    # transient only
+          - java.io.IOException
+          - java.util.concurrent.TimeoutException
+        ignore-exceptions:                   # never retry these
+          - com.acme.BadRequestException
+  bulkhead:
+    instances:
+      taxApi:
+        max-concurrent-calls: 30             # isolate concurrency to tax-api
+        max-wait-duration: 0                 # full → reject fast (shed)
+  timelimiter:
+    instances:
+      taxApi:
+        timeout-duration: 2s
+        cancel-running-future: true          # actually cancel, free the thread
+  ratelimiter:
+    instances:
+      taxApi:
+        limit-for-period: 800
+        limit-refresh-period: 1s
+        timeout-duration: 0                  # over limit → fail fast, don't queue
+
+// Annotation order = decoration order applied OUTER → INNER:
+//   @Retry ▸ @CircuitBreaker ▸ @RateLimiter ▸ @TimeLimiter ▸ @Bulkhead
+// Retry outermost: one attempt = one full pass through the inner stack, with jitter.
+// CircuitBreaker inside Retry: counts each real attempt (incl. timeouts) as a failure
+//   and, once OPEN, short-circuits before any retry burns budget.
+// TimeLimiter: turns a slow call into a countable failure (needs an async source).
+// Bulkhead innermost: caps concurrency right at the blocking call.
+@Retry(name = "taxApi")
+@CircuitBreaker(name = "taxApi", fallbackMethod = "taxFallback")
+@RateLimiter(name = "taxApi")
+@TimeLimiter(name = "taxApi")
+@Bulkhead(name = "taxApi", type = Bulkhead.Type.THREADPOOL)
+public CompletableFuture&lt;Tax&gt; computeTax(CheckoutId id, Money subtotal) {
+    return CompletableFuture.supplyAsync(() -&gt; taxClient.compute(id, subtotal));
+}
+
+// Fallback: same args + trailing Throwable. Local only — never another remote call.
+private CompletableFuture&lt;Tax&gt; taxFallback(CheckoutId id, Money subtotal, Throwable t) {
+    if (t instanceof CallNotPermittedException) {
+        Log.debugf("taxApi circuit OPEN — serving estimate for %s", id);
+    } else {
+        Log.warnf(t, "taxApi failed — serving estimate for %s", id);
+    }
+    return CompletableFuture.completedFuture(Tax.estimate(subtotal)); // degrade, don't fail
+}</code></pre>
+          </div>
+
+          <div class="interviewQa">
+            <h6>Interview scenario — "Diagnose and prevent a cascading failure"</h6>
+            <p class="turn interviewer">A downstream had a 20-second latency blip, but your whole checkout flow was down for 25 minutes. Walk me through it.</p>
+            <p class="turn candidate">That's the classic retry-storm shape: a small blip amplified by our own retries. When the downstream got slow, our calls hit their timeout, and the client was retrying 3× with a fixed backoff and no jitter. So a brief slowness turned into 3–4× synchronized load landing on a service that was already struggling — it couldn't recover under that load, so it stayed down. The downstream's inbound RPS graph jumping to 4× the instant it got slow is the tell.</p>
+            <p class="turn interviewer">How did you confirm it was retries and not real traffic?</p>
+            <p class="turn candidate">Two signals. First, the downstream's request rate quadrupled with no corresponding jump in our own inbound user traffic — that delta is retries. Second, the spikes were periodic, clustered on the same backoff intervals across all pods, because there was no jitter. Real traffic is smoother; a retry storm is bursty and synchronized.</p>
+            <p class="turn interviewer">What stops the bleeding fastest?</p>
+            <p class="turn candidate">A circuit breaker on that client. Once the failure or slow-call rate crosses threshold it opens and fails fast, so we stop calling the dying dependency entirely — that instantly removes the amplified load and lets it recover. Behind the open breaker we serve a fallback: a cached or estimated value so checkout still completes, degraded. I'd also cut retries to a single layer immediately.</p>
+            <p class="turn interviewer">And the structural fixes so it never happens again?</p>
+            <p class="turn candidate">Four. One, retries only at one layer, transient-only, with exponential backoff plus jitter and a retry budget capping retries to ~10% of traffic — so retries can never amplify load unbounded. Two, a circuit breaker per dependency that counts slow calls as failures, not just errors, since the trigger here was latency, not 5xx. Three, bulkhead isolation per dependency so one slow one can't starve the others. Four, on the downstream side, load shedding: reject early with 503 and Retry-After when queue depth is high, so it degrades gracefully instead of collapsing.</p>
+            <p class="turn interviewer">Why does the decorator order matter for any of this?</p>
+            <p class="turn candidate">Because it changes what each layer counts and protects. Retry has to be outermost so one attempt is a full pass through the inner stack and so the breaker, sitting inside it, sees each real attempt — including timeouts — and can short-circuit before a retry even runs. The TimeLimiter has to sit where the breaker can count its timeouts as failures, and the bulkhead has to be innermost, right around the blocking call, to cap its concurrency. Put the breaker outside the retry and it never sees the retries hammering the downstream — the protection silently does nothing.</p>
+          </div>
+        </section>
+
+      </div>
+    </article>
+
         <div class="topicNav" id="topicNav" aria-label="Topic navigation">
           <button class="prev" type="button" onclick="navTopic(-1)">
             <span class="label">← Previous</span>
@@ -7557,7 +9070,7 @@ if (seenSet.contains(x)) ...;  // HashSet&lt;Integer&gt; seenSet</code></pre>
         <h3>How to actually grow into A strong engineer</h3>
         <div class="grid2">
           <div class="box">
-            <h6>Do not study like a junior</h6>
+            <h6>How to study this effectively</h6>
             <ul>
               <li>Do not just learn definitions. Always ask: which production bug relates to this topic?</li>
               <li>Do not just learn annotations. Learn the mechanism behind them: proxy, transaction, lifecycle, thread, lock.</li>
