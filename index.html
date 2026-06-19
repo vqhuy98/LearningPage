@@ -359,6 +359,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libe
         <option value="#security">15. Security &amp; Identity</option>
         <option value="#testing">16. Testing Strategy</option>
         <option value="#resilience">17. Resilience</option>
+        <option value="#system-design-mastery">18. System Design Mastery</option>
       </optgroup>
     </select>
     <button class="secondary" onclick="collapseAll()">Collapse</button>
@@ -381,7 +382,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libe
         <a href="#roadmap">30-Day Roadmap</a>
 
         <div class="navTitle">Topics</div>
-        <a href="#java-core">1. Java Core for Backend</a><a href="#spring">2. Spring Boot / Spring Framework</a><a href="#rest-api">3. REST API Design</a><a href="#microservices">4. Microservices / Distributed Systems</a><a href="#kafka">5. Kafka / Event-driven Architecture</a><a href="#database">6. SQL / Transaction / Database Performance</a><a href="#jpa">7. JPA / Hibernate</a><a href="#docker-k8s">8. Docker / Kubernetes / Cloud-native</a><a href="#cloud">9. Cloud Basics for Java</a><a href="#architecture">10. System Design / Clean Architecture / CI-CD</a><a href="#ddd">11. Domain-Driven Design (Strategic + Tactical)</a><a href="#system-design">12. System Design at Scale</a><a href="#modern-java">13. Modern Java (Loom, Records, Sealed)</a><a href="#algorithms">14. Coding Test / Algorithms (DSA)</a><a href="#security">15. Security &amp; Identity</a><a href="#testing">16. Testing Strategy</a><a href="#resilience">17. Resilience &amp; Fault Tolerance</a>
+        <a href="#java-core">1. Java Core for Backend</a><a href="#spring">2. Spring Boot / Spring Framework</a><a href="#rest-api">3. REST API Design</a><a href="#microservices">4. Microservices / Distributed Systems</a><a href="#kafka">5. Kafka / Event-driven Architecture</a><a href="#database">6. SQL / Transaction / Database Performance</a><a href="#jpa">7. JPA / Hibernate</a><a href="#docker-k8s">8. Docker / Kubernetes / Cloud-native</a><a href="#cloud">9. Cloud Basics for Java</a><a href="#architecture">10. System Design / Clean Architecture / CI-CD</a><a href="#ddd">11. Domain-Driven Design (Strategic + Tactical)</a><a href="#system-design">12. System Design at Scale</a><a href="#modern-java">13. Modern Java (Loom, Records, Sealed)</a><a href="#algorithms">14. Coding Test / Algorithms (DSA)</a><a href="#security">15. Security &amp; Identity</a><a href="#testing">16. Testing Strategy</a><a href="#resilience">17. Resilience &amp; Fault Tolerance</a><a href="#system-design-mastery">18. System Design Mastery Course</a>
       </nav>
     </aside>
 
@@ -404,8 +405,8 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libe
       </section>
 
       <section class="stats">
-        <div class="card"><strong>17</strong><span>Topics</span></div>
-        <div class="card"><strong>63</strong><span>Deep sub-topics</span></div>
+        <div class="card"><strong>18</strong><span>Topics</span></div>
+        <div class="card"><strong>69</strong><span>Deep sub-topics</span></div>
         <div class="card"><strong>100+</strong><span>Tips, examples, pitfalls</span></div>
         <div class="card"><strong>Offline</strong><span>Open in browser anytime</span></div>
       </section>
@@ -413,14 +414,14 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libe
       <section class="section" id="topics">
         <h3>Deep Topics</h3>
         <p class="lead">
-          Search by keywords such as OOP, HashMap, Transaction, Outbox, Kafka, N+1, Kubernetes.
+          Search by keywords such as OOP, HashMap, Transaction, Outbox, Kafka, N+1, Kubernetes, System Design.
           The content prioritizes how to use it in real projects and how to apply them in real-world engineering.
         </p>
         <div class="controls">
           <input id="searchBox" placeholder="Search: OOP, Kafka, Outbox, Transaction, N+1, Kubernetes...">
           <select id="topicSelect">
             <option value="all">All topics</option>
-            <option value="1">1. Java Core for Backend</option><option value="2">2. Spring Boot / Spring Framework</option><option value="3">3. REST API Design</option><option value="4">4. Microservices / Distributed Systems</option><option value="5">5. Kafka / Event-driven Architecture</option><option value="6">6. SQL / Transaction / Database Performance</option><option value="7">7. JPA / Hibernate</option><option value="8">8. Docker / Kubernetes / Cloud-native</option><option value="9">9. Cloud Basics for Java</option><option value="10">10. System Design / Clean Architecture / CI-CD</option><option value="11">11. Domain-Driven Design (Strategic + Tactical)</option><option value="12">12. System Design at Scale</option><option value="13">13. Modern Java (Loom, Records, Sealed)</option><option value="14">14. Coding Test / Algorithms (DSA)</option><option value="15">15. Security &amp; Identity</option><option value="16">16. Testing Strategy</option><option value="17">17. Resilience &amp; Fault Tolerance</option>
+            <option value="1">1. Java Core for Backend</option><option value="2">2. Spring Boot / Spring Framework</option><option value="3">3. REST API Design</option><option value="4">4. Microservices / Distributed Systems</option><option value="5">5. Kafka / Event-driven Architecture</option><option value="6">6. SQL / Transaction / Database Performance</option><option value="7">7. JPA / Hibernate</option><option value="8">8. Docker / Kubernetes / Cloud-native</option><option value="9">9. Cloud Basics for Java</option><option value="10">10. System Design / Clean Architecture / CI-CD</option><option value="11">11. Domain-Driven Design (Strategic + Tactical)</option><option value="12">12. System Design at Scale</option><option value="13">13. Modern Java (Loom, Records, Sealed)</option><option value="14">14. Coding Test / Algorithms (DSA)</option><option value="15">15. Security &amp; Identity</option><option value="16">16. Testing Strategy</option><option value="17">17. Resilience &amp; Fault Tolerance</option><option value="18">18. System Design Mastery Course</option>
           </select>
           <button class="secondary" onclick="clearFilters()">Clear</button>
         </div>
@@ -443,6 +444,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libe
           <button class="topicTab" data-target="security" role="tab"><span class="num">15</span>Security</button>
           <button class="topicTab" data-target="testing" role="tab"><span class="num">16</span>Testing</button>
           <button class="topicTab" data-target="resilience" role="tab"><span class="num">17</span>Resilience</button>
+          <button class="topicTab" data-target="system-design-mastery" role="tab"><span class="num">18</span>System Design Mastery</button>
         </div>
 
     <article class="topic active" id="java-core" data-rank="1" data-search="java core for Backend do not learn java core as definitions. learn by being able to explain behavior, trade-off, production bug and performance. real-world oop in backend advanced does not only talk about encapsulation/inheritance/polymorphism/abstraction. advanced must know how to use oop to reduce coupling, keep the domain model meaningful, avoid service god class and avoid abusing inheritance. encapsulation: not just private field + getter/setter. the goal is to keep the invariant of the object. example: order should not allow the outside to setstatus arbitrarily, but should have methods confirm(), cancel(), pay(). inheritance: use very carefully. in business code, composition is usually safer than inheritance because inheritance creates tight coupling and easily breaks parent/child behavior. polymorphism: use it to replace long if/else with strategy, especially in fee calculation, choosing payment provider, validation rule, export file, notification channel. abstraction: an interface should represent a capability/business port, not mechanically create an interface for every service. hashmap, equals/hashcode, collections internals advanced needs to be able to explain why bugs happen when using a mutable object as a key, why hashmap degrades performance, and when to use concurrenthashmap. hashmap uses hashcode to find the bucket, then uses equals to find the right key. if hashcode is poorly distributed, many keys fall into the same bucket → performance drops. since java 8, a bucket can treeify into a red-black tree when collisions are many, but you should not rely on that to hide a poor hashcode design. a key used in a hashmap should be immutable or at least the fields participating in equals/hashcode must not change after put. concurrency, thread pool, completablefuture advanced must know that concurrency is not only for running faster, but also to control resources: thread pool, timeout, backpressure, connection pool, db pool and failure handling. completablefuture is suitable for parallel i/o such as calling many independent apis. do not use commonpool carelessly in backend production. you should define a dedicated executor to avoid affecting other tasks. more parallelism is not always faster. if the db pool has only 10 connections but you create 100 parallel db tasks then you only choke the system. always have timeout, fallback, exception handling and logging correlation id. java memory model, volatile, synchronized advanced needs to understand visibility and atomicity. volatile does not replace a lock for a compound operation such as count++. volatile guarantees visibility: other threads see the latest value. volatile does not guarantee atomicity for an operation made of multiple steps. synchronized guarantees mutual exclusion and visibility. atomicinteger is suitable for a simple counter; a lock is suitable when you need trylock, fairness or condition.">
@@ -8497,7 +8499,7 @@ class UserClientContractTest {
       </div>
     </article>
 
-    <article class="topic" id="resilience" data-rank="17" data-is-last="true" data-search="resilience fault tolerance distributed systems failure is the normal case design so that one slow or broken dependency cannot take the whole system down. in a distributed system networks partition, downstreams get slow, timeouts happen, retries amplify load and one bad dependency can cascade into a full outage. every remote call needs a timeout. no timeout is the root cause of most outages because a thread waits forever, the pool fills and the app hangs even though cpu is idle. set connect timeout and read timeout on every http client, rest template, okhttp, webclient, feign, grpc deadline, jdbc and database query timeout. retries should only be used for transient or idempotent operations such as get, put, delete, network blip, 503, connection reset. do not blindly retry non idempotent post like charge payment or place order because a retry can double charge. use idempotency keys so a retry is deduplicated on the server and a stored result is returned instead of executing twice. exponential backoff with jitter avoids synchronized retry storms and thundering herd where all clients retry at the same instant and hammer a recovering downstream. full jitter, equal jitter, decorrelated jitter. retry budget limits total retries to a percentage of requests so retries do not amplify load 3x and turn a small blip into an outage. circuit breaker states closed open half_open. closed means calls pass through and failures are counted. open means fail fast immediately without calling the dependency to give it time to recover, return error or fallback. half_open means allow a limited number of trial calls, if they succeed close again, if they fail go back to open. fail fast beats piling requests on a dying dependency. failure rate threshold, slow call rate threshold, sliding window count based or time based, wait duration in open state, permitted number of calls in half open state, minimum number of calls. bulkhead isolation separate thread pools or semaphores per dependency so one slow dependency cannot starve the threads needed by others, like watertight compartments in a ship. semaphore bulkhead limits concurrent calls, thread pool bulkhead isolates on a separate pool with a bounded queue. fallback graceful degradation returns a cached or default or partial response instead of failing the whole request, serve stale, default, empty. decorator order matters in resilience4j the recommended order from outside to inside is retry wraps circuit breaker wraps rate limiter wraps time limiter wraps bulkhead so that a retry sees a single logical attempt of the inner stack, the circuit breaker counts the timeout as a failure, and the bulkhead protects concurrency, retry of circuitbreaker of ratelimiter of timelimiter of bulkhead. rate limiting protects downstreams and yourself by capping the request rate, token bucket allows bursts up to bucket capacity refilled at a steady rate, leaky bucket smooths to a constant outflow rate, fixed window, sliding window log, sliding window counter. client side rate limiting versus server side and distributed rate limiting with redis using incr with expire or a lua script or token bucket in redis so the limit is shared across many instances. load shedding rejects early with 429 too many requests or 503 service unavailable when overloaded instead of accepting work that collapses the system, prioritize critical traffic, shed low priority, queue length and latency based shedding, adaptive concurrency limit, brownout. backpressure in reactive and streaming systems project reactor flux backpressure request n, onbackpressurebuffer, onbackpressuredrop, onbackpressurelatest, kafka consumer pause resume and max poll records, bounded queue, reject when full caller runs policy. the difference rate limiting protects the downstream from you, load shedding protects you from incoming traffic you cannot handle. retry storm thundering herd cascading failure war story a downstream blip turned into a full outage because every client retried 3 times with no jitter and no circuit breaker, the recovering service got hit by 3x load at the same instant and fell over again, retry amplification. resilience4j application.yml configuration circuitbreaker retry bulkhead timelimiter ratelimiter annotations CircuitBreaker Retry Bulkhead TimeLimiter RateLimiter fallbackMethod. little law concurrency equals arrival rate times latency. sre site reliability error budget graceful degradation defense in depth.">
+    <article class="topic" id="resilience" data-rank="17" data-search="resilience fault tolerance distributed systems failure is the normal case design so that one slow or broken dependency cannot take the whole system down. in a distributed system networks partition, downstreams get slow, timeouts happen, retries amplify load and one bad dependency can cascade into a full outage. every remote call needs a timeout. no timeout is the root cause of most outages because a thread waits forever, the pool fills and the app hangs even though cpu is idle. set connect timeout and read timeout on every http client, rest template, okhttp, webclient, feign, grpc deadline, jdbc and database query timeout. retries should only be used for transient or idempotent operations such as get, put, delete, network blip, 503, connection reset. do not blindly retry non idempotent post like charge payment or place order because a retry can double charge. use idempotency keys so a retry is deduplicated on the server and a stored result is returned instead of executing twice. exponential backoff with jitter avoids synchronized retry storms and thundering herd where all clients retry at the same instant and hammer a recovering downstream. full jitter, equal jitter, decorrelated jitter. retry budget limits total retries to a percentage of requests so retries do not amplify load 3x and turn a small blip into an outage. circuit breaker states closed open half_open. closed means calls pass through and failures are counted. open means fail fast immediately without calling the dependency to give it time to recover, return error or fallback. half_open means allow a limited number of trial calls, if they succeed close again, if they fail go back to open. fail fast beats piling requests on a dying dependency. failure rate threshold, slow call rate threshold, sliding window count based or time based, wait duration in open state, permitted number of calls in half open state, minimum number of calls. bulkhead isolation separate thread pools or semaphores per dependency so one slow dependency cannot starve the threads needed by others, like watertight compartments in a ship. semaphore bulkhead limits concurrent calls, thread pool bulkhead isolates on a separate pool with a bounded queue. fallback graceful degradation returns a cached or default or partial response instead of failing the whole request, serve stale, default, empty. decorator order matters in resilience4j the recommended order from outside to inside is retry wraps circuit breaker wraps rate limiter wraps time limiter wraps bulkhead so that a retry sees a single logical attempt of the inner stack, the circuit breaker counts the timeout as a failure, and the bulkhead protects concurrency, retry of circuitbreaker of ratelimiter of timelimiter of bulkhead. rate limiting protects downstreams and yourself by capping the request rate, token bucket allows bursts up to bucket capacity refilled at a steady rate, leaky bucket smooths to a constant outflow rate, fixed window, sliding window log, sliding window counter. client side rate limiting versus server side and distributed rate limiting with redis using incr with expire or a lua script or token bucket in redis so the limit is shared across many instances. load shedding rejects early with 429 too many requests or 503 service unavailable when overloaded instead of accepting work that collapses the system, prioritize critical traffic, shed low priority, queue length and latency based shedding, adaptive concurrency limit, brownout. backpressure in reactive and streaming systems project reactor flux backpressure request n, onbackpressurebuffer, onbackpressuredrop, onbackpressurelatest, kafka consumer pause resume and max poll records, bounded queue, reject when full caller runs policy. the difference rate limiting protects the downstream from you, load shedding protects you from incoming traffic you cannot handle. retry storm thundering herd cascading failure war story a downstream blip turned into a full outage because every client retried 3 times with no jitter and no circuit breaker, the recovering service got hit by 3x load at the same instant and fell over again, retry amplification. resilience4j application.yml configuration circuitbreaker retry bulkhead timelimiter ratelimiter annotations CircuitBreaker Retry Bulkhead TimeLimiter RateLimiter fallbackMethod. little law concurrency equals arrival rate times latency. sre site reliability error budget graceful degradation defense in depth.">
       <div class="topicHeader">
         <div>
           <h4>17. Resilience &amp; Fault Tolerance</h4>
@@ -9018,6 +9020,298 @@ private CompletableFuture&lt;Tax&gt; taxFallback(CheckoutId id, Money subtotal, 
             <p class="turn candidate">Four. One, retries only at one layer, transient-only, with exponential backoff plus jitter and a retry budget capping retries to ~10% of traffic — so retries can never amplify load unbounded. Two, a circuit breaker per dependency that counts slow calls as failures, not just errors, since the trigger here was latency, not 5xx. Three, bulkhead isolation per dependency so one slow one can't starve the others. Four, on the downstream side, load shedding: reject early with 503 and Retry-After when queue depth is high, so it degrades gracefully instead of collapsing.</p>
             <p class="turn interviewer">Why does the decorator order matter for any of this?</p>
             <p class="turn candidate">Because it changes what each layer counts and protects. Retry has to be outermost so one attempt is a full pass through the inner stack and so the breaker, sitting inside it, sees each real attempt — including timeouts — and can short-circuit before a retry even runs. The TimeLimiter has to sit where the breaker can count its timeouts as failures, and the bulkhead has to be innermost, right around the blocking call, to cap its concurrency. Put the breaker outside the retry and it never sees the retries hammering the downstream — the protection silently does nothing.</p>
+          </div>
+        </section>
+
+      </div>
+    </article>
+
+    <article class="topic" id="system-design-mastery" data-rank="18" data-is-last="true" data-search="system design mastery course ai software engineering interviews foundations single server dns web mobile http json api database sql nosql document wide column key value graph acid transactions consistency scalability vertical scaling horizontal scaling load balancer round robin least connections least response time ip hash health checks single point of failure api design contracts versioning rest graphql grpc tcp udp authentication authorization rbac abac acl oauth2 openid connect jwt bearer token api key security rate limiting cors injection firewall vpn csrf xss senior engineer trade offs architecture interview preparation">
+      <div class="topicHeader">
+        <div>
+          <h4>18. System Design Mastery Course</h4>
+          <p>A clear study path from the transcript: understand how systems work end to end, explain trade-offs, and answer senior-level design questions.</p>
+        </div>
+        <div class="rank">#18</div>
+      </div>
+      <div class="topicBody">
+
+        <section class="subtopic" id="system-design-mastery-1">
+          <span class="badge">Key focus</span>
+          <h5>Why this matters now and how to study it</h5>
+          <div class="concept">
+            <h6>Concept</h6>
+            <p>AI can help write implementation faster, so the higher-value skill becomes understanding the system: components, boundaries, data flow, failure modes, and trade-offs. System design is the ability to move from a requirement to an architecture that can be explained, scaled, operated, and defended.</p>
+            <p class="why"><strong>Why it exists:</strong> Interviews and real projects now test whether you can reason about the whole system, not only write one function. A senior engineer should explain why a database, API pattern, cache, queue, or load balancer belongs in the design.</p>
+          </div>
+          <div class="flow">
+            <h6>Transcript learning path</h6>
+            <ol class="flowList">
+              <li><strong>Foundations:</strong> start from a single server, DNS, HTTP request flow, web/mobile clients, and what each component does.</li>
+              <li><strong>API design:</strong> define contracts, methods, versioning, protocols, and client/server communication patterns.</li>
+              <li><strong>Databases:</strong> choose SQL, NoSQL, graph, key-value, or wide-column storage based on relationships, consistency, latency, and scale.</li>
+              <li><strong>Scale and reliability:</strong> introduce horizontal scaling, load balancing, health checks, SPOF removal, caching, and failure handling.</li>
+              <li><strong>Interview execution:</strong> clarify requirements, draw the baseline design, find bottlenecks, evolve the design, and explain trade-offs.</li>
+            </ol>
+          </div>
+          <div class="grid2">
+            <div class="box">
+              <h6>How to learn each lesson</h6>
+              <ul class="deepList">
+                <li><strong>Draw the request path</strong><p>For every concept, draw what happens from user action to server response. If you cannot draw the path, you probably only memorized the term.</p></li>
+                <li><strong>Name the trade-off</strong><p>Every design choice buys something and costs something: consistency vs latency, flexibility vs query power, horizontal scale vs operational complexity.</p></li>
+                <li><strong>Attach a production bug</strong><p>Ask: what failure would this prevent? Example: health checks stop load balancers from sending traffic to dead instances.</p></li>
+                <li><strong>Practice the interview sentence</strong><p>Turn each topic into a short answer: "I would choose X when Y matters, but I would avoid it when Z is the bottleneck."</p></li>
+              </ul>
+            </div>
+            <div class="box">
+              <h6>What good understanding sounds like</h6>
+              <ul>
+                <li>I can explain the current simple design before making it distributed.</li>
+                <li>I know where the data lives, who owns it, and what consistency the product needs.</li>
+                <li>I can identify the first bottleneck and scale only that part.</li>
+                <li>I can explain how the system fails and how users experience that failure.</li>
+                <li>I can compare alternatives instead of saying one technology is always best.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tip"><strong>Study rule:</strong> Do not memorize the transcript as separate definitions. Convert every section into: request flow, design choice, trade-off, failure mode, and interview answer.</div>
+        </section>
+
+        <section class="subtopic" id="system-design-mastery-2">
+          <span class="badge">Foundation</span>
+          <h5>Single server setup and request flow</h5>
+          <div class="concept">
+            <h6>Concept</h6>
+            <p>Every large system begins as a simple path: a user enters a domain, DNS resolves it to an IP address, the client sends an HTTP request, the server processes it, and the response returns as HTML for browsers or JSON for apps.</p>
+            <p class="why"><strong>Why it exists:</strong> Starting with one server makes the system understandable before you split it into web tier, data tier, cache, workers, and load-balanced services.</p>
+          </div>
+          <div class="flow">
+            <h6>Baseline flow to memorize</h6>
+            <ol class="flowList">
+              <li><strong>Client starts with a domain:</strong> the browser or mobile app knows <span class="mini">app.demo.com</span>, not the server IP.</li>
+              <li><strong>DNS resolves the domain:</strong> DNS returns the IP address that points to the server or load balancer.</li>
+              <li><strong>Client sends HTTP request:</strong> browser requests pages/assets; mobile app usually requests JSON from APIs.</li>
+              <li><strong>Server runs business logic:</strong> the app validates input, applies rules, reads/writes data, and builds a response.</li>
+              <li><strong>Response returns:</strong> HTML/CSS/JS for a browser, JSON for app/API clients.</li>
+            </ol>
+          </div>
+          <div class="grid2">
+            <div class="box">
+              <h6>What to understand deeply</h6>
+              <ul class="deepList">
+                <li><strong>DNS is the first dependency</strong><p>The user knows the domain, not the server IP. DNS latency, caching, and failures affect the first step of access.</p></li>
+                <li><strong>Browser and mobile clients need different responses</strong><p>A browser may receive HTML/CSS/JS, while a mobile app usually receives JSON from API endpoints. Same backend, different presentation needs.</p></li>
+                <li><strong>The single server is simple but fragile</strong><p>It is easy to deploy and reason about, but CPU, memory, database connections, disk, and network all share one machine.</p></li>
+                <li><strong>Boundaries appear before microservices</strong><p>Even in one server, separate web/API logic, business logic, data access, and background jobs mentally. That makes later scaling easier.</p></li>
+              </ul>
+            </div>
+            <div class="box">
+              <h6>Common mistakes</h6>
+              <ul class="deepList pitfallList">
+                <li><strong>Scaling before understanding the request</strong><p>If you cannot explain one request end to end, adding Kubernetes, queues, or caches only hides confusion.</p></li>
+                <li><strong>Putting every concern in one controller</strong><p>The app may still run on one server, but code should not become one giant handler. Keep business rules and data access separated.</p></li>
+                <li><strong>No visibility</strong><p>Without logs, metrics, and request IDs, you cannot tell whether slowness comes from DNS, network, server CPU, database, or downstream calls.</p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="tip"><strong>Interview answer tip:</strong> Start simple. Say: "I would first design a single-server version so the request path is clear, then split web/API and data tiers when load or reliability requires it."</div>
+        </section>
+
+        <section class="subtopic" id="system-design-mastery-3">
+          <span class="badge">Data layer</span>
+          <h5>Database choice: SQL, NoSQL, key-value and graph</h5>
+          <div class="concept">
+            <h6>Concept</h6>
+            <p>Database selection is not about which product is popular. It is about data shape, access pattern, consistency needs, relationship complexity, read/write volume, and operational maturity.</p>
+          </div>
+          <div class="flow">
+            <h6>Decision guide</h6>
+            <ol class="flowList">
+              <li><strong>Use SQL</strong> when data is structured, relationships matter, joins are useful, and ACID transactions are required.</li>
+              <li><strong>Use document storage</strong> when data is JSON-like, flexible, and often read as a whole document.</li>
+              <li><strong>Use key-value storage</strong> when lookup by key must be extremely fast, such as sessions, cache, feature flags, or rate-limit counters.</li>
+              <li><strong>Use wide-column storage</strong> when write volume is huge and query patterns are known ahead of time.</li>
+              <li><strong>Use graph storage</strong> when relationships themselves are the core query, such as recommendations, social graphs, or dependency graphs.</li>
+            </ol>
+          </div>
+          <div class="grid2">
+            <div class="box">
+              <h6>Real examples</h6>
+              <ul class="deepList">
+                <li><strong>E-commerce orders</strong><p>Customers, orders, payments, inventory, and refunds need transactions and clear relationships. SQL is the natural starting point.</p></li>
+                <li><strong>User activity events</strong><p>Clickstream or activity logs may be large and semi-structured. A document, wide-column, or event store can be better depending on query needs.</p></li>
+                <li><strong>Session lookup</strong><p>Session ID to session data is a direct key lookup. Redis-style key-value storage fits the access pattern.</p></li>
+                <li><strong>Recommendation graph</strong><p>"Users who bought X also bought Y" or friend-of-friend traversal can fit graph thinking better than deep SQL joins.</p></li>
+              </ul>
+            </div>
+            <div class="box">
+              <h6>Trade-offs to say out loud</h6>
+              <ul>
+                <li>SQL gives strong consistency and joins, but schema changes and horizontal scaling can need care.</li>
+                <li>NoSQL gives flexible scale and low latency, but you often trade away joins or strict transaction boundaries.</li>
+                <li>Key-value stores are fast, but only if the key access pattern matches the product need.</li>
+                <li>Graph databases make relationship queries expressive, but add another operational model to learn.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="pitfall"><strong>Pitfall:</strong> Do not choose NoSQL only because the system is "large scale." Many high-scale systems still use SQL for core transactional data and add NoSQL/cache/search around specific bottlenecks.</div>
+        </section>
+
+        <section class="subtopic" id="system-design-mastery-4">
+          <span class="badge">Scale</span>
+          <h5>Scaling, load balancing, health checks and SPOF</h5>
+          <div class="concept">
+            <h6>Concept</h6>
+            <p>Vertical scaling adds more resources to one server. Horizontal scaling adds more servers and uses a load balancer to distribute traffic. High-scale systems usually need horizontal scaling because it improves capacity and fault tolerance.</p>
+          </div>
+          <div class="flow">
+            <h6>How the architecture evolves</h6>
+            <ol class="flowList">
+              <li><strong>Start:</strong> clients call one application server and one database.</li>
+              <li><strong>Scale up:</strong> add CPU, RAM, or disk to the same server when traffic is still moderate.</li>
+              <li><strong>Scale out:</strong> run multiple stateless app servers behind a load balancer.</li>
+              <li><strong>Check health:</strong> the load balancer removes unhealthy instances from rotation.</li>
+              <li><strong>Remove SPOFs:</strong> duplicate or fail over critical components such as load balancers, databases, caches, and DNS.</li>
+            </ol>
+          </div>
+          <div class="grid2">
+            <div class="box">
+              <h6>Load-balancing strategies</h6>
+              <ul class="deepList">
+                <li><strong>Round robin</strong><p>Send requests to servers in rotation. Simple and good when servers have similar capacity and request cost is similar.</p></li>
+                <li><strong>Least connections</strong><p>Send new traffic to the server with the fewest active connections. Useful when request duration varies.</p></li>
+                <li><strong>Least response time</strong><p>Prefer servers currently responding fastest. Useful when performance differs between instances.</p></li>
+                <li><strong>IP hash / sticky routing</strong><p>Route the same client to the same server. Useful for session affinity, but weaker if one client is very heavy.</p></li>
+              </ul>
+            </div>
+            <div class="box">
+              <h6>Reliability checklist</h6>
+              <ul class="deepList">
+                <li><strong>Health checks</strong><p>The load balancer should stop sending traffic to unhealthy servers. Check readiness, not just "process is alive."</p></li>
+                <li><strong>SPOF removal</strong><p>A single server, single load balancer, single database primary, or single DNS provider can become the component that brings everything down.</p></li>
+                <li><strong>Separate tiers</strong><p>Split web/API tier from database tier so each can scale based on its own bottleneck.</p></li>
+                <li><strong>Measure first bottleneck</strong><p>CPU, memory, connection pool, DB locks, network, disk, and downstream APIs fail differently. Scale the bottleneck you can prove.</p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="tip"><strong>Interview answer tip:</strong> Say: "Vertical scaling is the simplest first move, but it has a hard ceiling and poor redundancy. Horizontal scaling adds operational complexity but gives capacity and fault tolerance through multiple instances behind a load balancer."</div>
+        </section>
+
+        <section class="subtopic" id="system-design-mastery-5">
+          <span class="badge">Contracts</span>
+          <h5>API design and communication protocols</h5>
+          <div class="concept">
+            <h6>Concept</h6>
+            <p>An API is a contract between systems. Good API design defines resources, operations, request/response shape, errors, versioning, and the protocol used for communication.</p>
+          </div>
+          <div class="grid2">
+            <div class="box">
+              <h6>REST design checklist</h6>
+              <ul class="deepList">
+                <li><strong>Use nouns for resources</strong><p>Use <span class="mini">/users</span>, <span class="mini">/orders/{id}</span>, <span class="mini">/products/{id}</span>. Avoid action-heavy paths like <span class="mini">/getUser</span>.</p></li>
+                <li><strong>Use HTTP methods correctly</strong><p><span class="mini">GET</span> reads, <span class="mini">POST</span> creates/actions, <span class="mini">PUT</span> replaces, <span class="mini">PATCH</span> partially updates, <span class="mini">DELETE</span> removes.</p></li>
+                <li><strong>Version deliberately</strong><p>Use versioning when the contract changes incompatibly. Keep old versions during a deprecation window.</p></li>
+                <li><strong>Standardize errors</strong><p>Return stable error codes, messages, correlation IDs, and validation details so clients can respond correctly.</p></li>
+              </ul>
+            </div>
+            <div class="box">
+              <h6>Protocol choices</h6>
+              <ul class="deepList">
+                <li><strong>REST over HTTP</strong><p>Best default for public APIs and CRUD-like resources. Simple, cacheable, and easy to debug.</p></li>
+                <li><strong>GraphQL</strong><p>Useful when clients need flexible field selection and one request can assemble related data. Watch for authorization and query-cost control.</p></li>
+                <li><strong>gRPC</strong><p>Useful for high-performance service-to-service calls with strong contracts through Protocol Buffers. Less browser-native than REST.</p></li>
+                <li><strong>TCP vs UDP</strong><p>TCP favors reliability and ordered delivery. UDP favors low latency and can tolerate loss, such as streaming or real-time media.</p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="flow">
+            <h6>API design flow</h6>
+            <ol class="flowList">
+              <li>Start with the user action or system event.</li>
+              <li>Identify the resource and ownership boundary.</li>
+              <li>Define the request, response, errors, and idempotency behavior.</li>
+              <li>Choose REST, GraphQL, gRPC, or async messaging based on client need and latency/contract requirements.</li>
+              <li>Plan versioning before breaking clients.</li>
+            </ol>
+          </div>
+          <div class="pitfall"><strong>Pitfall:</strong> A working endpoint is not the same as a good contract. If clients cannot rely on shape, errors, idempotency, and versioning, your API will be painful to evolve.</div>
+        </section>
+
+        <section class="subtopic" id="system-design-mastery-6">
+          <span class="badge">Security</span>
+          <h5>Authentication, authorization and API protection</h5>
+          <div class="concept">
+            <h6>Concept</h6>
+            <p>Authentication asks "who are you?" Authorization asks "what are you allowed to do?" API security protects the entry points so users, browsers, services, and attackers cannot abuse the system.</p>
+          </div>
+          <div class="grid2">
+            <div class="box">
+              <h6>Identity models</h6>
+              <ul class="deepList">
+                <li><strong>Basic auth / username-password</strong><p>Simple identity proof, but should only happen over HTTPS and usually only for narrow internal use.</p></li>
+                <li><strong>API keys</strong><p>Identify a calling app or integration. They are easy to use, but need scopes, rotation, and careful storage.</p></li>
+                <li><strong>OAuth2</strong><p>Delegated authorization. A third-party app gets a token with approved permissions instead of receiving the user's password.</p></li>
+                <li><strong>OpenID Connect</strong><p>Adds identity on top of OAuth2. Access tokens authorize API access; ID tokens tell the client who the user is.</p></li>
+                <li><strong>JWT / bearer tokens</strong><p>Carry claims such as user ID, role, scopes, issuer, and expiry. The server validates the token and applies authorization rules.</p></li>
+              </ul>
+            </div>
+            <div class="box">
+              <h6>Authorization models</h6>
+              <ul class="deepList">
+                <li><strong>RBAC</strong><p>Role-based access control: admin, editor, viewer. Simple and common for dashboards, CMS, and team tools.</p></li>
+                <li><strong>ABAC</strong><p>Attribute-based access control: allow based on user, resource, and environment attributes such as department, owner, location, or time.</p></li>
+                <li><strong>ACL</strong><p>Access control list: each resource has its own permission list. Good for document sharing, harder to manage at huge scale.</p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="cases">
+            <h6>API protection checklist</h6>
+            <ol class="caseList">
+              <li><strong>Rate limiting:</strong> limit requests per user, IP, endpoint, or globally to prevent brute force and overload.</li>
+              <li><strong>CORS:</strong> control which browser origins are allowed to call the API.</li>
+              <li><strong>SQL/NoSQL injection prevention:</strong> never concatenate user input into queries; use parameterized queries or safe ORM APIs.</li>
+              <li><strong>Firewall and VPN:</strong> keep internal admin APIs private and reachable only from approved networks.</li>
+              <li><strong>CSRF:</strong> protect cookie-based sessions with CSRF tokens and same-site cookie settings.</li>
+              <li><strong>XSS:</strong> escape untrusted content and use content security policy so injected scripts cannot run in user browsers.</li>
+            </ol>
+          </div>
+          <div class="tip"><strong>Interview answer tip:</strong> Separate the concepts clearly: "Authentication proves identity, authorization evaluates permissions, and API security controls abuse at the boundary with rate limits, CORS, injection prevention, CSRF/XSS defenses, and network isolation."</div>
+        </section>
+
+        <section class="deepExtras">
+          <h6>Deep dive - System Design Mastery</h6>
+
+          <div class="warStory">
+            <h6>Learning story - from transcript to memory</h6>
+            <p><strong>Bad way:</strong> Memorize "round robin, SQL, OAuth2, CORS" as isolated keywords.</p>
+            <p><strong>Better way:</strong> Build one system in your head. A user requests a product page. DNS resolves the domain. The request reaches a load balancer. The API reads product data from SQL, recommendations from graph/document data, and session data from Redis. The API returns JSON. Authentication proves the user, authorization checks whether they can access the resource, and rate limiting protects the endpoint.</p>
+            <p><strong>Result:</strong> You can answer follow-up questions because the terms are connected by one request path.</p>
+          </div>
+
+          <div class="box">
+            <h6>Interview answer frame</h6>
+            <ol class="flowList">
+              <li><strong>Clarify requirements:</strong> users, read/write volume, latency, availability, consistency, security, and core features.</li>
+              <li><strong>Start simple:</strong> client to DNS to API/server to database. Define core entities and request flow.</li>
+              <li><strong>Find bottlenecks:</strong> CPU, DB, network, storage, connection pool, external dependency, or hot data.</li>
+              <li><strong>Evolve the architecture:</strong> split tiers, add load balancer, cache, queue, replicas, CDN, workers, and failover only where needed.</li>
+              <li><strong>Explain trade-offs:</strong> SQL vs NoSQL, REST vs GraphQL vs gRPC, strong vs eventual consistency, vertical vs horizontal scaling.</li>
+            </ol>
+          </div>
+
+          <div class="interviewQa">
+            <h6>Interview scenario - "Design a product detail API for millions of users"</h6>
+            <p class="turn interviewer">Start with the simplest version. What happens when a mobile app opens a product detail screen?</p>
+            <p class="turn candidate">The app calls something like GET /products/{id}. DNS resolves the API domain to an address, the request reaches the API server, the server validates auth if needed, reads product data from the database, and returns JSON. I would begin with one API server and one relational database because product, inventory, category, and pricing data are structured and need clear relationships.</p>
+            <p class="turn interviewer">Traffic grows. What changes first?</p>
+            <p class="turn candidate">I would measure the bottleneck first. If API CPU is the bottleneck, add more stateless API instances behind a load balancer. If the database is the bottleneck, add indexes, read replicas, caching for hot products, and avoid expensive joins on every request. The first scaling move should match the measured bottleneck.</p>
+            <p class="turn interviewer">How do you keep unhealthy servers from receiving traffic?</p>
+            <p class="turn candidate">The load balancer needs health checks. Liveness tells me the process is alive, but readiness tells me whether the instance can actually serve traffic: dependencies initialized, connection pools available, and critical config loaded. If readiness fails, the load balancer stops routing new requests there.</p>
+            <p class="turn interviewer">Where do API security and authorization fit?</p>
+            <p class="turn candidate">Authentication validates the user or client token. Authorization checks permissions, for example whether the product is public, regional, or restricted. At the API boundary I also add rate limiting, CORS for browser clients, input validation, parameterized DB queries, and standard error responses with correlation IDs.</p>
+            <p class="turn interviewer">What trade-offs would you call out?</p>
+            <p class="turn candidate">SQL is a strong default for the core product catalog because relationships and consistency matter, but I might add search storage for text queries, cache for hot reads, and graph or document storage for recommendations. REST is a good default public contract; gRPC may be better for internal high-throughput calls. Horizontal scaling improves capacity and fault tolerance, but adds load balancing, health checks, deployment coordination, and observability requirements.</p>
           </div>
         </section>
 
