@@ -395,6 +395,14 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libe
           The goal is to help you relearn Java/Spring/Microservices/Kafka/DB/K8s in depth,
           not to learn generic definitions.
         </p>
+        <div class="tip">
+          <strong>Why this reference focuses on understanding, not memorizing:</strong>
+          AI tools can write implementation faster than ever, so the higher-value skill becomes
+          understanding the system — components, boundaries, data flow, failure modes, and trade-offs.
+          Every topic below is written to build that skill: not just what a thing is, but why it exists,
+          how it fails, and which trade-off you are choosing. See
+          <a href="#system-design-mastery">topic 18 (System Design Mastery)</a> for the full study method.
+        </div>
         <div class="actions">
           <a class="btn" href="#topics">Start deep learning</a>
           <a class="btn secondary" href="#roadmap">View 30-day roadmap</a>
@@ -9156,6 +9164,7 @@ private CompletableFuture&lt;Tax&gt; taxFallback(CheckoutId id, Money subtotal, 
             </div>
           </div>
           <div class="pitfall"><strong>Pitfall:</strong> Do not choose NoSQL only because the system is "large scale." Many high-scale systems still use SQL for core transactional data and add NoSQL/cache/search around specific bottlenecks.</div>
+          <p class="why"><strong>Go deeper:</strong> <a href="#database">Topic 6 (SQL / Transaction / DB Performance)</a> and <a href="#jpa">Topic 7 (JPA / Hibernate)</a> cover the transactional, indexing, and ORM details behind these choices.</p>
         </section>
 
         <section class="subtopic" id="system-design-mastery-4">
@@ -9196,6 +9205,7 @@ private CompletableFuture&lt;Tax&gt; taxFallback(CheckoutId id, Money subtotal, 
             </div>
           </div>
           <div class="tip"><strong>Interview answer tip:</strong> Say: "Vertical scaling is the simplest first move, but it has a hard ceiling and poor redundancy. Horizontal scaling adds operational complexity but gives capacity and fault tolerance through multiple instances behind a load balancer."</div>
+          <p class="why"><strong>Go deeper:</strong> <a href="#system-design">Topic 12 (System Design at Scale)</a> expands on caching, sharding, replication, consistent hashing, and rate limiting; <a href="#resilience">Topic 17 (Resilience &amp; Fault Tolerance)</a> covers health checks and failure handling.</p>
         </section>
 
         <section class="subtopic" id="system-design-mastery-5">
@@ -9236,6 +9246,7 @@ private CompletableFuture&lt;Tax&gt; taxFallback(CheckoutId id, Money subtotal, 
             </ol>
           </div>
           <div class="pitfall"><strong>Pitfall:</strong> A working endpoint is not the same as a good contract. If clients cannot rely on shape, errors, idempotency, and versioning, your API will be painful to evolve.</div>
+          <p class="why"><strong>Go deeper:</strong> <a href="#rest-api">Topic 3 (REST API Design)</a> covers the contract, error-response, idempotency, and versioning details in depth.</p>
         </section>
 
         <section class="subtopic" id="system-design-mastery-6">
@@ -9277,6 +9288,7 @@ private CompletableFuture&lt;Tax&gt; taxFallback(CheckoutId id, Money subtotal, 
             </ol>
           </div>
           <div class="tip"><strong>Interview answer tip:</strong> Separate the concepts clearly: "Authentication proves identity, authorization evaluates permissions, and API security controls abuse at the boundary with rate limits, CORS, injection prevention, CSRF/XSS defenses, and network isolation."</div>
+          <p class="why"><strong>Go deeper:</strong> <a href="#security">Topic 15 (Security &amp; Identity)</a> covers OAuth2/OIDC, JWT validation, RBAC/ABAC, and API protection in depth.</p>
         </section>
 
         <section class="deepExtras">
